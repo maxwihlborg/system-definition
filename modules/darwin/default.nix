@@ -1,9 +1,7 @@
 { pkgs, ... }:
 {
   environment = {
-    shells = with pkgs;[ fish zsh ];
-    # loginShell = pkgs.zsh;
-    systemPath = [ "/opt/homebrew/bin" ];
+    shells = with pkgs;[ fish ];
   };
 
   users.users.max.shell = "/run/current-system/sw/bin/zsh";
@@ -25,15 +23,15 @@
       };
       NSGlobalDomain = {
         AppleShowAllExtensions = true;
-        InitialKeyRepeat = 25;
-        KeyRepeat = 6;
+        InitialKeyRepeat = 20;
+        KeyRepeat = 4;
       };
     };
   };
 
-  homebrew = {
-    enable = true;
-  };
+  # homebrew = {
+  #   enable = true;
+  # };
 
   services.nix-daemon.enable = true;
 }
