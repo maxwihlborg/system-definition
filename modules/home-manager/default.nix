@@ -85,12 +85,14 @@
       sys-switch = {
         wraps = "nix";
         description = "rebuild system flake";
-        body = "darwin-rebuild switch --flake ~/.config/darwin $argv";
+
+        body = "darwin-rebuild switch --flake $(ghq root)/github.com/maxwihlborg/system-definition/ $argv";
       };
       sys-update = {
         description = "update system flake";
         body = ''
-          pushd ~/.config/darwin-rebuild
+          pushd $(ghq root)/github.com/maxwihlborg/system-definition
+          pushd $(ghq root)/github.com/maxwihlborg/system-definition
           nix flake update
           sys-switch
           git add flake.lock
