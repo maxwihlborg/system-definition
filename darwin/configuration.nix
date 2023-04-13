@@ -1,19 +1,32 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 {
   environment = {
     shells = with pkgs;[ fish ];
   };
 
-  users.users.max.shell = "/run/current-system/sw/bin/zsh";
+  users.users."${user}" = {
+    home = "/Users/${user}";
+    shell = pkgs.fish;
+  };
 
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    package = pkgs.nix;
+    gc = {
+      automatic = true;
+      interval.Day = 7;
+      options = "--delete-older-than 7d";
+    };
+    extraOptions = ''
+      auto-optimise-store = true
+      experimental-features = nix-command flakes
+    '';
+  };
 
   system = {
     keyboard = {
       enableKeyMapping = true;
       remapCapsLockToEscape = true;
+      swapLeftCommandAndLeftAlt = true;
     };
     defaults = {
       dock.autohide = true;
@@ -33,5 +46,11 @@
   #   enable = true;
   # };
 
-  services.nix-daemon.enable = true;
+  programs = {
+    fish.enable = true;
+  };
+
+  services = {
+    nix-daemon.enable = true;
+  };
 }

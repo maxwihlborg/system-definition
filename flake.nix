@@ -1,5 +1,5 @@
 {
-  description = "MacOS config";
+  description = "System Declaration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-22.11-darwin";
@@ -12,24 +12,16 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixpkgs-unstable, darwin, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, darwin, ... }:
+    let
+      user = "max";
+    in
     {
-      darwinConfigurations = {
-        xbook-pro = darwin.lib.darwinSystem
-          rec {
-            system = "aarch64-darwin";
-            modules = [
-              ./modules/darwin
-              home-manager.darwinModules.home-manager
-              {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.max = (import ./modules/home-manager {
-                  pkgs = nixpkgs-unstable.legacyPackages."${system}";
-                });
-              }
-            ];
-          };
-      };
+      darwinConfigurations = (
+        import ./darwin {
+          inherit (nixpkgs) lib;
+          inherit user inputs nixpkgs nixpkgs-unstable darwin home-manager;
+        }
+      );
     };
 }
