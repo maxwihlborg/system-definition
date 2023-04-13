@@ -35,11 +35,4 @@
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
   };
-
-  # setup the fish
-  home.file.".profile" = {
-    text = ''
-      exec fish
-    '';
-  };
 }
