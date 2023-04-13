@@ -8,9 +8,6 @@
   xdg.configFile."nvim/lua" = {
     source = ../../config/nvim/lua;
   };
-  xdg.configFile."nvim/queries" = {
-    source = ../../config/nvim/queries;
-  };
   xdg.configFile."nvim/spell" = {
     source = ../../config/nvim/spell;
   };
