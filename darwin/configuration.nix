@@ -36,8 +36,8 @@
       };
       NSGlobalDomain = {
         AppleShowAllExtensions = true;
-        InitialKeyRepeat = 20;
-        KeyRepeat = 4;
+        InitialKeyRepeat = 18;
+        KeyRepeat = 3;
       };
     };
   };

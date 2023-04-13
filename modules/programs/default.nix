@@ -1,5 +1,6 @@
 [
   ./alacritty.nix
-  ./neovim.nix
   ./lazygit.nix
+  ./neovim.nix
+  ./tmux.nix
 ]
