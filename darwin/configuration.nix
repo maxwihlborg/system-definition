@@ -26,7 +26,7 @@
     keyboard = {
       enableKeyMapping = true;
       remapCapsLockToEscape = true;
-      swapLeftCommandAndLeftAlt = true;
+      swapLeftCommandAndLeftAlt = false;
     };
     defaults = {
       dock.autohide = true;
