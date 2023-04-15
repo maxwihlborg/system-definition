@@ -5,17 +5,38 @@
     (import ../modules/shell);
 
   home = {
-    packages = with pkgs;[
-      ripgrep
-      nushell
+    packages = with pkgs; [
+      bat
+      bun
+      cloc
+      curl
+      imagemagick
+      darwin.trash
       delta
-      sad
+      deno
       exa
       fd
       fzf
-      curl
+      fzy
+      gh
+      ghq
+      gopass
+      htop
+      httpie
+      jq
       less
+      ncdu
+      nixpkgs-fmt
+      nnn
+      nushell
+      ripgrep
+      sad
+      silver-searcher
+      tig
+      watchman
+      wget
       zellij
+      zoxide
     ];
     stateVersion = "22.11";
   };
