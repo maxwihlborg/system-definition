@@ -1,16 +1,12 @@
 { pkgs, ... }:
-let
-  theme = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/folke/tokyonight.nvim/1d1d1722e035389dc3bfc2489133fa58533c310f/extras/alacritty/tokyonight_night.yml";
-    sha256 = "sha256-eQZRMc1jpE6spIuHCj7s20gR/0iy/MLOAzz7U+Mg/EY=";
-  };
-in
 {
   programs = {
     alacritty = {
       enable = true;
       settings = {
-        import = [ theme ];
+        import = [
+          "${pkgs.vimPlugins.tokyonight-nvim}/extras/alacritty/tokyonight_night.yml"
+        ];
         window = {
           "dynamic_padding" = true;
           decorations = "none";
