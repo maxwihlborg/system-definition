@@ -1,0 +1,91 @@
+set shell bash
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+set ifs "\n"
+
+cmd ql &qlmanage -p $fx &> /dev/null;
+
+cmd fzy-open ${{
+  dest=$(fd --type f | fzf --border)
+  if test -n "${dest}"; then
+    $EDITOR $dest
+  fi
+}}
+
+cmd edit-config :{{
+  $$EDITOR ~/.config/lf/lfrc
+  source ~/.config/lf/lfrc
+}}
+
+cmd trash %{{
+  if test -n "$fs"; then
+    printf " trash ['c'urrent/'s'elected]: "
+    read -r ans
+    case "$ans" in
+      C*|c*) trash $f;;
+      S*|s*) trash $fx;;
+    esac
+  else
+    printf " trash [y/n]: "
+    read -r ans
+    case "$ans" in
+      Y*|y*) trash $f;;
+    esac
+  fi
+}}
+
+cmd ghq-goto ${{
+  dest=$(ghq list --full-path | fzf --border)
+  if test -n "${dest}"; then
+    lf -remote "send $id cd '${dest}'"
+  fi
+}}
+
+cmd z ${{
+  set +u
+  if [ $# -gt 0 ]; then
+    dest=''
+    if command -v zoxide >/dev/null 2>&1; then
+      dest="$(zoxide query "$@")"
+    fi
+
+    if test -n "${dest}"; then
+      lf -remote "send $id cd '${dest}'"
+    fi
+  fi
+}}
+
+cmd select-all :unselect; invert
+
+map n
+
+map , edit-config
+
+map nf push %<space>touch<space>
+map nd push %<space>mkdir<space>
+
+map J push 10j
+map K push 10k
+
+map ~ cd ~
+
+map ga cd ~/ghq/github.com/maxwihlborg/system-definition
+map gc cd ~/.config
+
+map a select-all
+
+map - ql
+map . set hidden!
+
+map s push :
+map S push :
+
+map x trash
+map z push :z<space>
+map <esc> unselect; clear
+
+map u fzy-open
+map <c-u> fzy-open
+map <c-g> ghq-goto
