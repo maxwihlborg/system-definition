@@ -2,7 +2,6 @@
 {
   imports =
     (import ../modules/programs) ++
-    (import ../modules/services) ++
     (import ../modules/shell);
 
   home = {
