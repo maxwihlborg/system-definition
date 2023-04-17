@@ -112,17 +112,17 @@
         eval (/opt/homebrew/bin/brew shellenv)
 
         # Path
-        set -gx PATH ~/bin /usr/local/sbin $PATH
-
-        # Go/Rust
         set -gx GOPATH $HOME/gocode
-        set -gx PATH $GOPATH/bin $HOME/.cargo/bin $PATH
-
-        # JS
         set -gx PNPM_HOME $HOME/Library/pnpm
-        set -gx PATH $PNPM_HOME (yarn global bin) $PATH
+        set -gx RUST_HOME $HOME/.cargo/bin
+        set -gx YARN_HOME (yarn global bin)
+
+        set -gx PATH $GOPATH/bin $PNPM_HOME $RUST_HOME $YARN_HOME $PATH
       '';
       interactiveShellInit = ''
+        # Zoxide
+        ${pkgs.zoxide}/bin/zoxide init fish | source
+
         # Overrides
         set fish_color_cwd yellow
         set fish_greeting
@@ -145,9 +145,6 @@
         # Key maps
         bind \cu '__fzf_open --editor'
         bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
-
-        # Zoxide
-        zoxide init fish | source
       '';
       shellAliases = {
         # exa

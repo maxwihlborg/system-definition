@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ ! -f "$1" ]]; then
+  echo "Usage: ql <file>"
+  exit 1
+fi
+
+echo "preview: '$(basename "$1")'"
+
+exec qlmanage -p "$1" >/dev/null &
+wait
+exec osascript -e 'tell application "Alacritty" to activate'

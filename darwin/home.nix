@@ -10,7 +10,6 @@
       bun
       cloc
       curl
-      imagemagick
       darwin.trash
       delta
       deno
@@ -23,6 +22,7 @@
       gopass
       htop
       httpie
+      imagemagick
       jq
       less
       ncdu
@@ -36,6 +36,7 @@
       watchman
       wget
       zellij
+      zig
       zoxide
     ];
     stateVersion = "22.11";

@@ -5,7 +5,7 @@ set icons true
 set ignorecase true
 set ifs "\n"
 
-cmd ql &qlmanage -p $fx &> /dev/null;
+cmd ql &ql $fx &> /dev/null;
 
 cmd fzy-open ${{
   dest=$(fd --type f | fzf --border)

@@ -28,7 +28,7 @@ return {
         local line = vim.api.nvim_get_current_line()
         local path = require("drex.utils").get_element(line)
 
-        handle = vim.loop.spawn("qlmanage", { args = { "-p", path } }, function(code)
+        handle = vim.loop.spawn("ql", { args = { path } }, function(code)
           handle:close()
           if code ~= 0 then
             print "error"
