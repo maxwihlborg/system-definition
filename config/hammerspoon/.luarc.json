@@ -1,0 +1,6 @@
+{
+  "workspace.library": [
+    "$HOME/.config/hammerspoon/Spoons/EmmyLua.spoon/annotations"
+  ],
+  "diagnostics.globals": ["vim", "utils"]
+}
