@@ -7,6 +7,7 @@
   home = {
     packages = with pkgs; [
       bat
+      btop
       bun
       cloc
       curl
@@ -24,6 +25,7 @@
       httpie
       imagemagick
       jq
+      lazydocker
       less
       ncdu
       nixpkgs-fmt

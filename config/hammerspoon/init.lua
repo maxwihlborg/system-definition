@@ -1,4 +1,3 @@
--- globals hs
 hs.loadSpoon "EmmyLua"
 
 local mod = { "ctrl", "cmd", "alt" }
