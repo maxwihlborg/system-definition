@@ -28,6 +28,7 @@
       lazydocker
       less
       ncdu
+      neofetch
       nixpkgs-fmt
       nnn
       nushell
