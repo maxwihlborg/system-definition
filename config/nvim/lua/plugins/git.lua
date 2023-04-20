@@ -7,7 +7,11 @@ return {
     "LazyGitFilter",
     "LazyGitFilterCurrentFile",
   } },
-  { "pwntester/octo.nvim", cmd = "Octo" },
+  {
+    "pwntester/octo.nvim",
+    cmd = "Octo",
+    config = true,
+  },
   {
     "aspeddro/gitui.nvim",
     init = function()
