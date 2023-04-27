@@ -77,6 +77,7 @@ return {
       s("rce", { t "import ", i(1), t ' from "./', f(copy, 1), t { '";', "", "export default " }, f(copy, 1), t ";" }),
       s("rca", { t 'export * from "./', i(1), t '";' }),
       s("ec", { t "export class ", dl(1, bn(l.TM_FILENAME), {}), t { " {", "\tconstructor() {", "\t\t" }, i(0), t { "", "\t}", "}" } }),
+      s("ef", { t "export function ", dl(1, bn(l.TM_FILENAME), {}), t "(", i(2), t ")", t { " {", "\t" }, i(0), t { "", "}" } }),
       s("ecd", { t "export default class ", dl(1, bn(l.TM_FILENAME), {}), t { " {", "\tconstructor() {", "\t\t" }, i(0), t { "", "\t}", "}" } }),
       s("es", { t { 'import css from "./_index.module.scss";', "", "export default css;" } }),
     })
