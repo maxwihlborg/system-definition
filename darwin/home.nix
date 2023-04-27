@@ -25,6 +25,7 @@
       httpie
       imagemagick
       jq
+      just
       lazydocker
       less
       ncdu

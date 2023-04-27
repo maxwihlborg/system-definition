@@ -29,6 +29,15 @@ return {
         },
         filetype = "haxe",
       }
+      parser_config.just = {
+        install_info = {
+          url = "https://github.com/IndianBoy42/tree-sitter-just", -- local path or git repo
+          files = { "src/parser.c", "src/scanner.cc" },
+          branch = "main",
+          use_makefile = true,
+        },
+        maintainers = { "@IndianBoy42" },
+      }
 
       config.setup {
         ensure_installed = {
