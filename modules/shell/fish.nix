@@ -69,7 +69,7 @@
             nix flake update
             sys-switch
             git add flake.lock
-            git commit -m "v.$(date +%F)"
+            git commit -m "v$(date +%F)"
             git push
             popd
           '';

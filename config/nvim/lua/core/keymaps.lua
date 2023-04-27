@@ -14,6 +14,8 @@ M["main"] = {
     ["Twind"] = { ':%s/className="\\([^"]\\+\\)"/className={tw("\\1")}/g' },
   },
   ["n"] = {
+    ["<c-b>"] = { "<c-d>zz" },
+    ["<c-d>"] = { "<c-b>zz" },
     ["j"] = { "gj" },
     ["k"] = { "gk" },
     ["ä"] = { "{" },
@@ -231,7 +233,7 @@ M["gitui"] = {
 
 M["neogen"] = {
   ["n"] = {
-    ["<leader>d"] = {
+    ["<leader>dd"] = {
       function()
         require("neogen").generate()
       end,
@@ -260,6 +262,75 @@ M["close-buffers"] = {
     ["CloseHiddenBuffers"] = {
       function()
         require("close_buffers").delete { type = "hidden" }
+      end,
+    },
+  },
+}
+
+M["dap"] = {
+  ["n"] = {
+    ["<leader>b"] = {
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+    },
+    ["<leader>lp"] = {
+      function()
+        require("dap").set_breakpoint(nil, nil, vim.fn.input "Log point message: ")
+      end,
+    },
+    ["<leader>dr"] = {
+      function()
+        require("dap").repl.open()
+      end,
+    },
+    ["<leader>dl"] = {
+      function()
+        require("dap").run_last()
+      end,
+    },
+    ["<leader>df"] = {
+      function()
+        local widgets = require "dap.ui.widgets"
+        widgets.centered_float(widgets.frames)
+      end,
+    },
+    ["<leader>ds"] = {
+      function()
+        local widgets = require "dap.ui.widgets"
+        widgets.centered_float(widgets.scopes)
+      end,
+    },
+    ["<leader>dc"] = {
+      function()
+        require("dap").continue()
+      end,
+    },
+    ["<leader>do"] = {
+      function()
+        require("dap").step_over()
+      end,
+    },
+    ["<leader>dj"] = {
+      function()
+        require("dap").step_into()
+      end,
+    },
+    ["<leader>dk"] = {
+      function()
+        require("dap").step_out()
+      end,
+    },
+  },
+  [{ "n", "v" }] = {
+    ["<leader>dh"] = {
+      function()
+        require("dap.ui.widgets").hover()
+      end,
+    },
+    ["<leader>dp"] = {
+      function()
+        require("dap.ui.widgets").preview()
       end,
     },
   },

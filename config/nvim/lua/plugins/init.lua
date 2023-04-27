@@ -46,6 +46,10 @@ return {
 
         h["DrexDir"] = h["YanilTreeDirectory"]
         h["DrexRoot"] = { fg = c.yellow, bold = true, bg = c.bg_sidebar }
+
+        h["DapBreakpoint"] = { fg = c.red, bg = c.none }
+        h["DapLogPoint"] = { fg = c.blue, bg = c.none }
+        h["DapStopped"] = { fg = c.green, bg = c.none }
       end,
     },
   },
