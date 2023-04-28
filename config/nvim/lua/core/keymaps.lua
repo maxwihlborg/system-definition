@@ -37,6 +37,7 @@ M["main"] = {
     ["<leader>q"] = { "<cmd>q<cr>" },
     ["<leader>t"] = { "<cmd>tabe<cr>" },
     ["<leader>o"] = { "vip:sort<cr>" },
+    ["<leader><leader>o"] = { "vi{:sort<cr>" },
     ["<leader>x"] = { "<cmd>w|luafile %<cr>" },
 
     ["<leader>f"] = { "<cmd>Format<cr>" },
