@@ -19,7 +19,11 @@ return {
         file_sorter = sorters.get_fzy_sorter,
         mappings = {
           i = {
-            ["<C-s>"] = actions.send_to_qflist + actions.open_qflist,
+            ["<c-s>"] = actions.send_to_qflist + actions.open_qflist,
+            ["<c-u>"] = false,
+            ["<esc>"] = actions.close,
+            ["<c-p>"] = actions.move_selection_next,
+            ["<c-n>"] = actions.move_selection_previous,
           },
         },
       },
