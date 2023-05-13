@@ -57,7 +57,7 @@ function M.setup()
 end
 
 local function lsp_mappings(bufnr)
-  require("core.utils").load_keymap("lsp", {
+  require("pde.utils").load_keymap("lsp", {
     buffer = bufnr,
     silent = true,
     noremap = true,
@@ -105,7 +105,7 @@ local function lsp_signature(bufnr)
 end
 
 local function ts_mappings(bufnr)
-  require("core.utils").load_keymap("lsp.ts", {
+  require("pde.utils").load_keymap("lsp.ts", {
     buffer = bufnr,
     silent = true,
     noremap = true,

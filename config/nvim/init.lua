@@ -1,4 +1,4 @@
-require "core.editor"
-require "core.lazy"
+require "pde.editor"
+require "pde.lazy"
 
-require("core.utils").load_keymap "main"
+require("pde.utils").load_keymap "main"

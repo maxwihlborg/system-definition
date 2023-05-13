@@ -73,7 +73,7 @@ vim.api.nvim_create_autocmd("FileType", {
   group = group,
   pattern = { "qf", "help", "dap-float" },
   callback = function(opts)
-    require("core.utils").load_keymap("close", {
+    require("pde.utils").load_keymap("close", {
       buffer = opts.buf,
     })
   end,

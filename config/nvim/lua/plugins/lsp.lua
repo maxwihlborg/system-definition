@@ -43,7 +43,7 @@ return {
       },
     },
     config = function()
-      require "core.lsp"
+      require "pde.lsp"
     end,
   },
   {

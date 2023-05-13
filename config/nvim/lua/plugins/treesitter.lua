@@ -3,7 +3,7 @@ return {
     "danymat/neogen",
     lazy = true,
     init = function()
-      require("core.utils").load_keymap "neogen"
+      require("pde.utils").load_keymap "neogen"
     end,
     config = true,
   },

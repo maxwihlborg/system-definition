@@ -7,9 +7,9 @@ return {
     "FormatWriteLock",
   },
   init = function()
-    require("plugins.config.formatter").init()
+    require("pde.formatter").init()
   end,
   config = function()
-    require("plugins.config.formatter").setup()
+    require("pde.formatter").setup()
   end,
 }

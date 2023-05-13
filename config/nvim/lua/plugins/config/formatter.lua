@@ -100,7 +100,7 @@ local function setupFormatter()
   end
 
   local formatterConfig = {
-    -- haxe = { require("max.core.formatter.haxe").formatter },
+    -- haxe = { require("max.pde.formatter.haxe").formatter },
     fish = { require("formatter.filetypes.fish").fishindent },
     glsl = { require("formatter.filetypes.c").clangformat },
     rust = { require("formatter.filetypes.rust").rustfmt },

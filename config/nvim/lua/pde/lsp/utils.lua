@@ -1,4 +1,4 @@
-local handlers = require "core.lsp.handlers"
+local handlers = require "pde.lsp.handlers"
 
 local M = {}
 
@@ -70,7 +70,7 @@ function M.get_options(lsp)
     on_attach = handlers.on_attach,
     capabilities = handlers.capabilities,
   }
-  local opt_ok, extend_opt = pcall(require, "core.lsp.servers." .. lsp)
+  local opt_ok, extend_opt = pcall(require, "pde.lsp.servers." .. lsp)
   if opt_ok then
     opts = vim.tbl_deep_extend("force", extend_opt, opts)
   end

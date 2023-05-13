@@ -7,7 +7,7 @@ return {
     "nvim-lua/popup.nvim",
   },
   init = function()
-    require("core.utils").load_keymap "telescope"
+    require("pde.utils").load_keymap "telescope"
   end,
   config = function()
     local telescope = require "telescope"

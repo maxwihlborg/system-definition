@@ -36,7 +36,7 @@ local function resolve_keymap(arg, ...)
     return arg(...)
   end
   if t == "string" then
-    return resolve_keymap(require("core.keymaps")[arg], ...)
+    return resolve_keymap(require("pde.keymaps")[arg], ...)
   end
   assert(false, "Invalid keymap " .. arg)
 end

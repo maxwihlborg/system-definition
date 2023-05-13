@@ -15,7 +15,7 @@ return {
   {
     "aspeddro/gitui.nvim",
     init = function()
-      require("core.utils").load_keymap "gitui"
+      require("pde.utils").load_keymap "gitui"
     end,
     opts = {
       command = {

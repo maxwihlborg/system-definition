@@ -63,7 +63,7 @@ return {
     },
     init = function()
       vim.g.tmux_navigator_no_mappings = 1
-      require("core.utils").load_keymap "vim-tmux-navigator"
+      require("pde.utils").load_keymap "vim-tmux-navigator"
     end,
   },
   {
@@ -103,7 +103,7 @@ return {
     "kazhala/close-buffers.nvim",
     lazy = true,
     init = function()
-      require("core.utils").load_keymap "close-buffers"
+      require("pde.utils").load_keymap "close-buffers"
     end,
     opts = {
       preserve_window_layout = { "this" },
@@ -113,7 +113,7 @@ return {
     "stevearc/oil.nvim",
     lazy = true,
     init = function()
-      require("core.utils").load_keymap "oil"
+      require("pde.utils").load_keymap "oil"
     end,
     opts = {
       columns = {
@@ -135,7 +135,7 @@ return {
     "junegunn/vim-easy-align",
     lazy = false,
     init = function()
-      require("core.utils").load_keymap "easy-align"
+      require("pde.utils").load_keymap "easy-align"
     end,
   },
 }

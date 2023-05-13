@@ -9,7 +9,7 @@ return {
       group = group,
       pattern = { "term://*toggleterm#*" },
       callback = function()
-        require("core.utils").load_keymap("terminal", {
+        require("pde.utils").load_keymap("terminal", {
           buffer = 0,
         })
       end,

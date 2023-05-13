@@ -2,7 +2,7 @@ return {
   "ThePrimeagen/harpoon",
   lazy = true,
   init = function()
-    require("core.utils").load_keymap "harpoon"
+    require("pde.utils").load_keymap "harpoon"
   end,
   opts = {
     menu = {
