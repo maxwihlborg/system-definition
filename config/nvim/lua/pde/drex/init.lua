@@ -26,8 +26,6 @@ local function expand_toggle()
 end
 
 function M.setup()
-  local elements = require "drex.elements"
-
   require("drex.config").configure {
     on_enter = function()
       vim.wo.winhighlight = "Normal:NormalSB,SignColumn:SignColumnSB"
