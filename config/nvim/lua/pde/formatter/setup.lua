@@ -32,6 +32,7 @@ function M.setup()
     "markdown.mdx",
     "graphql",
     "json",
+    "jsonc",
     "yaml",
     "xml",
     "svelte",

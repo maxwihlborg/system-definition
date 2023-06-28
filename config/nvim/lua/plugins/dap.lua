@@ -13,6 +13,31 @@ return {
               pattern = { "typescript", "typescriptreact" },
               cmd = "pnpm tsc",
             })
+
+            vim.api.nvim_create_user_command("CheckTranslation", function()
+              local split = require "pde.split"
+              local items = {}
+              vim.fn.jobstart("pnpm i18n:check -v", {
+                cwd = vim.fn.expand "~/ghq/github.com/nomadicretail/xnomad/apps/web",
+                on_exit = function()
+                  vim.fn.setqflist(items)
+                  vim.cmd "copen"
+                end,
+                on_stderr = function(_pid, data)
+                  for _, n in ipairs(data) do
+                    if string.sub(n, 1, 1) == "/" then
+                      local nn = split.split(n, ": ")
+                      if nn[2] == "Warning" then
+                        table.insert(items, {
+                          filename = nn[1],
+                          text = nn[3],
+                        })
+                      end
+                    end
+                  end
+                end,
+              })
+            end, {})
           end,
         },
         {
