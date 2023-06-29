@@ -11,6 +11,7 @@ return {
       { "ray-x/lsp_signature.nvim" },
       {
         "j-hui/fidget.nvim",
+        tag = "legacy",
         opts = {
           align = {
             bottom = true,
