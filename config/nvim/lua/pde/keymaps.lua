@@ -78,10 +78,30 @@ M["telescope"] = {
         require("telescope.builtin").help_tags()
       end,
     },
+    ["Fd"] = {
+      function(opts)
+        require("telescope.builtin").find_files {
+          find_command = function()
+            return vim.list_extend({ "fd", "--color", "never" }, opts.fargs)
+          end,
+        }
+      end,
+      { nargs = "*" },
+    },
     ["Rg"] = {
       function(opts)
         require("telescope.builtin").grep_string {
           search = opts.args,
+        }
+      end,
+      { nargs = "*" },
+    },
+    ["Rgg"] = {
+      function(opts)
+        require("telescope.builtin").find_files {
+          find_command = function()
+            return vim.list_extend({ "rg", "--color", "never", "-l" }, opts.fargs)
+          end,
         }
       end,
       { nargs = "*" },
