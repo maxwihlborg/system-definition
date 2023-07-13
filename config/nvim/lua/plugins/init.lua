@@ -132,6 +132,14 @@ return {
     },
   },
   {
+    "ecthelionvi/NeoSwap.nvim",
+    cmd = { "NeoSwapPrev", "NeoSwapNext" },
+    init = function()
+      require("pde.utils").load_keymap "neo-swap"
+    end,
+    config = true,
+  },
+  {
     "junegunn/vim-easy-align",
     lazy = false,
     init = function()

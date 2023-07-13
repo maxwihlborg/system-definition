@@ -35,7 +35,7 @@ M["main"] = {
     ["<leader>co"] = { "<cmd>copen<cr>" },
     ["<leader>a"] = { "<cmd>w<cr>" },
     ["<leader>q"] = { "<cmd>q<cr>" },
-    ["<leader>t"] = { "<cmd>tabe<cr>" },
+    ["<leader>tt"] = { "<cmd>tabe<cr>" },
     ["<leader>o"] = { "vip:sort<cr>" },
     ["<leader><leader>o"] = { "vi{:sort<cr>" },
     ["<leader>x"] = { "<cmd>w|luafile %<cr>" },
@@ -269,6 +269,13 @@ M["oil"] = {
         require("oil").open()
       end,
     },
+  },
+}
+
+M["neo-swap"] = {
+  [{ "n" }] = {
+    ["<leader>th"] = { "<cmd>NeoSwapPrev<cr>", {} },
+    ["<leader>tl"] = { "<cmd>NeoSwapNext<cr>", {} },
   },
 }
 
