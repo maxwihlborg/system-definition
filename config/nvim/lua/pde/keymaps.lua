@@ -8,6 +8,14 @@ M["close"] = function(opts)
   }
 end
 
+M["help"] = function(opts)
+  return {
+    ["n"] = {
+      ["gd"] = { "<c-]>", opts },
+    },
+  }
+end
+
 M["main"] = {
   ["cmd"] = {
     ["ClassNames"] = { ':%s/className="\\([^"]\\+\\)"/className={css["\\1"]}/g' },
@@ -169,38 +177,29 @@ M["lsp"] = function(opts)
 end
 
 M["harpoon"] = {
-  ["n"] = {
-    ["<leader>h"] = {
-      function()
-        require("harpoon.mark").add_file()
-      end,
-    },
-    ["<leader>m"] = {
-      function()
-        require("harpoon.ui").toggle_quick_menu()
-      end,
-    },
-    ["<leader>1"] = {
-      function()
-        require("harpoon.ui").nav_file(1)
-      end,
-    },
-    ["<leader>2"] = {
-      function()
-        require("harpoon.ui").nav_file(2)
-      end,
-    },
-    ["<leader>3"] = {
-      function()
-        require("harpoon.ui").nav_file(3)
-      end,
-    },
-    ["<leader>4"] = {
-      function()
-        require("harpoon.ui").nav_file(4)
-      end,
-    },
-  },
+  ["n"] = (function()
+    local m = {
+      ["<leader>h"] = {
+        function()
+          require("harpoon.mark").add_file()
+        end,
+      },
+      ["<leader>m"] = {
+        function()
+          require("harpoon.ui").toggle_quick_menu()
+        end,
+      },
+    }
+    for i = 1, 9, 1 do
+      m[string.format("<leader>%i", i)] = {
+        function()
+          require("harpoon.ui").nav_file(i)
+        end,
+        { desc = string.format("Harpoon move (%i)", i) },
+      }
+    end
+    return m
+  end)(),
 }
 
 M["vim-tmux-navigator"] = {

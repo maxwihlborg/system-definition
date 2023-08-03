@@ -78,3 +78,13 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = group,
+  pattern = { "help" },
+  callback = function(opts)
+    require("pde.utils").load_keymap("help", {
+      buffer = opts.buf,
+    })
+  end,
+})

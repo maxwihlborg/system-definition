@@ -123,6 +123,10 @@
         # Zoxide
         ${pkgs.zoxide}/bin/zoxide init fish | source
 
+        # Secrets
+        source ${config.home.homeDirectory}/ghq/github.com/maxwihlborg/system-definition/config/fish/env.fish
+
+
         # Overrides
         set fish_color_cwd yellow
         set fish_greeting
