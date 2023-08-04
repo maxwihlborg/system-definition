@@ -149,9 +149,9 @@ return {
   {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
-    config = function()
-      require("chatgpt").setup()
-    end,
+    opts = {
+      api_key_cmd = "vault kv get -field=open_ai_token -mount=secret neovim",
+    },
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
