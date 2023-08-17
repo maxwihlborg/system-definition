@@ -7,6 +7,7 @@ function M.setup()
   local formatterConfig = {
     fish = { require("formatter.filetypes.fish").fishindent },
     glsl = { require("formatter.filetypes.c").clangformat },
+    go = { require("formatter.filetypes.go").gofmt },
     rust = { require("formatter.filetypes.rust").rustfmt },
     css = { require("formatter.filetypes.css").prettier },
     lua = { require("formatter.filetypes.lua").stylua },
