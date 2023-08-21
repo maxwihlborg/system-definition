@@ -1,7 +1,12 @@
-(switch_expression) @scope
+; Scopes
+[
+ (block)
+ (function_declaration)
+] @scope @local.scope
 
 ; Definitions
-;------------
-(type_declaration) @definition.type
-(let_binding) @definition.var
-(module_declaration) @definition.namespace
+(function_arg name: (identifier) @definition.parameter)
+(variable_declaration name: (identifier) @local.definition) 
+
+; References
+(block (identifier)) @local.reference
