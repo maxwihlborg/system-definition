@@ -8,7 +8,7 @@ return {
         {
           path = vim.fn.expand "~/ghq/github.com/nomadicretail/xnomad/apps/web",
           config = function()
-            require("pde.lsp.utils").setup_autostart "graphql"
+            -- require("pde.lsp.utils").setup_autostart "graphql"
             require("pde.utils").set_compiler("tsc", {
               pattern = { "typescript", "typescriptreact" },
               cmd = "pnpm tsc",

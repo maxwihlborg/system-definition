@@ -26,8 +26,6 @@ M["main"] = {
     ["<c-d>"] = { "<c-b>zz" },
     ["j"] = { "gj" },
     ["k"] = { "gk" },
-    ["ä"] = { "{" },
-    ["ö"] = { "}" },
     ["Q"] = { "<nop>" },
 
     ["H"] = { "<cmd>tabp<cr>" },
@@ -39,6 +37,7 @@ M["main"] = {
 
     ["<leader>cm"] = { "<cmd>Mason<cr>" },
     ["<leader>ca"] = { "<cmd>Lazy<cr>" },
+    ["<leader>cb"] = { "<cmd>DBUI<cr>" },
     ["<leader>cc"] = { "<cmd>cclose<cr>" },
     ["<leader>co"] = { "<cmd>copen<cr>" },
     ["<leader>a"] = { "<cmd>w<cr>" },
@@ -63,6 +62,8 @@ M["main"] = {
   [{ "n", "v" }] = {
     ["J"] = { "8j" },
     ["K"] = { "8k" },
+    ["ä"] = { "{" },
+    ["ö"] = { "}" },
     ["s"] = { ":", { nowait = true } },
     ["S"] = { ":", { nowait = true } },
   },
@@ -176,31 +177,32 @@ M["lsp"] = function(opts)
   }
 end
 
-M["harpoon"] = {
-  ["n"] = (function()
-    local m = {
-      ["<leader>h"] = {
-        function()
-          require("harpoon.mark").add_file()
-        end,
-      },
-      ["<leader>m"] = {
-        function()
-          require("harpoon.ui").toggle_quick_menu()
-        end,
-      },
+M["harpoon"] = function()
+  local nmaps = {
+    ["<leader>h"] = {
+      function()
+        require("harpoon.mark").add_file()
+      end,
+    },
+    ["<leader>m"] = {
+      function()
+        require("harpoon.ui").toggle_quick_menu()
+      end,
+    },
+  }
+  for i = 1, 9, 1 do
+    nmaps[string.format("<leader>%i", i)] = {
+      function()
+        require("harpoon.ui").nav_file(i)
+      end,
+      { desc = string.format("Harpoon move (%i)", i) },
     }
-    for i = 1, 9, 1 do
-      m[string.format("<leader>%i", i)] = {
-        function()
-          require("harpoon.ui").nav_file(i)
-        end,
-        { desc = string.format("Harpoon move (%i)", i) },
-      }
-    end
-    return m
-  end)(),
-}
+  end
+
+  return {
+    ["n"] = nmaps,
+  }
+end
 
 M["vim-tmux-navigator"] = {
   [{ "n", "i" }] = {
