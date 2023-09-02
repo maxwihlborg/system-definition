@@ -35,10 +35,11 @@ M["main"] = {
 
     ["<esc>"] = { "<cmd>noh<cr>" },
 
-    ["<leader>cm"] = { "<cmd>Mason<cr>" },
     ["<leader>ca"] = { "<cmd>Lazy<cr>" },
     ["<leader>cb"] = { "<cmd>DBUI<cr>" },
     ["<leader>cc"] = { "<cmd>cclose<cr>" },
+    ["<leader>cg"] = { "<cmd>ChatGPT<cr>" },
+    ["<leader>cm"] = { "<cmd>Mason<cr>" },
     ["<leader>co"] = { "<cmd>copen<cr>" },
     ["<leader>a"] = { "<cmd>w<cr>" },
     ["<leader>q"] = { "<cmd>q<cr>" },

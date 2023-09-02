@@ -107,7 +107,7 @@ return {
       },
     },
     config = function()
-      require "pde.dap"
+      require("pde.dap").setup()
     end,
   },
   {
