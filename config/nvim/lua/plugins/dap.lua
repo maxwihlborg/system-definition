@@ -27,7 +27,7 @@ return {
                   for _, n in ipairs(data) do
                     if string.sub(n, 1, 1) == "/" then
                       local nn = split.split(n, ": ")
-                      if nn[2] == "Warning" then
+                      if nn[2] == "Warning" or nn[2] == "Error" then
                         table.insert(items, {
                           filename = nn[1],
                           text = nn[3],
