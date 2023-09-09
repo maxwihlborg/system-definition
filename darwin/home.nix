@@ -14,7 +14,7 @@
       darwin.trash
       delta
       deno
-      exa
+      eza
       fd
       fzf
       fzy

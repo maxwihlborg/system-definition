@@ -151,11 +151,11 @@
         bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
       '';
       shellAliases = {
-        # exa
-        la = "exa -a";
-        ll = "exa -l";
-        lla = "exa -la";
-        lt = "exa -T -I node_modules";
+        # eza
+        la = "eza -a";
+        ll = "eza -l";
+        lla = "eza -la";
+        lt = "eza -T -I node_modules";
 
         # node
         p = "pnpm";
