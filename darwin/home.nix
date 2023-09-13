@@ -42,6 +42,7 @@
       zellij
       zig
       zoxide
+      termscp
     ];
     stateVersion = "22.11";
   };
