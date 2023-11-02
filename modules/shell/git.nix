@@ -46,6 +46,10 @@
         "Network Trash Folder"
         "Temporary Items"
         ".apdisk"
+
+        # Vim
+        ".swp"
+        ".netrwhist"
       ];
     };
   };
