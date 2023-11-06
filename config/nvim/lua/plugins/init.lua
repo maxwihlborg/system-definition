@@ -98,7 +98,6 @@ return {
     "smjonas/inc-rename.nvim",
     cmd = "IncRename",
   },
-  { "ActivityWatch/aw-watcher-vim" },
   {
     "kazhala/close-buffers.nvim",
     lazy = true,
