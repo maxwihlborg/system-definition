@@ -8,11 +8,6 @@ return {
     "LazyGitFilterCurrentFile",
   } },
   {
-    "pwntester/octo.nvim",
-    cmd = "Octo",
-    config = true,
-  },
-  {
     "aspeddro/gitui.nvim",
     init = function()
       require("pde.utils").load_keymap "gitui"
