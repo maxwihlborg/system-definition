@@ -36,13 +36,14 @@
       ripgrep
       sad
       silver-searcher
+      termscp
       tig
       watchman
       wget
+      xplr
       zellij
       zig
       zoxide
-      termscp
     ];
     stateVersion = "22.11";
   };
