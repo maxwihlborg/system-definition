@@ -10,6 +10,7 @@ function M.setup()
     go = { require("formatter.filetypes.go").gofmt },
     rust = { require("formatter.filetypes.rust").rustfmt },
     css = { require("formatter.filetypes.css").prettier },
+    php = { require("formatter.filetypes.php").phpcbf },
     lua = { require("formatter.filetypes.lua").stylua },
     nix = { require("formatter.filetypes.nix").nixpkgs_fmt },
     -- html = { require("formatter.filetypes.html").htmlbeautify },
