@@ -146,6 +146,7 @@ M["lsp"] = function(opts)
       ["gI"] = { "<cmd>Glance implementations<cr>", opts },
       ["gD"] = { "<cmd>Glance definitions<cr>", opts },
       ["gR"] = { "<cmd>Glance references<cr>", opts },
+      ["gs"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols symbols=function<cr>", opts },
 
       ["<leader>rn"] = { ":IncRename ", vim.fn.extend(opts, { silent = false }) },
       ["<leader>rr"] = {
