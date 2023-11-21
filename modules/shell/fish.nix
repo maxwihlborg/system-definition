@@ -33,10 +33,10 @@
         }
       ];
       functions = {
-        ly = {
-          wraps = "lazygit";
-          description = "yadm in lazygit-ish";
-          body = "lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git";
+        gap = {
+          wraps = "git";
+          description = "git add --patch";
+          body = "git add --patch";
         };
         lfcd = {
           body = ''
