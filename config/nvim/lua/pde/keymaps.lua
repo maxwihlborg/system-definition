@@ -47,8 +47,6 @@ M["main"] = {
     ["<leader>o"] = { "vip:sort<cr>" },
     ["<leader><leader>o"] = { "vi{:sort<cr>" },
     ["<leader>x"] = { "<cmd>w|luafile %<cr>" },
-
-    ["<leader>f"] = { "<cmd>Format<cr>" },
     ["<leader>g"] = { "<cmd>LazyGit<cr>" },
     ["<leader>p"] = { "<cmd>NnnPicker %:p:h<cr>" },
 
@@ -67,6 +65,16 @@ M["main"] = {
     ["ö"] = { "}" },
     ["s"] = { ":", { nowait = true } },
     ["S"] = { ":", { nowait = true } },
+  },
+}
+
+M["conform"] = {
+  ["n"] = {
+    ["<leader>f"] = {
+      function()
+        require("conform").format()
+      end,
+    },
   },
 }
 
