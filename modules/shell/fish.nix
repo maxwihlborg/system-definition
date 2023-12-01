@@ -115,9 +115,8 @@
         set -gx GOPATH $HOME/gocode
         set -gx PNPM_HOME $HOME/Library/pnpm
         set -gx RUST_HOME $HOME/.cargo/bin
-        set -gx YARN_HOME (yarn global bin)
 
-        set -gx PATH $GOPATH/bin $PNPM_HOME $RUST_HOME $YARN_HOME $PATH
+        set -gx PATH $GOPATH/bin $PNPM_HOME $RUST_HOME $PATH
       '';
       interactiveShellInit = ''
         # Zoxide
