@@ -62,8 +62,6 @@ hs.hotkey.bind(mod, "S", launch_by_bundle_id "com.tinyspeck.slackmacgap")
 hs.hotkey.bind(mod, "N", launch_by_bundle_id "com.spotify.client")
 hs.hotkey.bind(mod, "B", launch_by_bundle_id "com.linear")
 hs.hotkey.bind(mod, "F", launch_by_bundle_id "com.figma.Desktop")
--- Shortwave
-hs.hotkey.bind(mod, "D", launch_by_bundle_id "com.google.Chrome.app.lnachpgegbbmnnlgpokibfjlmppeciah")
 
 -- Split Screen Actions
 local send_win_left = send_win(0, 0, 0.5, 1)

@@ -255,7 +255,7 @@ M["yanil"] = {
 
 M["gitui"] = {
   ["n"] = {
-    ["<leader>cg"] = {
+    ["<leader>cu"] = {
       function()
         require("gitui").open()
       end,
