@@ -8,14 +8,6 @@ return {
     local util = require "conform.util"
 
     local formatters = {
-      rescript = {
-        command = util.from_node_modules "rescript",
-        args = { "format", "-stdin", "$FILENAME" },
-        cwd = util.root_file {
-          "bsconfig.json",
-          "package.json",
-        },
-      },
       biome = {
         command = util.from_node_modules "biome",
         args = { "format", "--stdin-file-path", "$FILENAME" },
@@ -24,38 +16,47 @@ return {
           "package.json",
         },
       },
+      rescript = {
+        command = util.from_node_modules "rescript",
+        args = { "format", "-stdin", "$FILENAME" },
+        cwd = util.root_file {
+          "bsconfig.json",
+          "package.json",
+        },
+      },
     }
 
     local formatters_by_ft = {
-      lua = { "stylua" },
-      nix = { "nixpkgs_fmt" },
       fish = { "fish_indent" },
       glsl = { "clang_format" },
       go = { "gofmt" },
+      lua = { "stylua" },
+      just = { "just" },
+      nix = { "nixpkgs_fmt" },
+      php = { "phpcbf" },
+      rescript = { "rescript" },
       rust = { "rustfmt" },
       sql = { "sql_formatter" },
-      rescript = { "rescript" },
-      php = { "phpcbf" },
     }
 
     local prettier_fts = {
-      "scss",
+      "graphql",
       "html",
       "javascript",
       "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "markdown",
-      "markdown.mdx",
-      "graphql",
       "json",
       "jsonc",
-      "yaml",
+      "markdown",
+      "markdown.mdx",
+      "scss",
+      "typescript",
+      "typescriptreact",
       "xml",
+      "yaml",
     }
 
     for _, ft in ipairs(prettier_fts) do
-      formatters_by_ft[ft] = { { "prettierd", "prettier" } }
+      formatters_by_ft[ft] = { { "prettier", "prettierd" } }
     end
 
     conform.setup {

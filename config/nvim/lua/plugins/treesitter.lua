@@ -29,10 +29,11 @@ return {
         },
         filetype = "haxe",
       }
+
       parser_config.just = {
         install_info = {
-          url = "https://github.com/IndianBoy42/tree-sitter-just", -- local path or git repo
-          files = { "src/parser.c", "src/scanner.cc" },
+          url = "https://github.com/IndianBoy42/tree-sitter-just",
+          files = { "src/parser.c", "src/scanner.c" },
           branch = "main",
           use_makefile = true,
         },
