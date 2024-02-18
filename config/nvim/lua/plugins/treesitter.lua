@@ -7,11 +7,12 @@ return {
     end,
     config = true,
   },
-  { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
+
   {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
       { "nvim-treesitter/nvim-treesitter-textobjects" },
+      { "NoahTheDuke/vim-just", ft = { "just" } }, -- Use treesitter in the future instead
       { "nkrkv/nvim-treesitter-rescript" },
       { "serenadeai/tree-sitter-scss" },
     },
@@ -30,16 +31,6 @@ return {
         filetype = "haxe",
       }
 
-      parser_config.just = {
-        install_info = {
-          url = "https://github.com/IndianBoy42/tree-sitter-just",
-          files = { "src/parser.c", "src/scanner.c" },
-          branch = "main",
-          use_makefile = true,
-        },
-        maintainers = { "@IndianBoy42" },
-      }
-
       config.setup {
         ensure_installed = {
           "bash",
@@ -49,7 +40,6 @@ return {
           "cmake",
           "comment",
           "cpp",
-          "scss",
           "css",
           "dockerfile",
           "elixir",
@@ -62,6 +52,7 @@ return {
           "gomod",
           "gowork",
           "graphql",
+          "haxe",
           "html",
           "http",
           "javascript",
@@ -84,6 +75,7 @@ return {
           "ruby",
           "rust",
           "scss",
+          "scss",
           "svelte",
           "toml",
           "tsx",
@@ -91,7 +83,6 @@ return {
           "vim",
           "vue",
           "wgsl",
-          "haxe",
           "yaml",
           "zig",
         },
