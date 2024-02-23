@@ -55,11 +55,30 @@
             end
           '';
         };
+        env-init = {
+          description = "setup dir with flakes";
+          body = ''
+            echo "Init flakes"
+            nix flake new -t github:nix-community/nix-direnv .
+            echo "Setup just"
+            echo -n "set positional-arguments := true
+
+            # List all recipies
+            @default:
+              just --list
+
+            # Run command
+            @run *args=\'\':
+              echo \$@
+            " > justfile
+          '';
+        };
         sys-switch = {
           wraps = "nix";
           description = "rebuild system flake";
-
-          body = "darwin-rebuild switch --flake $(ghq root)/github.com/maxwihlborg/system-definition/ $argv";
+          body = ''
+            darwin-rebuild switch --flake $(ghq root)/github.com/maxwihlborg/system-definition/ $argv
+          '';
         };
         sys-update = {
           description = "update system flake";
