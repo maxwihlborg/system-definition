@@ -3,6 +3,7 @@ return {
   cmd = { "Telescope" },
   dependencies = {
     { "nvim-telescope/telescope-fzy-native.nvim", build = "make" },
+    { "stevearc/aerial.nvim", opts = true },
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",
   },
@@ -30,5 +31,6 @@ return {
     }
 
     telescope.load_extension "fzy_native"
+    telescope.load_extension "aerial"
   end,
 }
