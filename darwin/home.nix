@@ -20,6 +20,7 @@
       fzy
       gh
       ghq
+      glow
       gopass
       htop
       httpie
