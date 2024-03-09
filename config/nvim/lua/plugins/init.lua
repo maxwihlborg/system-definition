@@ -145,7 +145,7 @@ return {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     opts = {
-      api_key_cmd = "vsh decrypt vsh:v1:h35v--0P:yyfJS_mkDWCcMYC7x7_rdV7iQB3qLCZE9HJyWvaO-qvmDa3K1-f-PazoE0ZEGFLcNQFh",
+      api_key_cmd = "vsh decrypt vsh:v1:VExCVORF:k10fB87j1FeR-gsjh7UpAB40BU4eeHe74lQaDvfKJbtvgX2j-WlCSJTFaKoaMdD7-VSY",
       openai_params = {
         max_tokens = 2000,
       },

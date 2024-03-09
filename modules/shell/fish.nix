@@ -68,7 +68,7 @@
               just --list
 
             # Run command
-            @run *args=\'\':
+            @run *args='\':
               echo \$@
             " > justfile
           '';

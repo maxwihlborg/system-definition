@@ -12,8 +12,8 @@ return {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
       { "nvim-treesitter/nvim-treesitter-textobjects" },
-      { "NoahTheDuke/vim-just", ft = { "just" } }, -- Use treesitter in the future instead
       { "nkrkv/nvim-treesitter-rescript" },
+      { "IndianBoy42/tree-sitter-just", opts = true },
       { "serenadeai/tree-sitter-scss" },
     },
     config = function()
@@ -59,6 +59,7 @@ return {
           "jsdoc",
           "json",
           "jsonc",
+          "just",
           "kotlin",
           "lua",
           "make",
@@ -76,11 +77,13 @@ return {
           "rust",
           "scss",
           "scss",
+          "sql",
           "svelte",
           "toml",
           "tsx",
           "typescript",
           "vim",
+          "vimdoc",
           "vue",
           "wgsl",
           "yaml",
