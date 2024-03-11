@@ -1,3 +1,5 @@
+; inherits: ecma
+
 (call_expression
   function:
     ([
