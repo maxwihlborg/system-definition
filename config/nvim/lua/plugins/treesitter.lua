@@ -90,7 +90,7 @@ return {
           "zig",
         },
         indent = {
-          enable = false,
+          enable = true,
         },
         highlight = {
           enable = true,

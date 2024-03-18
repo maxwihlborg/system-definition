@@ -80,7 +80,7 @@ return {
         end, { "i", "s" }),
       },
       sources = cmp.config.sources({
-        { name = "luasnip" },
+        { name = "luasnip", max_item_count = 1 },
         { name = "nvim_lsp", max_item_count = 15 },
         { name = "nvim_lua", max_item_count = 15 },
         { name = "vim-dadbod-completion", max_item_count = 15 },
