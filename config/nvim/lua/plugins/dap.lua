@@ -79,15 +79,6 @@ return {
     end,
   },
   {
-    "rest-nvim/rest.nvim",
-    keys = { {
-      "g<space>",
-      "<Plug>RestNvim",
-    } },
-    ft = "http",
-    config = true,
-  },
-  {
     "mfussenegger/nvim-dap",
     lazy = true,
     init = function()
@@ -115,6 +106,7 @@ return {
     ft = { "typescript", "typescriptreact" },
     dependencies = {
       "marilari88/neotest-vitest",
+      "nvim-neotest/nvim-nio",
     },
     config = function()
       require("neotest").setup {
