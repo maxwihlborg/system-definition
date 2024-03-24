@@ -9,7 +9,6 @@
       bat
       btop
       bun
-      cloc
       curl
       darwin.trash
       delta
@@ -39,6 +38,7 @@
       silver-searcher
       termscp
       tig
+      tokei
       watchman
       wget
       xplr
