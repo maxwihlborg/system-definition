@@ -125,7 +125,7 @@
           '';
         };
       };
-      shellInit = ''
+      loginShellInit = ''
         # Homebrew
         eval (/opt/homebrew/bin/brew shellenv)
 
