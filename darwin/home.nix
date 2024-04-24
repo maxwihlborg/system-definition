@@ -42,6 +42,7 @@
       watchman
       wget
       xplr
+      yazi
       zellij
       zig
       zoxide
