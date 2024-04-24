@@ -119,6 +119,9 @@ return {
       },
       view_options = {
         show_hidden = true,
+        is_always_hidden = function(name)
+          return name == ".DS_Store"
+        end,
       },
       keymaps = {
         ["<C-h>"] = false,
@@ -143,7 +146,7 @@ return {
   },
   {
     "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
+    cmd = { "ChatGPT", "ChatGPTRun" },
     opts = {
       api_key_cmd = "vsh decrypt vsh:v1:VExCVORF:k10fB87j1FeR-gsjh7UpAB40BU4eeHe74lQaDvfKJbtvgX2j-WlCSJTFaKoaMdD7-VSY",
       openai_params = {
@@ -153,6 +156,7 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
+      "folke/trouble.nvim",
       "nvim-telescope/telescope.nvim",
     },
   },

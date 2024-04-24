@@ -36,6 +36,7 @@ opt.swapfile = false
 opt.tabstop = 2 -- Tabwidth
 opt.updatetime = 300
 opt.wildmenu = true -- File Explorer settings
+opt.wildignore:append ".DS_Store"
 opt.wrap = true -- Wordwrap on
 opt.writebackup = false
 

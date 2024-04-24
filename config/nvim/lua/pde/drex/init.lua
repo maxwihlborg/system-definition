@@ -42,6 +42,10 @@ function M.setup()
       link = "",
       others = "",
     },
+    show_hidden = true,
+    is_always_hidden = function(name)
+      return name == ".DS_Store"
+    end,
     disable_default_keybindings = true,
     hide_cursor = true,
     keybindings = {
