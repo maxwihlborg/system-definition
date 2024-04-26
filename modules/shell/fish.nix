@@ -198,6 +198,7 @@
         nn = "nvim";
         ne = "nvim";
         nb = "nvim +DBUI";
+        nnc = "nvim -c 'cbuffer | copen | bdelete! 1'";
       };
     };
   };
