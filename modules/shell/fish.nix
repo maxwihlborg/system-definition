@@ -73,6 +73,11 @@
             " > justfile
           '';
         };
+        t = {
+          wraps = "sesh";
+          description = "sesh connect from zoxide query";
+          body = "sesh connect $(zoxide query $argv)";
+        };
         sys-switch = {
           wraps = "nix";
           description = "rebuild system flake";
@@ -192,7 +197,6 @@
 
         # tmux
         mx = "tmux";
-        tx = "tmuxinator";
 
         # neovim
         nn = "nvim";
