@@ -35,6 +35,7 @@
       nushell
       ripgrep
       sad
+      sesh
       silver-searcher
       termscp
       tig
