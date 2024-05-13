@@ -198,6 +198,9 @@
         # tmux
         mx = "tmux";
 
+        # GoPass
+        pass = "gopass";
+
         # neovim
         nn = "nvim";
         ne = "nvim";
