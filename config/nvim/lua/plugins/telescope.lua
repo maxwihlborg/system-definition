@@ -2,7 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   cmd = { "Telescope" },
   dependencies = {
-    { "nvim-telescope/telescope-fzy-native.nvim", build = "make" },
+    { "natecraddock/telescope-zf-native.nvim" },
     { "stevearc/aerial.nvim", opts = true },
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",
@@ -13,24 +13,20 @@ return {
   config = function()
     local telescope = require "telescope"
     local actions = require "telescope.actions"
-    local sorters = require "telescope.sorters"
 
     telescope.setup {
       defaults = {
-        file_sorter = sorters.get_fzy_sorter,
         mappings = {
           i = {
             ["<c-s>"] = actions.send_to_qflist + actions.open_qflist,
             ["<c-u>"] = false,
             ["<esc>"] = actions.close,
-            -- ["<c-p>"] = actions.move_selection_next,
-            -- ["<c-n>"] = actions.move_selection_previous,
           },
         },
       },
     }
 
-    telescope.load_extension "fzy_native"
+    telescope.load_extension "zf-native"
     telescope.load_extension "aerial"
   end,
 }
