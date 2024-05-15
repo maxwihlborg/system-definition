@@ -40,6 +40,7 @@
       termscp
       tig
       tokei
+      vimv
       watchman
       wget
       xplr
