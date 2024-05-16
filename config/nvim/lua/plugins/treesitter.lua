@@ -72,7 +72,6 @@ return {
           "python",
           "query",
           "regex",
-          "rescript",
           "ruby",
           "rust",
           "scss",

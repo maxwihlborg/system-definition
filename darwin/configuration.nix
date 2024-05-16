@@ -29,6 +29,9 @@
     };
     defaults = {
       dock.autohide = true;
+      trackpad = {
+        Clicking = true;
+      };
       finder = {
         AppleShowAllExtensions = true;
         _FXShowPosixPathInTitle = true;
