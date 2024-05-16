@@ -148,7 +148,7 @@ return {
     "jackMort/ChatGPT.nvim",
     cmd = { "ChatGPT", "ChatGPTRun" },
     opts = {
-      api_key_cmd = "vsh decrypt vsh:v1:VExCVORF:k10fB87j1FeR-gsjh7UpAB40BU4eeHe74lQaDvfKJbtvgX2j-WlCSJTFaKoaMdD7-VSY",
+      api_key_cmd = "vsh decrypt vsh:v1:KenJYkez:oqivBeUcUr6IU6aux_tBe9t4KhBBf_bB6c81fc6t-fl2KnvNX2wrA-bKVkoMpeT0uOSe",
       openai_params = {
         max_tokens = 2000,
       },
