@@ -27,11 +27,12 @@ return {
     }
 
     local formatters_by_ft = {
+      cs = { "csharpier" },
       fish = { "fish_indent" },
       glsl = { "clang_format" },
       go = { "gofmt" },
-      lua = { "stylua" },
       just = { "just" },
+      lua = { "stylua" },
       nix = { "nixpkgs_fmt" },
       php = { "phpcbf" },
       rescript = { "rescript" },
