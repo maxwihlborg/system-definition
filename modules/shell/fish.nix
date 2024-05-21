@@ -181,10 +181,14 @@
 
         # node
         p = "pnpm";
+        n = "npm";
 
         # git
         g = "git";
+
+        # lazy
         gg = "lazygit";
+        gd = "lazydocker";
 
         md = "mkdir -p";
 
