@@ -111,6 +111,7 @@ return {
       require("pde.utils").load_keymap "oil"
     end,
     opts = {
+      default_file_explorer = true,
       columns = {
         -- "permissions",
         -- "size",
