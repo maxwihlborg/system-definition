@@ -46,6 +46,7 @@
       xplr
       yazi
       zellij
+      zf
       zig
       zoxide
     ];
