@@ -9,6 +9,7 @@
       bat
       btop
       bun
+      cocogitto
       curl
       darwin.trash
       delta
