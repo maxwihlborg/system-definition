@@ -4,6 +4,7 @@ return {
   dependencies = {
     { "natecraddock/telescope-zf-native.nvim" },
     { "stevearc/aerial.nvim", opts = true },
+    "isak102/telescope-git-file-history.nvim",
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",
   },
@@ -26,6 +27,7 @@ return {
       },
     }
 
+    telescope.load_extension "git_file_history"
     telescope.load_extension "zf-native"
     telescope.load_extension "aerial"
   end,
