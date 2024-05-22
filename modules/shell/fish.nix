@@ -5,15 +5,6 @@
       enable = true;
       plugins = [
         {
-          name = "ghq";
-          src = pkgs.fetchFromGitHub {
-            owner = "decors";
-            repo = "fish-ghq";
-            rev = "cafaaabe63c124bf0714f89ec715cfe9ece87fa2";
-            sha256 = "sha256-6b1zmjtemNLNPx4qsXtm27AbtjwIZWkzJAo21/aVZzM=";
-          };
-        }
-        {
           name = "fzf";
           src = pkgs.fetchFromGitHub {
             owner = "jethrokuan";
