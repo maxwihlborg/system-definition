@@ -1,10 +1,5 @@
 return {
   {
-    "luukvbaal/nnn.nvim",
-    cmd = { "NnnExplorer", "NnnPicker" },
-    config = true,
-  },
-  {
     "TheBlob42/drex.nvim",
     cmd = { "DrexDrawerToggle", "DrexDrawerFindFileAndFocus" },
     init = function()

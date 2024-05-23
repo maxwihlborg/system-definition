@@ -8,14 +8,6 @@ return {
     "LazyGitFilterCurrentFile",
   } },
   {
-    "aspeddro/gitui.nvim",
-    init = function()
-      require("pde.utils").load_keymap "gitui"
-    end,
-    opts = {
-      command = {
-        enable = false,
-      },
     },
   },
   {

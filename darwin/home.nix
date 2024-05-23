@@ -33,7 +33,6 @@
       ncdu
       neofetch
       nixpkgs-fmt
-      nnn
       nushell
       ripgrep
       sad

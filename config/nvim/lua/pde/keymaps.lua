@@ -48,7 +48,6 @@ M["main"] = {
     ["<leader><leader>o"] = { "vi{:sort<cr>" },
     ["<leader>x"] = { "<cmd>w|luafile %<cr>" },
     ["<leader>g"] = { "<cmd>LazyGit<cr>" },
-    ["<leader>p"] = { "<cmd>NnnPicker %:p:h<cr>" },
 
     ["<bar>"] = { ":m .+1<cr>==" },
     ["!"] = { ":m .-2<cr>==" },
@@ -250,16 +249,6 @@ M["yanil"] = {
     ["<leader>n"] = {
       function()
         require("plugins.config.yanil").findFile()
-      end,
-    },
-  },
-}
-
-M["gitui"] = {
-  ["n"] = {
-    ["<leader>cu"] = {
-      function()
-        require("gitui").open()
       end,
     },
   },
