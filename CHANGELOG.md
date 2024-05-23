@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.2.0](https://github.com/maxwihlborg/system-definition/compare/05f4d54347f4c962a99a1bfe72f6a336b98f3b9b..0.2.0) - 2024-05-23
+#### Features
+- add justfile - ([c6cca04](https://github.com/maxwihlborg/system-definition/commit/c6cca044189ab760aeacf2776a05ed9ebd57795b)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- git followTags option - ([ca15096](https://github.com/maxwihlborg/system-definition/commit/ca1509686d45d37bdf367ad1509c30743f7888bc)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Miscellaneous Chores
+- update cocogitto configuration - ([30925f4](https://github.com/maxwihlborg/system-definition/commit/30925f4a49d62398341412ab1ae036eb9ea452e1)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Refactoring
+- rename readme -> README - ([05f4d54](https://github.com/maxwihlborg/system-definition/commit/05f4d54347f4c962a99a1bfe72f6a336b98f3b9b)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## 0.1.0 - 2024-05-23
 #### Bug Fixes
 - fish remove ghq-fish - (1c08e14) - Max Wihlborg
