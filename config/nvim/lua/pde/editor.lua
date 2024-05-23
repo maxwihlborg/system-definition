@@ -89,3 +89,9 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
+
+vim.filetype.add {
+  filename = {
+    ["flake.lock"] = "jsonc",
+  },
+}
