@@ -8,6 +8,11 @@ return {
     "LazyGitFilterCurrentFile",
   } },
   {
+    "crnvl96/lazydocker.nvim",
+    cmd = "LazyDocker",
+    config = true,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
     },
   },
   {

@@ -48,6 +48,7 @@ M["main"] = {
     ["<leader><leader>o"] = { "vi{:sort<cr>" },
     ["<leader>x"] = { "<cmd>w|luafile %<cr>" },
     ["<leader>g"] = { "<cmd>LazyGit<cr>" },
+    ["<leader>cd"] = { "<cmd>LazyDocker<cr>" },
 
     ["<bar>"] = { ":m .+1<cr>==" },
     ["!"] = { ":m .-2<cr>==" },
