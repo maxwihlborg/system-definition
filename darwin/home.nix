@@ -16,6 +16,7 @@
       deno
       eza
       fd
+      ffmpeg
       fzf
       fzy
       gh

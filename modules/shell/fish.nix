@@ -80,11 +80,8 @@
           description = "update system flake";
           body = ''
             pushd $(ghq root)/github.com/maxwihlborg/system-definition
-            pushd $(ghq root)/github.com/maxwihlborg/system-definition
             nix flake update
             sys-switch
-            git add flake.lock
-            git commit -m "v$(date +%F)"
             popd
           '';
         };
