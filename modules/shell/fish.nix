@@ -69,22 +69,6 @@
           description = "sesh connect from zoxide query";
           body = "sesh connect $(zoxide query $argv)";
         };
-        sys-switch = {
-          wraps = "nix";
-          description = "rebuild system flake";
-          body = ''
-            darwin-rebuild switch --flake $(ghq root)/github.com/maxwihlborg/system-definition/ $argv
-          '';
-        };
-        sys-update = {
-          description = "update system flake";
-          body = ''
-            pushd $(ghq root)/github.com/maxwihlborg/system-definition
-            nix flake update
-            sys-switch
-            popd
-          '';
-        };
 
         fish_prompt = {
           body = ''
