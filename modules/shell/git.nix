@@ -15,7 +15,7 @@
       };
       extraConfig = {
         init = { defaultBranch = "main"; };
-        push = { default = "simple"; };
+        push = { default = "simple"; followTags = true; };
         pull = { rebase = true; };
         fetch = { prune = true; };
       };
