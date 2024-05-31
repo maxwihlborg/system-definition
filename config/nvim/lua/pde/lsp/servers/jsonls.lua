@@ -59,6 +59,11 @@ return {
           fileMatch = { "now.json", "vercel.json" },
           url = "https://json.schemastore.org/now",
         },
+        {
+          description = "glTF 2.0",
+          fileMatch = { "*.gltf" },
+          url = "https://raw.githubusercontent.com/KhronosGroup/glTF/main/specification/2.0/schema/glTF.schema.json",
+        },
       },
     },
   },
