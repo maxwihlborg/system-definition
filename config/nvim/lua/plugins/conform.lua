@@ -24,10 +24,15 @@ return {
           "package.json",
         },
       },
+      csharpier_local = {
+        command = "dotnet csharpier",
+        args = { "--write-stdout" },
+        stdin = true,
+      },
     }
 
     local formatters_by_ft = {
-      cs = { "csharpier" },
+      cs = { "csharpier_local" },
       fish = { "fish_indent" },
       glsl = { "clang_format" },
       go = { "gofmt" },
