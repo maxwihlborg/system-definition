@@ -11,16 +11,16 @@ return {
       { "ray-x/lsp_signature.nvim" },
       {
         "j-hui/fidget.nvim",
-        tag = "legacy",
         opts = {
-          align = {
-            bottom = true,
-            right = true,
+          progress = {
+            display = {
+              done_icon = "󰄬",
+            },
           },
-          window = {
-            relative = "win",
-            blend = 0,
-            zindex = nil,
+          notification = {
+            window = {
+              winblend = 0,
+            },
           },
         },
       },
