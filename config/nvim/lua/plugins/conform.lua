@@ -54,6 +54,7 @@ return {
       "jsonc",
       "markdown",
       "markdown.mdx",
+      "css",
       "scss",
       "typescript",
       "typescriptreact",
