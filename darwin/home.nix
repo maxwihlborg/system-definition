@@ -8,7 +8,6 @@
     packages = with pkgs; [
       bat
       btop
-      bun
       cocogitto
       curl
       darwin.trash
@@ -47,8 +46,6 @@
       xplr
       yazi
       zellij
-      zf
-      zig
       zoxide
     ];
     stateVersion = "24.11";
