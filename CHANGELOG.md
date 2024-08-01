@@ -2,6 +2,37 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.3.0](https://github.com/maxwihlborg/system-definition/compare/b43fd80046c93627e81696ac19fafb70450bb579..0.3.0) - 2024-08-01
+#### Bug Fixes
+- **(nvim)** remove prettierd after conform update - ([54a8772](https://github.com/maxwihlborg/system-definition/commit/54a877217d2ed408a8d618b38e4daad48d8dda5a)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** diagnostic symbols - ([b02973a](https://github.com/maxwihlborg/system-definition/commit/b02973a3562f330d8490b191c733938e00b6c748)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Features
+- **(nvim)** go back to fzy_native instead of zf-native (build issues) - ([8d1a4d9](https://github.com/maxwihlborg/system-definition/commit/8d1a4d9298b7178fbdde3ac6aeb6216100afb724)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** css formatting with prettier - ([f54a8de](https://github.com/maxwihlborg/system-definition/commit/f54a8de6dd2a391b8303c9255283e6fae597fda4)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** upgrade fidget nvim! - ([2c979cc](https://github.com/maxwihlborg/system-definition/commit/2c979cc63c399dfec86d8287aee10817f2d48019)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add .csharpierrc filetype - ([42b2f7b](https://github.com/maxwihlborg/system-definition/commit/42b2f7b1f0800180d62fc32feb2a960372a5f286)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- nvim add csharpier_local conform command - ([ef907c7](https://github.com/maxwihlborg/system-definition/commit/ef907c74c7912d67243106842bcaff38dd54c746)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- nvim add gltf file type - ([c6ca46e](https://github.com/maxwihlborg/system-definition/commit/c6ca46eafbdb0e8591a2a82efa0cba7bb5528fb4)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- remove neogit - ([001b1ee](https://github.com/maxwihlborg/system-definition/commit/001b1eed127d811c980885b805e3d2eb560ccf7c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- add flake.lock filetype definition - ([d77c8f0](https://github.com/maxwihlborg/system-definition/commit/d77c8f0a5963489f864f6604044bc0cd91a2e14d)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- remove sys-switch sys-update in favour of justfile - ([1d5c1a1](https://github.com/maxwihlborg/system-definition/commit/1d5c1a19dd173dbfbdb984151cd8ed9bd47ac14a)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- add lazydocker.nvim - ([d88889f](https://github.com/maxwihlborg/system-definition/commit/d88889fefd025ab5da335cddc4754bf76aa7d601)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- remove gitui and nnn - ([c4e7900](https://github.com/maxwihlborg/system-definition/commit/c4e7900f2447d489559ce798c1e5cc22820de853)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- add justfile - ([b43fd80](https://github.com/maxwihlborg/system-definition/commit/b43fd80046c93627e81696ac19fafb70450bb579)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Miscellaneous Chores
+- **(nvim)** remove yanil highlights - ([ad4e429](https://github.com/maxwihlborg/system-definition/commit/ad4e429e758dd0bcd10b8dad435c445ea8fb993c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(version)** 0.2.0 - ([2ffcedd](https://github.com/maxwihlborg/system-definition/commit/2ffcedddd0bf64d8c412d41b75f2478015735b44)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([b4768eb](https://github.com/maxwihlborg/system-definition/commit/b4768ebbc2052d85ac2f456006174dc130c673bf)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([f5314e3](https://github.com/maxwihlborg/system-definition/commit/f5314e3e89c69e8c5c1045c9ca7c002c228318f8)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([e0d36d3](https://github.com/maxwihlborg/system-definition/commit/e0d36d3b2c70a27c77c8762dbcf15d066a7c099c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([6c3f7f4](https://github.com/maxwihlborg/system-definition/commit/6c3f7f4d69f360e99e867cd7a106198c6004d7c4)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update nix-pkgs - ([6b5355a](https://github.com/maxwihlborg/system-definition/commit/6b5355a043513df1dc066f2132b1253498154f48)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update lock files - ([8a53836](https://github.com/maxwihlborg/system-definition/commit/8a5383638e864d9b714257484d9a7ce5f8429453)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- pin Neogit version - ([ecf082f](https://github.com/maxwihlborg/system-definition/commit/ecf082fb85ba9853775ba304a0e8245c9472006f)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update cocogitto configuration - ([144b3a2](https://github.com/maxwihlborg/system-definition/commit/144b3a2f1b91bfa4483dd59550e7fc233445a03c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## [0.2.0](https://github.com/maxwihlborg/system-definition/compare/05f4d54347f4c962a99a1bfe72f6a336b98f3b9b..0.2.0) - 2024-05-23
 #### Features
 - add justfile - ([c6cca04](https://github.com/maxwihlborg/system-definition/commit/c6cca044189ab760aeacf2776a05ed9ebd57795b)) - [@maxwihlborg](https://github.com/maxwihlborg)
