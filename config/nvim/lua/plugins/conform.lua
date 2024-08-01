@@ -63,7 +63,7 @@ return {
     }
 
     for _, ft in ipairs(prettier_fts) do
-      formatters_by_ft[ft] = { { "prettier", "prettierd" } }
+      formatters_by_ft[ft] = { "prettier" }
     end
 
     conform.setup {
