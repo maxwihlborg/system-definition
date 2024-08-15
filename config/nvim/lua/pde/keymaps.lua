@@ -38,6 +38,15 @@ M["main"] = {
     ["<leader>ca"] = { "<cmd>Lazy<cr>" },
     ["<leader>cb"] = { "<cmd>DBUI<cr>" },
     ["<leader>cc"] = { "<cmd>cclose<cr>" },
+    ["<leader>ce"] = {
+      function()
+        vim.ui.input({ prompt = "Command" }, function(input)
+          if input ~= nil then
+            vim.cmd(([[cexpr system("%s") | copen]]):format(input))
+          end
+        end)
+      end,
+    },
     ["<leader>cg"] = { "<cmd>ChatGPT<cr>" },
     ["<leader>cm"] = { "<cmd>Mason<cr>" },
     ["<leader>co"] = { "<cmd>copen<cr>" },
@@ -120,7 +129,7 @@ M["telescope"] = {
       function(opts)
         require("telescope.builtin").find_files {
           find_command = function()
-            return vim.list_extend({ "rg", "--color", "never", "-l" }, opts.fargs)
+            return vim.list_extend({ "rg", "--color=never", "-l" }, opts.fargs)
           end,
         }
       end,
