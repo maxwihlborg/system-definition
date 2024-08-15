@@ -66,6 +66,16 @@ return {
     ls.add_snippets("typescript", {
       s("et", { t "export type ", i(1), t " = ", i(0), t ";" }),
       s("ei", { t "export interface ", i(1), t { " {", "\t" }, i(0), t { "", "}" } }),
+      s("tid", {
+        t { "const " },
+        i(1),
+        t { ': unique symbol = Symbol.for("' },
+        i(2),
+        t { '");', "export type " },
+        f(copy, 1),
+        t { " = typeof " },
+        f(copy, 1),
+      }),
     })
 
     ls.add_snippets("_jscommon", {
