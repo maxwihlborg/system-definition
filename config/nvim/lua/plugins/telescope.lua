@@ -30,5 +30,6 @@ return {
     telescope.load_extension "git_file_history"
     telescope.load_extension "fzy_native"
     telescope.load_extension "aerial"
+    telescope.load_extension "notify"
   end,
 }

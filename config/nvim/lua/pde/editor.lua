@@ -99,3 +99,50 @@ vim.filetype.add {
     ["flake.lock"] = "jsonc",
   },
 }
+
+vim.api.nvim_create_user_command("Lint", function()
+  local progress = require "fidget.progress"
+  local Job = require "plenary.job"
+
+  local handle = progress.handle.create {
+    title = "Lint",
+  }
+  Job:new({
+    command = "pnpm",
+    args = { "run", "--silent", "lint", "--format=json" },
+    on_exit = function(j)
+      local items = {}
+      for _, result in ipairs(vim.json.decode(j:result()[1])) do
+        for _, msg in ipairs(result.messages) do
+          table.insert(items, {
+            filename = result.filePath,
+            text = msg.message,
+            type = msg.severity > 1 and "E" or "W",
+            lnum = msg.line,
+            end_lnum = msg.endLine,
+            col = msg.col,
+            end_col = msg.endCol,
+          })
+        end
+      end
+
+      table.sort(items, function(a, b)
+        if a.type == b.type then
+          return false
+        end
+        return a.type == "E"
+      end)
+
+      vim.schedule(function()
+        if #items > 1 then
+          vim.fn.setqflist(items)
+          vim.cmd.copen()
+        else
+          vim.fn.setqflist {}
+          vim.notify("No lint errors!", nil, { title = "All good" })
+        end
+        handle:finish()
+      end)
+    end,
+  }):start()
+end, {})
