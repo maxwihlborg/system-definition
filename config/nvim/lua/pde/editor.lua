@@ -100,6 +100,60 @@ vim.filetype.add {
   },
 }
 
+vim.api.nvim_create_user_command("Lcc", function(opts)
+  local raw_args = vim.tbl_filter(function(s)
+    return s ~= ""
+  end, vim.split(opts.fargs[1], " "))
+
+  local cmd = raw_args[1]
+  local cmd_args = {}
+  if cmd == "on" then
+    cmd_args = { "-o", raw_args[2] }
+  elseif cmd == "off" then
+    cmd_args = { "-x", raw_args[2] }
+  elseif cmd == "list" then
+    cmd_args = { "list" }
+  elseif cmd == "scene" then
+    cmd_args = { "-s", raw_args[2] }
+  end
+
+  local progress = require "fidget.progress"
+  local Job = require "plenary.job"
+
+  local handle = progress.handle.create {
+    title = "Running",
+    lsp_client = { name = "lcc" },
+  }
+  if #cmd_args < 1 then
+    vim.notify(opts.fargs[1], vim.log.levels.ERROR, { title = "Invalid Command" })
+    return
+  end
+  Job:new({
+    command = "lcc",
+    args = cmd_args,
+    on_exit = function(j)
+      vim.schedule(function()
+        vim.notify(j:result(), nil, { title = "Output" })
+        handle:finish()
+      end)
+    end,
+  }):start()
+end, {
+  nargs = 1,
+  complete = function(lead, line)
+    local valid = { "on", "off", "scene", "list" }
+    local cands = {}
+    for _, c in ipairs(valid) do
+      if string.find(line, c) then
+        return {}
+      elseif string.find(c, "^" .. lead) then
+        table.insert(cands, c)
+      end
+    end
+    return cands
+  end,
+})
+
 vim.api.nvim_create_user_command("Lint", function()
   local progress = require "fidget.progress"
   local Job = require "plenary.job"
