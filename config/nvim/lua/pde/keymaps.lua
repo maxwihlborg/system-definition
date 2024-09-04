@@ -102,6 +102,11 @@ end
 
 M["telescope"] = {
   ["cmd"] = {
+    ["Commands"] = {
+      function()
+        require("telescope.builtin").commands()
+      end,
+    },
     ["Help"] = {
       function()
         require("telescope.builtin").help_tags()
@@ -166,6 +171,12 @@ M["lsp"] = function(opts)
       ["gD"] = { "<cmd>Glance definitions<cr>", opts },
       ["gR"] = { "<cmd>Glance references<cr>", opts },
       ["gs"] = { "<cmd>Telescope aerial<cr>", opts },
+      ["gu"] = {
+        function()
+          require("aerial").nav_toggle()
+        end,
+        opts,
+      },
 
       ["<leader>rn"] = { ":IncRename ", vim.fn.extend(opts, { silent = false }) },
       ["<leader>rr"] = {
@@ -286,14 +297,14 @@ M["oil"] = {
 
 M["neo-swap"] = {
   [{ "n" }] = {
-    ["<leader>th"] = { "<cmd>NeoSwapPrev<cr>", {} },
-    ["<leader>tl"] = { "<cmd>NeoSwapNext<cr>", {} },
+    ["<leader>th"] = { "<cmd>NeoSwapPrev<cr>" },
+    ["<leader>tl"] = { "<cmd>NeoSwapNext<cr>" },
   },
 }
 
 M["easy-align"] = {
   [{ "n", "x" }] = {
-    ["ga"] = { "<Plug>(EasyAlign)", {} },
+    ["ga"] = { "<Plug>(EasyAlign)" },
   },
 }
 

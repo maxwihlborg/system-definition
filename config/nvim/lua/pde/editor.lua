@@ -42,7 +42,7 @@ opt.writebackup = false
 
 opt.foldlevelstart = 99
 opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 -- Format (:h fo-table)
 opt.formatoptions = opt.formatoptions

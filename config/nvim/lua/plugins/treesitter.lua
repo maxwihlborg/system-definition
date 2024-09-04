@@ -60,6 +60,7 @@ return {
           "json",
           "jsonc",
           "just",
+          "kdl",
           "kotlin",
           "lua",
           "make",
@@ -98,17 +99,24 @@ return {
         incremental_selection = {
           enable = true,
           keymaps = {
-            init_selection = "<cr>", -- set to `false` to disable one of the mappings
+            init_selection = "<cr>",
             scope_incremental = "<cr>",
             node_incremental = "<tab>",
             node_decremental = "<s-tab>",
           },
         },
         textobjects = {
+          swap = {
+            enable = true,
+            swap_previous = {
+              ["<leader>tah"] = "@parameter.inner",
+            },
+            swap_next = {
+              ["<leader>tal"] = "@parameter.inner",
+            },
+          },
           select = {
             enable = true,
-
-            -- Automatically jump forward to textobj, similar to targets.vim
             lookahead = true,
 
             keymaps = {
