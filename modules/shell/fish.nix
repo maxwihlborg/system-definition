@@ -120,6 +120,7 @@
         # Secrets
         source ${config.home.homeDirectory}/ghq/github.com/maxwihlborg/system-definition/config/fish/env.fish
 
+        set -gx OPENAI_API_KEY $(vsh decrypt vsh:v1:KenJYkez:oqivBeUcUr6IU6aux_tBe9t4KhBBf_bB6c81fc6t-fl2KnvNX2wrA-bKVkoMpeT0uOSe)
 
         # Overrides
         set fish_color_cwd yellow

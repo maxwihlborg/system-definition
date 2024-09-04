@@ -154,6 +154,38 @@ end, {
   end,
 })
 
+vim.api.nvim_create_user_command("CommitMsg", function()
+  local progress = require "fidget.progress"
+  local Job = require "plenary.job"
+
+  local handle = progress.handle.create {
+    title = "Generating",
+    lsp_client = { name = "cgip" },
+  }
+  Job:new({
+    command = "cgip",
+    args = {
+      "" -- Source: https://github.com/rtwfroody/gpt-commit-msg/blob/master/gpt_commit_msg.py
+        .. "Write a git commit message for the following. The message "
+        .. "starts with a one-line summary of 60 characters, followed by a "
+        .. "blank line, followed by a longer but concise description of the "
+        .. "change",
+    },
+    writer = Job:new {
+      command = "git",
+      args = { "diff", "--staged" },
+    },
+    on_exit = function(j)
+      vim.schedule(function()
+        handle:finish()
+        local buf = vim.api.nvim_get_current_buf()
+        local line_number = vim.api.nvim_win_get_cursor(0)[1]
+        vim.api.nvim_buf_set_lines(buf, line_number, line_number, false, j:result())
+      end)
+    end,
+  }):start()
+end, {})
+
 vim.api.nvim_create_user_command("Lint", function()
   local progress = require "fidget.progress"
   local Job = require "plenary.job"
