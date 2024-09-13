@@ -109,6 +109,8 @@ vim.api.nvim_create_user_command("Lcc", function(opts)
   local cmd_args = {}
   if cmd == "on" then
     cmd_args = { "-o", raw_args[2] }
+  elseif cmd == "dim" then
+    cmd_args = { "-d", raw_args[2], raw_args[3] }
   elseif cmd == "off" then
     cmd_args = { "-x", raw_args[2] }
   elseif cmd == "list" then
@@ -141,7 +143,7 @@ vim.api.nvim_create_user_command("Lcc", function(opts)
 end, {
   nargs = 1,
   complete = function(lead, line)
-    local valid = { "on", "off", "scene", "list" }
+    local valid = { "on", "off", "scene", "list", "dim" }
     local cands = {}
     for _, c in ipairs(valid) do
       if string.find(line, c) then
@@ -192,6 +194,7 @@ vim.api.nvim_create_user_command("Lint", function()
 
   local handle = progress.handle.create {
     title = "Lint",
+    lsp_client = { name = "eslint" },
   }
   Job:new({
     command = "pnpm",
