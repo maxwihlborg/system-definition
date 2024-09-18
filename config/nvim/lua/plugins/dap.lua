@@ -86,6 +86,10 @@ return {
     end,
     dependencies = {
       {
+        "NicholasMata/nvim-dap-cs",
+        config = true,
+      },
+      {
         "rcarriga/nvim-dap-ui",
         cmd = { "DapContinue" },
         opts = {
@@ -98,7 +102,7 @@ return {
       },
     },
     config = function()
-      require("pde.dap").setup()
+      require "pde.dap"
     end,
   },
   {

@@ -277,7 +277,7 @@ M["yanil"] = {
 
 M["neogen"] = {
   ["n"] = {
-    ["<leader>dd"] = {
+    ["<leader>dg"] = {
       function()
         require("neogen").generate()
       end,
@@ -355,6 +355,11 @@ M["dap"] = {
     ["<leader>dc"] = {
       function()
         require("dap").continue()
+      end,
+    },
+    ["<leader>dd"] = {
+      function()
+        require("dap").disconnect()
       end,
     },
     ["<leader>do"] = {

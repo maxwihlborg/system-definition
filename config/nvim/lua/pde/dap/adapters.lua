@@ -30,7 +30,7 @@ function M.setup()
   }
 
   for _, language in ipairs { "typescript", "javascript" } do
-    require("dap").configurations[language] = {
+    dap.configurations[language] = {
       {
         name = "Attach to process",
         type = "node2",
