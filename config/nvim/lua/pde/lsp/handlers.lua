@@ -172,7 +172,6 @@ local function ts_on_attach(client, bufnr)
 end
 
 function M.on_attach(client, bufnr)
-  print(client.name)
   if client.name == "ts_ls" then
     ts_on_attach(client, bufnr)
   end

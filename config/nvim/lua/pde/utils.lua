@@ -13,15 +13,19 @@ end
 M.get_augroup_memo = create_augroup_memo()
 
 ---@param compiler string
----@param opts { pattern: string|table, cmd: string }
+---@param opts { pattern: string|table, cmd: string|fun(ev:{file:string}):string }
 function M.set_compiler(compiler, opts)
   vim.api.nvim_create_autocmd("FileType", {
     group = M.get_augroup_memo "ProjectConfigCompiler",
     pattern = opts.pattern,
-    callback = function()
+    callback = function(ev)
       vim.schedule(function()
         vim.cmd(string.format("compiler %s", compiler))
-        vim.opt_local.makeprg = opts.cmd
+        if type(opts.cmd) == "string" then
+          vim.opt_local.makeprg = opts.cmd
+        else
+          vim.opt_local.makeprg = opts.cmd(ev)
+        end
       end)
     end,
   })
@@ -39,6 +43,19 @@ local function resolve_keymap(arg, ...)
     return resolve_keymap(require("pde.keymaps")[arg], ...)
   end
   assert(false, "Invalid keymap " .. arg)
+end
+
+function M.find_package_json_dir()
+  local current_dir = vim.fn.expand "%:p:h" -- Get the directory of the current file
+
+  while current_dir ~= "/" do
+    if vim.fn.filereadable(current_dir .. "/package.json") == 1 then
+      return current_dir
+    end
+    current_dir = vim.fn.fnamemodify(current_dir, ":h")
+  end
+
+  return nil
 end
 
 function M.load_keymap(arg, ...)

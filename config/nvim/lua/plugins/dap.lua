@@ -53,6 +53,18 @@ return {
             })
           end,
         },
+        {
+          path = vim.fn.expand "~/ghq/github.com/walktheroom",
+          config = function()
+            require("pde.utils").set_compiler("tsc", {
+              pattern = { "typescript", "typescriptreact" },
+              cmd = function()
+                local dir = require("pde.utils").find_package_json_dir()
+                return string.format("pnpm --dir %s run build", dir)
+              end,
+            })
+          end,
+        },
       },
     },
   },
