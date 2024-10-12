@@ -2,6 +2,28 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.4.0](https://github.com/maxwihlborg/system-definition/compare/ca8ca53b0aba95213ccc70e4987c3c2260e75d1e..0.4.0) - 2024-10-12
+#### Bug Fixes
+- **(nvim)** fix haxe tree-sitter - ([8c2a472](https://github.com/maxwihlborg/system-definition/commit/8c2a4721781e5dbbea5f167d30eb2fa2708b6975)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Features
+- **(home)** add postgres, unar and meshoptimizer apps - ([2af8674](https://github.com/maxwihlborg/system-definition/commit/2af86742cdad3346990ff6d7dc5d8ab0971d8271)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** move project-config into own module - ([5076d08](https://github.com/maxwihlborg/system-definition/commit/5076d08eb713b73d148bdee9250f06103d83762f)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** `cnn` snippet -> className={$1} - ([d5dbc41](https://github.com/maxwihlborg/system-definition/commit/d5dbc41ae5d68233e9e269bdb3616de56a65addf)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** run closest build command in wtr repo - ([7f2001c](https://github.com/maxwihlborg/system-definition/commit/7f2001c958d976f2b1098ef24c5aa21db211051e)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** nvim-dap symbols, dotnet dap adapter - ([6d7d4bc](https://github.com/maxwihlborg/system-definition/commit/6d7d4bc2067a80ad8a1e0f7de9e90dad6c3003a8)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add dim to light-control-cli user command - ([5de0072](https://github.com/maxwihlborg/system-definition/commit/5de007220350f3a9ef60a842c5c16c8490c9a901)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add `CommitMsg` command - ([f3de4f1](https://github.com/maxwihlborg/system-definition/commit/f3de4f19f5742eacd1867fd74915c570c25730c1)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** Update nvim configurations and packages versions - ([d4eb4c9](https://github.com/maxwihlborg/system-definition/commit/d4eb4c9196265a7448ad88556c9b0b2d607ff651)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** light-control-cli user command - ([39e9309](https://github.com/maxwihlborg/system-definition/commit/39e9309d334b8699c6e408324abb1d9c62730d8f)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add Lint user_command - ([1276bc8](https://github.com/maxwihlborg/system-definition/commit/1276bc89d50dbd6bc27b495885f6313cf4854046)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add `cexpr system(...) | copen` keybind - ([fba3400](https://github.com/maxwihlborg/system-definition/commit/fba3400d9045a0b498c829502b31b3fa457b9fc4)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add `tid` (type id) snippet - ([ca8ca53](https://github.com/maxwihlborg/system-definition/commit/ca8ca53b0aba95213ccc70e4987c3c2260e75d1e)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Miscellaneous Chores
+- **(nvim)** rename tsserver -> ts_ls - ([b65cdb0](https://github.com/maxwihlborg/system-definition/commit/b65cdb0f908f215c87253a12fff1e694b15c16e0)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([ff8e75d](https://github.com/maxwihlborg/system-definition/commit/ff8e75d99313b1863e0f024ab5c511d967e573de)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## [0.3.0](https://github.com/maxwihlborg/system-definition/compare/b43fd80046c93627e81696ac19fafb70450bb579..0.3.0) - 2024-08-01
 #### Bug Fixes
 - **(nvim)** remove prettierd after conform update - ([54a8772](https://github.com/maxwihlborg/system-definition/commit/54a877217d2ed408a8d618b38e4daad48d8dda5a)) - [@maxwihlborg](https://github.com/maxwihlborg)
