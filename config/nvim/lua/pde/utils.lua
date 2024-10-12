@@ -45,6 +45,12 @@ local function resolve_keymap(arg, ...)
   assert(false, "Invalid keymap " .. arg)
 end
 
+---@param str string
+---@param suffix string
+function M.ends_with(str, suffix)
+  return string.sub(str, -#suffix) == suffix
+end
+
 function M.find_package_json_dir()
   local current_dir = vim.fn.expand "%:p:h" -- Get the directory of the current file
 
