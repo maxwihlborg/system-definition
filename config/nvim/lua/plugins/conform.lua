@@ -42,7 +42,7 @@ return {
       php = { "phpcbf" },
       rescript = { "rescript" },
       rust = { "rustfmt" },
-      sql = { "sql_formatter" },
+      sql = { "pg_format" },
     }
 
     local prettier_fts = {

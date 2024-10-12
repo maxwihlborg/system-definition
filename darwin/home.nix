@@ -29,10 +29,13 @@
       just
       lazydocker
       less
+      meshoptimizer
       ncdu
       neofetch
       nixpkgs-fmt
       nushell
+      pgformatter
+      postgresql_16_jit
       ripgrep
       sad
       sesh
@@ -40,6 +43,7 @@
       termscp
       tig
       tokei
+      unar
       vimv
       watchman
       wget

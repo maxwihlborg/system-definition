@@ -92,7 +92,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.filetype.add {
   extension = {
-    gltf = "json",
+    gltf = "jsonc",
   },
   filename = {
     [".csharpierrc"] = "jsonc",
