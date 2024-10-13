@@ -102,6 +102,11 @@ end
 
 M["telescope"] = {
   ["cmd"] = {
+    ["History"] = {
+      function()
+        require("telescope").extensions.git_file_history.git_file_history()
+      end,
+    },
     ["Commands"] = {
       function()
         require("telescope.builtin").commands()
