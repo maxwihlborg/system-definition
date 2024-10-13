@@ -72,7 +72,7 @@ local group = vim.api.nvim_create_augroup("CoreEditor", { clear = true })
 
 vim.api.nvim_create_autocmd("FileType", {
   group = group,
-  pattern = { "qf", "help", "dap-float", "chatgpt-input" },
+  pattern = { "qf", "help", "dap-float", "chatgpt-input", "aerial-nav" },
   callback = function(opts)
     require("pde.utils").load_keymap("close", {
       buffer = opts.buf,
