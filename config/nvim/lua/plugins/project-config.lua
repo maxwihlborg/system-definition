@@ -64,6 +64,9 @@ return {
               if utils.ends_with(dir, "apps/studio") then
                 return string.format("pnpm --dir %s exec tsc -b", dir)
               end
+              if utils.ends_with(dir, "packages/ui") then
+                return string.format("pnpm --dir %s run build:ts", dir)
+              end
 
               return string.format("pnpm --dir %s run build", dir)
             end,
