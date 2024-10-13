@@ -27,10 +27,10 @@
         gap = {
           wraps = "git";
           description = "git add --patch";
-          body = "git add --patch";
+          body = /* fish */"git add --patch";
         };
         lfcd = {
-          body = ''
+          body = /* fish */''
             set tmp (mktemp)
             # `command` is needed in case `lfcd` is aliased to `lf`
             command lf -last-dir-path=$tmp $argv
@@ -48,17 +48,16 @@
         };
         env-init = {
           description = "setup dir with flakes";
-          body = ''
+          body = /* fish */''
             echo "Init flakes"
             nix flake new -t github:nix-community/nix-direnv .
             echo "Setup just"
-            echo -n "set positional-arguments := true
-
-            # List all recipies
+            echo -n "
+            # list all recipies
             @default:
               just --list
 
-            # Run command
+            # run command
             @run *args='\':
               echo \$@
             " > justfile
@@ -71,7 +70,7 @@
         };
 
         fish_prompt = {
-          body = ''
+          body = /* fish */''
             set -l last_status $status
             set -l normal (set_color normal)
             set -l color_cwd (set_color $fish_color_cwd)
@@ -102,7 +101,7 @@
           '';
         };
       };
-      loginShellInit = ''
+      loginShellInit = /* fish */''
         # Homebrew
         eval (/opt/homebrew/bin/brew shellenv)
 
@@ -113,24 +112,25 @@
 
         set -gx PATH $GOPATH/bin $PNPM_HOME $RUST_HOME $PATH
       '';
-      interactiveShellInit = ''
-        # Zoxide
+      interactiveShellInit = /* fish */''
+        # zoxide
         ${pkgs.zoxide}/bin/zoxide init fish | source
 
+        # transient secrets
         set -gx OPENAI_API_KEY $(vsh decrypt vsh:v1:KenJYkez:oqivBeUcUr6IU6aux_tBe9t4KhBBf_bB6c81fc6t-fl2KnvNX2wrA-bKVkoMpeT0uOSe)
 
-        # Overrides
+        # overrides
         set fish_color_cwd yellow
         set fish_greeting
 
-        # Fish git prompt
+        # fish git prompt
         set __fish_git_prompt_show_informative_status yes
         set __fish_git_prompt_color_upstream_ahead green
         set __fish_git_prompt_color_upstream_behind red
         set __fish_git_prompt_color_cleanstate green
         set __fish_git_prompt_color_branch yellow
 
-        # Colors
+        # colors
         set normal (set_color normal)
         set magenta (set_color magenta)
         set yellow (set_color yellow)
@@ -138,7 +138,7 @@
         set red (set_color red)
         set gray (set_color -o black)
 
-        # Key maps
+        # keymaps
         bind \cu '__fzf_open --editor'
         bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
       '';
