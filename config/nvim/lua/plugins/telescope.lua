@@ -22,6 +22,8 @@ return {
             ["<c-s>"] = actions.send_to_qflist + actions.open_qflist,
             ["<c-u>"] = false,
             ["<esc>"] = actions.close,
+            ["<c-j>"] = actions.move_selection_next,
+            ["<c-k>"] = actions.move_selection_previous,
           },
         },
       },
