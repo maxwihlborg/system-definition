@@ -66,6 +66,7 @@ return {
     ls.add_snippets("typescript", {
       s("et", { t "export type ", i(1), t " = ", i(0), t ";" }),
       s("ei", { t "export interface ", i(1), t { " {", "\t" }, i(0), t { "", "}" } }),
+      s("gg", { t { "Effect.gen(function* () {", "\t" }, i(0), t { "", "})" } }),
       s("tid", {
         t { "const " },
         i(1),
