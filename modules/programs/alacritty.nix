@@ -4,9 +4,11 @@
     alacritty = {
       enable = true;
       settings = {
-        import = [
-          "${pkgs.vimPlugins.tokyonight-nvim}/extras/alacritty/tokyonight_night.toml"
-        ];
+        general = {
+          import = [
+            "${pkgs.vimPlugins.tokyonight-nvim}/extras/alacritty/tokyonight_night.toml"
+          ];
+        };
         window = {
           decorations = "buttonless";
           dynamic_padding = true;
