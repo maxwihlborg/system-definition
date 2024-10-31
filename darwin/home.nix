@@ -4,6 +4,8 @@
     (import ../modules/programs) ++
     (import ../modules/shell);
 
+  xdg.enable = true;
+
   home = {
     packages = with pkgs; [
       bat
@@ -61,7 +63,6 @@
     CLICOLOR = 1;
     EDITOR = "nvim";
     VISUAL = "$EDITOR";
-    XDG_CONFIG_HOME = "$HOME/.config";
     # fzf
     FZF_FIND_FILE_COMMAND = "fd --type f";
     FZF_OPEN_COMMAND = "fd --type f";
