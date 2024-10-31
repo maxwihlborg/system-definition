@@ -2,6 +2,23 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.5.0](https://github.com/maxwihlborg/system-definition/compare/5eb43df285e9416031e5771bbbb145a92a102d41..0.5.0) - 2024-10-31
+#### Features
+- **(fish)** add syntax highlighting - ([444f565](https://github.com/maxwihlborg/system-definition/commit/444f56588125fc41280feee94fe53c541ae10a51)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(fish)** remove secrets file - ([5eb43df](https://github.com/maxwihlborg/system-definition/commit/5eb43df285e9416031e5771bbbb145a92a102d41)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(home)** manage lazygit with home-manager, enable xdg - ([0226b9f](https://github.com/maxwihlborg/system-definition/commit/0226b9f323788a73e66fee2cb170dee117d8d150)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** move user commands into own file - ([b27dcb9](https://github.com/maxwihlborg/system-definition/commit/b27dcb99aabbb2f8e1ac0b7f9ab6e64086ee4bb8)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** q close binding in aerial-nav - ([df4dae4](https://github.com/maxwihlborg/system-definition/commit/df4dae4d6d29816ea6459f4e70391bd35c4d6b2f)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** c-j/c-k keymaps for telescope - ([af5024e](https://github.com/maxwihlborg/system-definition/commit/af5024e265e6bb17b9a1696d614ba660e05df2b1)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add git_file_history keymap command - ([7eb598d](https://github.com/maxwihlborg/system-definition/commit/7eb598d2c1685a5846c13b6a10895dce22c93732)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(vifm)** enable vifm - ([4621014](https://github.com/maxwihlborg/system-definition/commit/4621014822d8a3183b30bd0990d26fe3a702cb90)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Miscellaneous Chores
+- **(nvim)** ui package wtr monorepo makeprg - ([ca0f2c8](https://github.com/maxwihlborg/system-definition/commit/ca0f2c898d58b5880a1be92cc1a10d2a60ec98be)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([9e32dbb](https://github.com/maxwihlborg/system-definition/commit/9e32dbb56c09fc38f415f306f36530f8bb48e9cd)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([4a82e7e](https://github.com/maxwihlborg/system-definition/commit/4a82e7edf29e431449ebbda8916cae5c936e2f78)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## [0.4.0](https://github.com/maxwihlborg/system-definition/compare/ca8ca53b0aba95213ccc70e4987c3c2260e75d1e..0.4.0) - 2024-10-12
 #### Bug Fixes
 - **(nvim)** fix haxe tree-sitter - ([8c2a472](https://github.com/maxwihlborg/system-definition/commit/8c2a4721781e5dbbea5f167d30eb2fa2708b6975)) - [@maxwihlborg](https://github.com/maxwihlborg)
