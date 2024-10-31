@@ -6,4 +6,5 @@
   ./neovim.nix
   ./scripts.nix
   ./tmux.nix
+  ./vifm.nix
 ]
