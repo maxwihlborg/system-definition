@@ -69,6 +69,37 @@
           body = "sesh connect $(zoxide query $argv)";
         };
 
+        fish_user_key_bindings = {
+          body = /* fish */''
+            # keymaps
+            fish_vi_key_bindings
+
+            bind \cu '__fzf_open --editor'
+            bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
+
+            bind -M insert \cu '__fzf_open --editor'
+            bind -M insert \co '__fzf_open --editor'
+          '';
+        };
+
+        fish_mode_prompt = {
+          body = /* fish */''
+            set -l normal (set_color normal)
+            switch $fish_bind_mode
+              case default
+                echo -n -s '[' (set_color red) 'N' $normal ']'
+              case insert
+                echo -n -s '[' (set_color green) 'I' $normal ']'
+              case replace_one
+                echo -n -s '[' (set_color green) 'R' $normal ']'
+              case visual
+                echo -n -s '[' (set_color magenta) 'V' $normal ']'
+              case '*'
+                echo -n -s '[' (set_color red) '?' $normal ']'
+            end
+          '';
+        };
+
         fish_prompt = {
           body = /* fish */''
             set -l last_status $status
@@ -129,18 +160,6 @@
         set __fish_git_prompt_color_upstream_behind red
         set __fish_git_prompt_color_cleanstate green
         set __fish_git_prompt_color_branch yellow
-
-        # colors
-        set normal (set_color normal)
-        set magenta (set_color magenta)
-        set yellow (set_color yellow)
-        set green (set_color green)
-        set red (set_color red)
-        set gray (set_color -o black)
-
-        # keymaps
-        bind \cu '__fzf_open --editor'
-        bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
       '';
       shellAliases = {
         # eza
