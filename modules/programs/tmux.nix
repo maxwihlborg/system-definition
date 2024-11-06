@@ -1,8 +1,11 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
+let
+  inherit (config.lib.file) mkOutOfStoreSymlink;
+in
 {
   home.packages = [ pkgs.tmux ];
 
-  xdg.configFile."tmux/tmux.conf" = {
-    source = ../../config/tmux/tmux.conf;
+  xdg.configFile."tmux" = {
+    source = mkOutOfStoreSymlink "${config.home.homeDirectory}/ghq/github.com/maxwihlborg/system-definition/config/tmux";
   };
 }
