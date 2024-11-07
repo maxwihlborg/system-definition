@@ -8,7 +8,7 @@ switch:
 
 # update flake
 update:
-    nix flake update .
+    nix flake update --flake .
 
 # update and switch in one
 upgrade: update switch
