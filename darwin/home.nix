@@ -24,9 +24,7 @@
       fzy
       gh
       ghq
-      glow
       gopass
-      htop
       httpie
       imagemagick
       jq
@@ -37,21 +35,16 @@
       ncdu
       neofetch
       nixpkgs-fmt
-      nushell
       pgformatter
       postgresql_16_jit
       ripgrep
       sad
       sesh
       silver-searcher
-      termscp
-      tig
       tokei
       unar
-      vimv
       watchman
       wget
-      xplr
       yazi
       zellij
       zoxide
