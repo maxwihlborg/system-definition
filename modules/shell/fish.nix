@@ -13,15 +13,6 @@
             sha256 = "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=";
           };
         }
-        {
-          name = "lf-icons";
-          src = pkgs.fetchFromGitHub {
-            owner = "joshmedeski";
-            repo = "fish-lf-icons";
-            rev = "d1c47b2088e0ffd95766b61d2455514274865b4f";
-            sha256 = "sha256-6po/PYvq4t0K8Jq5/t5hXPLn80iyl3Ymx2Whme/20kc=";
-          };
-        }
       ];
       functions = {
         gap = {
@@ -29,21 +20,14 @@
           description = "git add --patch";
           body = /* fish */"git add --patch";
         };
-        lfcd = {
+        vicd = {
           body = /* fish */''
-            set tmp (mktemp)
-            # `command` is needed in case `lfcd` is aliased to `lf`
-            command lf -last-dir-path=$tmp $argv
-
-            if test -f "$tmp"
-              set dir (cat $tmp)
-              rm -f $tmp
-              if test -d "$dir"
-                if test "$dir" != (pwd)
-                  cd $dir
-                end
-              end
+            set dst "$(command vifm --choose-dir - $argv[2..-1])"
+            if [ -z "$dst" ]; 
+              echo 'Directory picking cancelled/failed'
+              return 1
             end
+            cd "$dst"
           '';
         };
         env-init = {
@@ -51,16 +35,6 @@
           body = /* fish */''
             echo "Init flakes"
             nix flake new -t github:nix-community/nix-direnv .
-            echo "Setup just"
-            echo -n "
-            # list all recipies
-            @default:
-              just --list
-
-            # run command
-            @run *args='\':
-              echo \$@
-            " > justfile
           '';
         };
         t = {
@@ -75,10 +49,10 @@
             fish_vi_key_bindings
 
             bind \cu '__fzf_open --editor'
-            bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
+            bind \co 'vicd; commandline -f repaint'
 
             bind -M insert \cu '__fzf_open --editor'
-            bind -M insert \co '__fzf_open --editor'
+            bind -M insert \co 'vicd; commandline -f repaint'
           '';
         };
 

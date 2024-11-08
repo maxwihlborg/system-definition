@@ -35,6 +35,7 @@
       ncdu
       neofetch
       nixpkgs-fmt
+      nurl
       pgformatter
       postgresql_16_jit
       ripgrep
