@@ -36,6 +36,7 @@
       neofetch
       nixpkgs-fmt
       nurl
+      p7zip
       pgformatter
       postgresql_16_jit
       ripgrep

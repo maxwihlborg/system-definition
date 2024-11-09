@@ -10,6 +10,7 @@ in
 {
   xdg.configFile = {
     "vifm/plugins/devicons".source = "${repo}/data/plugins/devicons";
+    "vifm/plugins/packer".source = "${repo}/data/plugins/packer";
   };
   programs = {
     vifm = {
