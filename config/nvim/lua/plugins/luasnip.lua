@@ -67,7 +67,7 @@ return {
       s("et", { t "export type ", i(1), t " = ", i(0), t ";" }),
       s("ei", { t "export interface ", i(1), t { " {", "\t" }, i(0), t { "", "}" } }),
       s("gg", { t { "Effect.gen(function* () {", "\t" }, i(0), t { "", "})" } }),
-      s("tid", {
+      s("tt", {
         t { "const " },
         i(1),
         t { ': unique symbol = Symbol.for("' },
