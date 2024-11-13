@@ -5,6 +5,7 @@ return {
   end,
   config = function()
     local conform = require "conform"
+    local prettier = require "conform.formatters.prettier"
     local util = require "conform.util"
 
     local formatters = {
@@ -46,6 +47,7 @@ return {
     }
 
     local prettier_fts = {
+      "css",
       "graphql",
       "html",
       "javascript",
@@ -54,12 +56,16 @@ return {
       "jsonc",
       "markdown",
       "markdown.mdx",
-      "css",
       "scss",
       "typescript",
+      "svg",
       "typescriptreact",
       "xml",
       "yaml",
+    }
+
+    prettier.options.ft_parsers = {
+      svg = "html",
     }
 
     for _, ft in ipairs(prettier_fts) do
