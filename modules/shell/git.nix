@@ -5,6 +5,10 @@
       enable = true;
       userEmail = "6181962+maxwihlborg@users.noreply.github.com";
       userName = "Max Wihlborg";
+      signing = {
+        key = "CFEADCD30132EB29";
+        signByDefault = true;
+      };
       aliases = {
         rename = "!moveit() { git push origin --delete `git branch --show-current` || true; git branch -m $1; git push --set-upstream origin $1; }; moveit";
         co = "checkout";
