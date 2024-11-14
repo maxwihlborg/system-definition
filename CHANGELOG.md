@@ -2,6 +2,26 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.6.0](https://github.com/maxwihlborg/system-definition/compare/1e114d6167cec73a8593aab6c59c7717f65db95a..0.6.0) - 2024-11-14
+#### Bug Fixes
+- **(just)** update recipie - ([f17ae24](https://github.com/maxwihlborg/system-definition/commit/f17ae2431b405ab9d1042bbc4ce2bf6369d3febb)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** rename tid snippet to tt - ([123ec7d](https://github.com/maxwihlborg/system-definition/commit/123ec7ded0103fba5864e4e3f46258213514e16b)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Features
+- **(darwin)** sops and git-crypt + notmuch/mail config - ([3676bd2](https://github.com/maxwihlborg/system-definition/commit/3676bd20fdb75ae28cb0faeb274d51e342fbbb80)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(fish)** vim bindings! - ([a52efd9](https://github.com/maxwihlborg/system-definition/commit/a52efd98b90d932525548cb16b9dc4f826c665b5)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(git)** add sig key - ([4d2cc56](https://github.com/maxwihlborg/system-definition/commit/4d2cc561b7b48eef318618c9a0070140c8392c70)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(lazygit)** enable emoji parsing - ([97b87b3](https://github.com/maxwihlborg/system-definition/commit/97b87b3fd0db0aac0d5d00de2ff0ac0cbe7fba91)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** svg formatting using prettier - ([6211a73](https://github.com/maxwihlborg/system-definition/commit/6211a73895af9b0bae30c1f58c727fe49b08aaa4)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** Effect.gen snippet - ([1e114d6](https://github.com/maxwihlborg/system-definition/commit/1e114d6167cec73a8593aab6c59c7717f65db95a)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(tmux)** make out of store symlink - ([ddaaee2](https://github.com/maxwihlborg/system-definition/commit/ddaaee22ef1520a6bf03a0be6e3caa5cda3e2db0)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(vifm)** packer plugin - ([17867bb](https://github.com/maxwihlborg/system-definition/commit/17867bb20032f3f5fbda6e140abd8154cbf0ffb6)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(vifm)** change from lf to vifm - ([dc2e67b](https://github.com/maxwihlborg/system-definition/commit/dc2e67b8d23c5239d48994286877b733180fb546)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Miscellaneous Chores
+- **(home)** remove unused programs - ([2dbc96e](https://github.com/maxwihlborg/system-definition/commit/2dbc96e20d745759363e0ac93acf0d53f4f5cace)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(tmux)** cleanup config file - ([040ade8](https://github.com/maxwihlborg/system-definition/commit/040ade8fffc3a920f1eb3a61be386c7f41505b1c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## [0.5.0](https://github.com/maxwihlborg/system-definition/compare/5eb43df285e9416031e5771bbbb145a92a102d41..0.5.0) - 2024-10-31
 #### Features
 - **(fish)** add syntax highlighting - ([444f565](https://github.com/maxwihlborg/system-definition/commit/444f56588125fc41280feee94fe53c541ae10a51)) - [@maxwihlborg](https://github.com/maxwihlborg)
