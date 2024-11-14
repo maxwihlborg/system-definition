@@ -122,7 +122,7 @@
         ${pkgs.zoxide}/bin/zoxide init fish | source
 
         # transient secrets
-        set -gx OPENAI_API_KEY $(vsh decrypt vsh:v1:KenJYkez:oqivBeUcUr6IU6aux_tBe9t4KhBBf_bB6c81fc6t-fl2KnvNX2wrA-bKVkoMpeT0uOSe)
+        set -gx OPENAI_API_KEY $(cat ~/.config/sops-nix/secrets/open_api_token)
 
         # overrides
         set fish_color_cwd yellow

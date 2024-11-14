@@ -1,0 +1,9 @@
+keys:
+  - &admin_disasm age1sqhczj9k5k9zkkyts5qxwuxns28544wpuazhj3gh2skn2t74gslsz3usfl
+  - &system age1868le9rqqcmzryv5fj83n4q0u655lhje6a0as4hn8ww9ph7jpasqc66exd
+creation_rules:
+  - path_regex: secrets.yaml$
+    key_groups:
+      - age:
+          - *admin_disasm
+          - *system

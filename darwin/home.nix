@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   imports =
+    (import ../modules/account) ++
     (import ../modules/programs) ++
     (import ../modules/shell);
 
@@ -8,8 +9,15 @@
     enable = true;
   };
 
+  sops = {
+    age.keyFile = "${config.xdg.dataHome}/system-definition/key.txt";
+    defaultSopsFile = ./secrets.yaml;
+    secrets.open_api_token = { };
+  };
+
   home = {
     packages = with pkgs; [
+      age
       bat
       btop
       cocogitto
@@ -24,6 +32,8 @@
       fzy
       gh
       ghq
+      git-agecrypt
+      git-crypt
       gopass
       httpie
       imagemagick
@@ -43,6 +53,7 @@
       sad
       sesh
       silver-searcher
+      sops
       tokei
       unar
       watchman
