@@ -53,10 +53,19 @@ in
         nnoremap cc cw<c-u>
         nnoremap A cw
 
-        fileviewer *.bmp,*.jpg,*.avif,*.webp,*.jpeg,*.png,*.gif,*.xpm magick identify %f -verbose
-        fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
-        fileviewer justfile just -f %c --list
-        fileviewer *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz tar -tf %f
+        fileviewer <image/*>,<video/*>,<audio/*>
+            \ mpvimgcat view %px %py %pw %ph %c
+            \ %pc
+            \ mpvimgcat clear
+
+        fileviewer *.zip,*.jar,*.war,*.ear
+            \ zip -sf %c
+
+        fileviewer justfile
+            \ just -f %c --list
+
+        fileviewer *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz
+            \ tar -tf %f
       '';
     };
   };
