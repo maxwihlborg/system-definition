@@ -126,7 +126,7 @@ vim.api.nvim_create_user_command("Lint", function()
           vim.cmd.copen()
         else
           vim.fn.setqflist {}
-          vim.notify("No lint errors!", nil, { title = "All good" })
+          vim.notify("No lint errors!", nil, { title = "Happy days" })
         end
         handle:finish()
       end)

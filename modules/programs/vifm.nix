@@ -54,7 +54,7 @@ in
         nnoremap A cw
 
         fileviewer <image/*>,<video/*>,<audio/*>
-            \ mpvimgcat view %px %py %pw %ph %c
+            \ mpvimgcat view --padding=-1 %px %py %pw %ph %c
             \ %pc
             \ mpvimgcat clear
 

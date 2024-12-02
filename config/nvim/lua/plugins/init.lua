@@ -135,6 +135,9 @@ return {
     end,
   },
   {
+    "tpope/vim-abolish",
+  },
+  {
     "jackMort/ChatGPT.nvim",
     cmd = { "ChatGPT", "ChatGPTRun" },
     opts = {
