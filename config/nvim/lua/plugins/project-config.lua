@@ -7,7 +7,6 @@ return {
       {
         path = vim.fn.expand "~/ghq/github.com/nomadicretail/xnomad/apps/web",
         config = function()
-          -- require("pde.lsp.utils").setup_autostart "graphql"
           require("pde.utils").set_compiler("tsc", {
             pattern = { "typescript", "typescriptreact" },
             cmd = "pnpm tsc",
@@ -55,10 +54,15 @@ return {
       {
         path = vim.fn.expand "~/ghq/github.com/walktheroom",
         config = function()
-          require("pde.utils").set_compiler("tsc", {
+          local config = require "pde.lsp.config"
+          local utils = require "pde.utils"
+          local lspconfig = require "lspconfig"
+
+          lspconfig.csharp_ls.setup(config.get_options "csharp_ls")
+
+          utils.set_compiler("tsc", {
             pattern = { "typescript", "typescriptreact", "json", "jsonc" },
             cmd = function()
-              local utils = require "pde.utils"
               local dir = utils.find_package_json_dir()
               assert(dir ~= nil, "Could not find root dir")
               if utils.ends_with(dir, "wtr-admin") then

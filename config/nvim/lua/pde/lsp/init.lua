@@ -1,5 +1,5 @@
 local handlers = require "pde.lsp.handlers"
-local utils = require "pde.lsp.utils"
+local utils = require "pde.lsp.config"
 
 local lspconfig = require "lspconfig"
 
