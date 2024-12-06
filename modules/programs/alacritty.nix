@@ -82,15 +82,15 @@
             { key = "T"; mods = "Command"; chars = "\\u0002\\u0063"; }
             # Break the current tmux pane out of the tmux window
             { key = "T"; mods = "Command|Shift"; chars = "\\u0002\\u0021"; }
-            # Kill the current tmux  pane (and window if last pane)
+            # Kill the current tmux pane (and window if last pane)
             { key = "W"; mods = "Command"; chars = "\\u0002\\u0078"; }
-            # Toggle the zoom state  of the current tmux pane
+            # Toggle the zoom state of the current tmux pane
             { key = "Z"; mods = "Command"; chars = "\\u0002\\u007a"; }
             # Split the current pane into two; left and right
             { key = "N"; mods = "Command"; chars = "\\u0002\\u0025"; }
             # Split the current pane into two; top and bottom.
             { key = "N"; mods = "Command|Shift"; chars = "\\u0002\\u0022"; }
-            # Change to the next     tmux window
+            # Change to the next tmux window
             { key = "J"; mods = "Command"; chars = "\\u0002\\u0068"; }
             # Change to the previous tmux window
             { key = "K"; mods = "Command"; chars = "\\u0002\\u006c"; }

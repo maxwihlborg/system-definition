@@ -18,6 +18,9 @@
         rb = "rebase";
       };
       extraConfig = {
+        include = {
+          path = "${pkgs.vimPlugins.tokyonight-nvim}/extras/delta/tokyonight_night.gitconfig";
+        };
         init = { defaultBranch = "main"; };
         push = { default = "simple"; followTags = true; };
         pull = { rebase = true; };
