@@ -24,6 +24,16 @@ return {
         "packer",
       },
       on_highlights = function(h, c)
+        h["YanilTreeRoot"] = { fg = c.yellow, bold = true }
+        h["YanilTreeDirectory"] = { fg = c.blue, bg = c.none }
+        h["YanilTreeDirectoryIcon"] = { fg = c.teal, bg = c.none }
+        h["YanilTreeFile"] = { fg = c.fg_sidebar, bg = c.none }
+        h["YanilTreeFileExecutable"] = { fg = c.yellow, bold = true }
+        h["YanilTreeFileReadonly"] = { fg = c.red }
+        h["YanilTreeLink"] = { fg = c.comment, italic = true }
+        h["YanilTreeLinkBroken"] = { fg = c.comment, italic = true, underline = true }
+        h["YanilTreeLinkArrow"] = { fg = c.comment }
+        h["YanilTreeLinkTo"] = { fg = c.comment, italic = true }
         h["MsgArea"] = { fg = c.fg_dark }
 
         h["WinBar"] = { fg = c.fg_sidebar, bg = c.bg_sidebar }
