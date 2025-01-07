@@ -1,5 +1,6 @@
 [
   ./alacritty.nix
+  ./ghostty.nix
   ./hammerspoon.nix
   ./lazygit.nix
   ./neovim.nix

@@ -56,7 +56,7 @@ local function launch_by_bundle_id(id)
 end
 
 -- osascript -e 'id of app "App Name"'
-hs.hotkey.bind(mod, "T", launch_by_bundle_id "org.alacritty")
+hs.hotkey.bind(mod, "T", launch_by_bundle_id "com.mitchellh.ghostty")
 hs.hotkey.bind(mod, "C", launch_by_bundle_id "company.thebrowser.Browser")
 hs.hotkey.bind(mod, "S", launch_by_bundle_id "com.tinyspeck.slackmacgap")
 hs.hotkey.bind(mod, "N", launch_by_bundle_id "com.spotify.client")
