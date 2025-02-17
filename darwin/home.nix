@@ -62,7 +62,7 @@
       zellij
       zoxide
     ];
-    stateVersion = "24.11";
+    stateVersion = "25.05";
     sessionVariables = {
       PAGER = "less";
       LESS = "-RiF --mouse --wheel-lines=3";

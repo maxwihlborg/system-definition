@@ -21,8 +21,13 @@
     '';
   };
 
+  ids = {
+    gids = {
+      nixbld = 30000;
+    };
+  };
   system = {
-    stateVersion = 5;
+    stateVersion = 6;
     keyboard = {
       enableKeyMapping = true;
       remapCapsLockToEscape = true;
@@ -58,9 +63,5 @@
 
   programs = {
     fish.enable = true;
-  };
-
-  services = {
-    nix-daemon.enable = true;
   };
 }

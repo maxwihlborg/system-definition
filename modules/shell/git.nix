@@ -7,6 +7,7 @@
       userName = "Max Wihlborg";
       signing = {
         key = "CFEADCD30132EB29";
+        format = "openpgp";
         signByDefault = true;
       };
       aliases = {
