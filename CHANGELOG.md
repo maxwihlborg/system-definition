@@ -2,6 +2,28 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.7.0](https://github.com/maxwihlborg/system-definition/compare/9dc2a455f2079ac885470ab83d2c73b0edf65f16..0.7.0) - 2025-02-17
+#### Bug Fixes
+- **(lazygit)** branchLog command - ([8a855d5](https://github.com/maxwihlborg/system-definition/commit/8a855d53fcbd91f0ef17470b78defe78076bf6eb)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** try fix drex highlights - ([fbb3e01](https://github.com/maxwihlborg/system-definition/commit/fbb3e01eb77156176f62f897d4e4617b84ad1ec3)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** fix tabline - ([fd26964](https://github.com/maxwihlborg/system-definition/commit/fd26964655d801c71f72e28b9c2e264304c7c14d)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Features
+- **(ghostty)** ghostty config - ([28777bf](https://github.com/maxwihlborg/system-definition/commit/28777bf43e943fa9b6c45e4467d9e8cc2450cc46)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(neomutt)** configure email - ([9dc2a45](https://github.com/maxwihlborg/system-definition/commit/9dc2a455f2079ac885470ab83d2c73b0edf65f16)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** export declare namespace luasnip - ([4669649](https://github.com/maxwihlborg/system-definition/commit/46696491dffd925c3d45fe481532a5ba770e53de)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** move csharp_ls to project-config - ([37a2514](https://github.com/maxwihlborg/system-definition/commit/37a2514f197f3b7736006facd1912cb544d1f507)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** add vim-abolish - ([2ec53ad](https://github.com/maxwihlborg/system-definition/commit/2ec53adb4de796dc1e3ae37a1a928d86e4f62b82)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(vifm)** image previews - ([4b2dfde](https://github.com/maxwihlborg/system-definition/commit/4b2dfde7a0548cbeaa575177ea2eea365baeb798)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- atac and serie packages - ([1b2f7f8](https://github.com/maxwihlborg/system-definition/commit/1b2f7f8f5a3d2948d99581e8e315834fe5f85743)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- more tokyonight theming - ([1da53ac](https://github.com/maxwihlborg/system-definition/commit/1da53ac4586e696062ea2a3c24b3b3f50019d8a9)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Miscellaneous Chores
+- **(ghostty)** close on last window - ([5ce90f6](https://github.com/maxwihlborg/system-definition/commit/5ce90f6011d19a6ee1d6e59c49f66f222ccf76b2)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** update plugins - ([168b5d5](https://github.com/maxwihlborg/system-definition/commit/168b5d5004ddbb05c61cabb102fc7accc93b299e)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update nix - ([f4d9592](https://github.com/maxwihlborg/system-definition/commit/f4d95920aea5fbc86b9fdf9d4727bd238169a788)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- update system - ([bf222cb](https://github.com/maxwihlborg/system-definition/commit/bf222cb6591d77cd4675b6b21dfa64365a9676ec)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## [0.6.0](https://github.com/maxwihlborg/system-definition/compare/1e114d6167cec73a8593aab6c59c7717f65db95a..0.6.0) - 2024-11-14
 #### Bug Fixes
 - **(just)** update recipie - ([f17ae24](https://github.com/maxwihlborg/system-definition/commit/f17ae2431b405ab9d1042bbc4ce2bf6369d3febb)) - [@maxwihlborg](https://github.com/maxwihlborg)
