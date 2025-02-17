@@ -6,10 +6,10 @@
       settings = {
         git = {
           parseEmoji = true;
+          branchLogCmd = "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --";
           paging = {
             colorArg = "always";
             pager = "${pkgs.delta}/bin/delta --dark --paging=never";
-            branchLogCmd = "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --";
           };
         };
         gui = {
