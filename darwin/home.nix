@@ -9,6 +9,7 @@
     enable = true;
   };
 
+
   sops = {
     age.keyFile = "${config.xdg.dataHome}/system-definition/key.txt";
     defaultSopsFile = ./secrets.yaml;
@@ -18,6 +19,7 @@
   home = {
     packages = with pkgs; [
       age
+      atac
       bat
       btop
       cocogitto
@@ -51,6 +53,7 @@
       postgresql_16_jit
       ripgrep
       sad
+      serie
       sesh
       silver-searcher
       sops
