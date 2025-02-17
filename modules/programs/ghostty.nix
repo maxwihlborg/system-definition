@@ -1,10 +1,9 @@
 { pkgs, lib, ... }:
 let
-  keyValueSettings = {
+  keyValue = pkgs.formats.keyValue {
     listsAsDuplicateKeys = true;
     mkKeyValue = lib.generators.mkKeyValueDefault { } " = ";
   };
-  keyValue = pkgs.formats.keyValue keyValueSettings;
 in
 {
   # FIXME change to home manager when darwin ghostty works
@@ -27,6 +26,7 @@ in
       mouse-hide-while-typing = true;
 
       confirm-close-surface = false;
+      quit-after-last-window-closed = true;
 
       keybind = [
         "super+b>r=reload_config"
