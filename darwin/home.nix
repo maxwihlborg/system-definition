@@ -56,6 +56,7 @@
       serie
       sesh
       silver-searcher
+      skim
       sops
       tokei
       unar
@@ -75,6 +76,8 @@
       # fzf
       FZF_FIND_FILE_COMMAND = "fd --type f";
       FZF_OPEN_COMMAND = "fd --type f";
+      # skim
+      SKIM_DEFAULT_COMMAND = "fd --type f";
       # l10n
       LANG = "en_US.UTF-8";
       LC_ALL = "en_US.UTF-8";

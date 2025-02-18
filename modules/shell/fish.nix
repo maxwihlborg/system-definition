@@ -3,17 +3,6 @@
   programs = {
     fish = {
       enable = true;
-      plugins = [
-        {
-          name = "fzf";
-          src = pkgs.fetchFromGitHub {
-            owner = "jethrokuan";
-            repo = "fzf";
-            rev = "479fa67d7439b23095e01b64987ae79a91a4e283";
-            hash = "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=";
-          };
-        }
-      ];
       functions = {
         gap = {
           wraps = "git";
@@ -48,11 +37,25 @@
             # keymaps
             fish_vi_key_bindings
 
-            bind \cu '__fzf_open --editor'
+            bind \cu '__sk_open'
             bind \co 'vicd; commandline -f repaint'
 
-            bind -M insert \cu '__fzf_open --editor'
+            bind -M insert \cu '__sk_open'
             bind -M insert \co 'vicd; commandline -f repaint'
+          '';
+        };
+
+        __sk_open = {
+          description = "Open files and directories with editor";
+          body = /* fish */''
+            set -l select (sk-tmux -d 40% | string escape)
+            set -l open_status 0
+            if not test -z "$select"
+              commandline "$EDITOR $select"; and commandline -f execute
+              set open_status $status
+            end
+            commandline -f repaint
+            return $open_status
           '';
         };
 

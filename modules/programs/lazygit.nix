@@ -6,7 +6,8 @@
       settings = {
         git = {
           parseEmoji = true;
-          branchLogCmd = "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --";
+          # branchLogCmd = "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --";
+          branchLogCmd = "git-graph --no-pager -n 100";
           paging = {
             colorArg = "always";
             pager = "${pkgs.delta}/bin/delta --dark --paging=never";
