@@ -1,7 +1,5 @@
 vim.api.nvim_create_user_command("Lcc", function(opts)
-  local raw_args = vim.tbl_filter(function(s)
-    return s ~= ""
-  end, vim.split(opts.fargs[1], " "))
+  local raw_args = vim.tbl_filter(function(s) return s ~= "" end, vim.split(opts.fargs[1], " "))
 
   local cmd = raw_args[1]
   local cmd_args = {}

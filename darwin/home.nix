@@ -51,6 +51,7 @@
       p7zip
       pgformatter
       postgresql_16_jit
+      repgrep
       ripgrep
       sad
       serie

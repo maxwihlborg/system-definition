@@ -8,9 +8,6 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",
   },
-  init = function()
-    require("pde.utils").load_keymap "telescope"
-  end,
   config = function()
     local telescope = require "telescope"
     local actions = require "telescope.actions"
@@ -32,6 +29,5 @@ return {
     telescope.load_extension "git_file_history"
     telescope.load_extension "fzy_native"
     telescope.load_extension "aerial"
-    telescope.load_extension "notify"
   end,
 }

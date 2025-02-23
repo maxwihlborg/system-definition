@@ -6,7 +6,7 @@
       settings = {
         general = {
           import = [
-            "${pkgs.vimPlugins.tokyonight-nvim}/extras/alacritty/tokyonight_night.toml"
+            "${pkgs.vimPlugins.kanagawa-nvim}/extras/alacritty/kanagawa_wave.toml"
           ];
         };
         window = {

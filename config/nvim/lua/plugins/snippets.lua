@@ -26,9 +26,7 @@ return {
     local i = ls.insert_node
     local f = ls.function_node
 
-    local function copy(args)
-      return args[1]
-    end
+    local function copy(args) return args[1] end
 
     local function bn(str)
       -- return basename (no extension)

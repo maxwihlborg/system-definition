@@ -1,25 +1,24 @@
 return {
   { "lewis6991/gitsigns.nvim", config = true },
-  { "kdheepak/lazygit.nvim", cmd = {
-    "LazyGit",
-    "LazyGitConfig",
-    "LazyGitCurrentFile",
-    "LazyGitFilter",
-    "LazyGitFilterCurrentFile",
-  } },
+  { "tpope/vim-fugitive" },
   {
-    "crnvl96/lazydocker.nvim",
-    cmd = "LazyDocker",
-    config = true,
+    "kdheepak/lazygit.nvim",
+    cmd = "LazyGit",
     dependencies = {
-      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      { "<leader>g", "<cmd>LazyGit<cr>" },
     },
   },
   {
-    "tpope/vim-fugitive",
+    "crnvl96/lazydocker.nvim",
+    cmd = "LazyDocker",
     dependencies = {
-      { "tommcdo/vim-fubitive" },
-      { "tpope/vim-rhubarb" },
+      "MunifTanjim/nui.nvim",
+    },
+    keys = {
+      { "<leader>cd", "<cmd>LazyDocker<cr>" },
     },
   },
 }

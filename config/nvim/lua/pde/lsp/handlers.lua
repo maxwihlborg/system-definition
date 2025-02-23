@@ -2,9 +2,9 @@ local M = {}
 
 local function get_client_capabilites()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
-  local cmp_ok, cmp = pcall(require, "cmp_nvim_lsp")
-  if cmp_ok then
-    return cmp.default_capabilities(capabilities)
+  local blink_ok, blink = pcall(require, "blink.cmp")
+  if blink_ok then
+    return blink.get_lsp_capabilities(capabilities)
   end
   return capabilities
 end
@@ -74,34 +74,16 @@ local function lsp_commands(client, bufnr)
   })
 
   vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-    callback = function()
-      vim.lsp.buf.document_highlight()
-    end,
+    callback = function() vim.lsp.buf.document_highlight() end,
     buffer = bufnr,
     group = group,
   })
 
   vim.api.nvim_create_autocmd({ "CursorMoved" }, {
-    callback = function()
-      vim.lsp.buf.clear_references()
-    end,
+    callback = function() vim.lsp.buf.clear_references() end,
     buffer = bufnr,
     group = group,
   })
-end
-
-local function lsp_signature(bufnr)
-  local status_ok, signature = pcall(require, "lsp_signature")
-  if not status_ok then
-    return
-  end
-
-  signature.on_attach({
-    bind = true,
-    hint_enable = false,
-    toggle_key = "<C-s>",
-    doc_lines = 0,
-  }, bufnr)
 end
 
 local function ts_mappings(bufnr)
@@ -176,7 +158,6 @@ function M.on_attach(client, bufnr)
     ts_on_attach(client, bufnr)
   end
   lsp_mappings(bufnr)
-  lsp_signature(bufnr)
   lsp_winbar(client, bufnr)
   lsp_commands(client, bufnr)
 end

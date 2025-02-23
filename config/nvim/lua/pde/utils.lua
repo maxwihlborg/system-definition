@@ -47,9 +47,7 @@ end
 
 ---@param str string
 ---@param suffix string
-function M.ends_with(str, suffix)
-  return string.sub(str, -#suffix) == suffix
-end
+function M.ends_with(str, suffix) return string.sub(str, -#suffix) == suffix end
 
 function M.find_package_json_dir()
   local current_dir = vim.fn.expand "%:p:h" -- Get the directory of the current file
@@ -72,9 +70,7 @@ function M.load_keymap(arg, ...)
     })
   end
 
-  local usr_cmd = function(cmd, info)
-    vim.api.nvim_create_user_command(cmd, info[1], info[2] or {})
-  end
+  local usr_cmd = function(cmd, info) vim.api.nvim_create_user_command(cmd, info[1], info[2] or {}) end
 
   for mode, mode_values in pairs(resolve_keymap(arg, ...)) do
     for keybind, info in pairs(mode_values) do

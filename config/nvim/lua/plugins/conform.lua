@@ -1,8 +1,9 @@
 return {
   "stevearc/conform.nvim",
-  init = function()
-    require("pde.utils").load_keymap "conform"
-  end,
+  event = "BufReadPost",
+  keys = {
+    { "<leader>f", function() require("conform").format { lsp_fallback = true } end },
+  },
   config = function()
     local conform = require "conform"
     local prettier = require "conform.formatters.prettier"

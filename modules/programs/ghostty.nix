@@ -9,7 +9,7 @@ in
   # FIXME change to home manager when darwin ghostty works
   xdg.configFile."ghostty/config" = {
     source = keyValue.generate "ghostty-config" {
-      theme = "${pkgs.vimPlugins.tokyonight-nvim}/extras/ghostty/tokyonight_night";
+      theme = "${pkgs.vimPlugins.kanagawa-nvim}/extras/ghostty/kanagawa-wave";
 
       font-family = "JetbrainsMonoNL Nerd Font";
       font-feature = "-calt";
