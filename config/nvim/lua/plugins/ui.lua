@@ -52,7 +52,9 @@ return {
   {
     "catgoose/nvim-colorizer.lua",
     event = "BufReadPre",
-    opts = true,
+    opts = {
+      filetypes = {},
+    },
   },
   {
     "akinsho/toggleterm.nvim",
