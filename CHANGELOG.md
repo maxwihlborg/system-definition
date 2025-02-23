@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.8.0](https://github.com/maxwihlborg/system-definition/compare/06ba617d14c2e2b03507ac0f6d11a4cdaeb6e82c..0.8.0) - 2025-02-23
+#### Features
+- **(fish)** simple __sk_open instead of broken __fzf_open - ([06ba617](https://github.com/maxwihlborg/system-definition/commit/06ba617d14c2e2b03507ac0f6d11a4cdaeb6e82c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** new config - ([b6a0951](https://github.com/maxwihlborg/system-definition/commit/b6a09511df398e2daa94614ff207d83236668427)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## [0.7.0](https://github.com/maxwihlborg/system-definition/compare/9dc2a455f2079ac885470ab83d2c73b0edf65f16..0.7.0) - 2025-02-17
 #### Bug Fixes
 - **(lazygit)** branchLog command - ([8a855d5](https://github.com/maxwihlborg/system-definition/commit/8a855d53fcbd91f0ef17470b78defe78076bf6eb)) - [@maxwihlborg](https://github.com/maxwihlborg)
