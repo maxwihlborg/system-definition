@@ -23,6 +23,7 @@ return {
         input = {
           keys = {
             ["<esc>"] = { "cancel", mode = "i" },
+            ["<c-s>"] = { "qflist", mode = { "i", "n" } },
           },
         },
       },
