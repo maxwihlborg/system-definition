@@ -9,10 +9,17 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
+    keys = {
+      { "<leader>tr", "<cmd>Neotest run<cr>" },
+      { "<leader>tf", "<cmd>Neotest run file<cr>" },
+      { "<leader>tn", "<cmd>Neotest jump next<cr>" },
+      { "<leader>tp", "<cmd>Neotest jump prev<cr>" },
+      { "<leader>ts", "<cmd>Neotest summary<cr>" },
+    },
     config = function()
       require("neotest").setup {
         adapters = {
-          require "neotest-vitest",
+          require "neotest-vitest" {},
         },
       }
     end,
