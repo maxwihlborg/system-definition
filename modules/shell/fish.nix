@@ -38,10 +38,24 @@
             fish_vi_key_bindings
 
             bind \cu '__sk_open'
+            bind \cg '__sk_ghq'
             bind \co 'vicd; commandline -f repaint'
 
             bind -M insert \cu '__sk_open'
+            bind -M insert \cg '__sk_ghq'
             bind -M insert \co 'vicd; commandline -f repaint'
+          '';
+        };
+
+        __sk_ghq = {
+          description = "Change directory from ghq";
+          body = /* fish */''
+            set -l select (ghq list | sk-tmux -d 40% | string escape)
+            set -l open_status 0
+            if not test -z "$select"
+              cd "$(ghq root)/$select";
+            end
+            commandline -f repaint
           '';
         };
 
