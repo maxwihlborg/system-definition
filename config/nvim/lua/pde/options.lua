@@ -49,7 +49,7 @@ vim.opt.updatetime = 250
 vim.opt.virtualedit = "block"
 vim.opt.wildignore:append ".DS_Store"
 vim.opt.wildmenu = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.writebackup = false
 
 local group = vim.api.nvim_create_augroup("CoreEditor", { clear = true })
