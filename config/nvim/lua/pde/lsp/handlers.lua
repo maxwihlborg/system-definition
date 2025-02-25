@@ -1,12 +1,11 @@
 local M = {}
 
 local function get_client_capabilites()
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
   local blink_ok, blink = pcall(require, "blink.cmp")
   if blink_ok then
-    return blink.get_lsp_capabilities(capabilities)
+    return blink.get_lsp_capabilities()
   end
-  return capabilities
+  return vim.lsp.protocol.make_client_capabilities()
 end
 
 function M.setup()

@@ -7,9 +7,15 @@ return {
   opts = {
     keymap = {
       preset = "default",
+      ["<c-e>"] = {},
       ["<cr>"] = { "select_and_accept", "fallback" },
     },
     snippets = { preset = "luasnip" },
+
+    fuzzy = {
+      use_proximity = false,
+      sorts = { "exact", "score", "sort_text" },
+    },
 
     cmdline = { enabled = false },
     signature = { enabled = true },
@@ -21,13 +27,20 @@ return {
     },
 
     completion = {
+      list = { selection = { preselect = false } },
+
       accept = {
         auto_brackets = { enabled = false },
+      },
+
+      ghost_text = {
+        enabled = true,
+        show_without_selection = true,
       },
     },
 
     sources = {
-      default = { "lsp", "path", "snippets", "buffer" },
+      default = { "snippets", "lsp", "path", "buffer" },
     },
   },
 }
