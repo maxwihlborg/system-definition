@@ -84,6 +84,25 @@ vim.api.nvim_create_user_command("CommitMsg", function()
   }):start()
 end, {})
 
+vim.api.nvim_create_user_command("Ws", function()
+  local Job = require "plenary.job"
+  Job:new({
+    command = "ws-list",
+    on_exit = function(j)
+      vim.schedule(function()
+        vim.ui.select(vim.json.decode(j:result()[1]), {
+          prompt = "Select package",
+          format_item = function(item) return item.name end,
+        }, function(choice)
+          if choice ~= nil then
+            vim.cmd(string.format("cd %s", vim.fn.escape(choice.dir, " \\")))
+          end
+        end)
+      end)
+    end,
+  }):start()
+end, {})
+
 vim.api.nvim_create_user_command("Lint", function()
   local progress = require "fidget.progress"
   local Job = require "plenary.job"
