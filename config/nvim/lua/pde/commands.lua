@@ -31,7 +31,7 @@ vim.api.nvim_create_user_command("Lcc", function(opts)
     args = cmd_args,
     on_exit = function(j)
       vim.schedule(function()
-        vim.notify(j:result(), nil, { title = "Output" })
+        vim.notify(table.concat(j:result(), "\n"), nil, { title = "Output" })
         handle:finish()
       end)
     end,

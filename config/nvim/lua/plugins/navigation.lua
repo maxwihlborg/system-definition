@@ -49,7 +49,12 @@ return {
     init = function()
       require("pde.utils").load_keymap {
         ["cmd"] = {
-          ["CloseHiddenBuffers"] = { "<cmd>BDelete hidden<cr>" },
+          ["CloseHiddenBuffers"] = {
+            function() require("close_buffers").delete { type = "hidden" } end,
+          },
+          ["CloseNamelessBuffers"] = {
+            function() require("close_buffers").delete { type = "nameless" } end,
+          },
         },
       }
     end,
