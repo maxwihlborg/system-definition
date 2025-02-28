@@ -42,6 +42,13 @@ return {
           DapBreakpoint = { fg = p.autumnRed },
           DapLogPoint = { fg = p.waveBlue2 },
           DapStopped = { fg = p.springGreen },
+
+          ["@markup.link.url.markdown_inline"] = { link = "Special" }, -- (url)
+          ["@markup.link.label.markdown_inline"] = { fg = p.roninYellow, underline = true, sp = p.springBlue }, -- [label]
+          ["@markup.italic.markdown_inline"] = { link = "Exception" }, -- *italic*
+          ["@markup.raw.markdown_inline"] = { link = "String" }, -- `code`
+          ["@markup.list.markdown"] = { link = "Function" }, -- + list
+          ["@markup.quote.markdown"] = { link = "Error" }, -- > blockcode
         }
       end,
     },
