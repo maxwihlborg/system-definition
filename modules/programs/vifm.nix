@@ -53,10 +53,8 @@ in
         nnoremap cc cw<c-u>
         nnoremap A cw
 
-        fileviewer <image/*>,<video/*>,<audio/*>
-            \ mpvimgcat view --padding=-1 %px %py %pw %ph %c
-            \ %pc
-            \ mpvimgcat clear
+        fileviewer <image/*>
+            \ chafa --passthrough tmux -f kitty --polite on --size=%pwx%ph %c %pd %N
 
         fileviewer *.zip,*.jar,*.war,*.ear
             \ zip -sf %c

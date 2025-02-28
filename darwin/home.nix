@@ -22,6 +22,7 @@
       atac
       bat
       btop
+      chafa
       cocogitto
       curl
       darwin.trash

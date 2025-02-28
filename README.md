@@ -4,4 +4,4 @@
 
 MacOS system configuration using nix-darwin and home-manager to control system configurations and packages.
 
-![Screen Shot](.github/screenshot.png)
+![Screenshot](.github/screenshot.png)
