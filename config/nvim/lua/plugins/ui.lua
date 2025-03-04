@@ -128,6 +128,11 @@ return {
     },
   },
   {
+    "stevearc/quicker.nvim",
+    ft = { "qf" },
+    opts = true,
+  },
+  {
     "utilyre/barbecue.nvim",
     dependencies = {
       "SmiteshP/nvim-navic",
