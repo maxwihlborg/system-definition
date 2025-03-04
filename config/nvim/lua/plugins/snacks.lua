@@ -41,17 +41,16 @@ return {
     require("pde.utils").load_keymap {
       ["cmd"] = {
         ["Gbrowse"] = { function() Snacks.gitbrowse() end },
-        ["Help"] = { function() Snacks.picker.help() end },
         ["History"] = { function() Snacks.picker.git_log_file() end },
         ["Notifications"] = { function() Snacks.notifier.show_history() end },
         ["Pickers"] = { function() Snacks.picker() end },
       },
       ["n"] = {
-        ["<c-c>"] = { function() Snacks.picker.command_history() end },
-        ["<c-f>"] = { function() Snacks.picker.grep() end },
-        ["<c-u>"] = { function() Snacks.picker.files() end },
-        ["<leader>u"] = { function() Snacks.picker.buffers() end },
-        ["?"] = { function() Snacks.picker.resume() end },
+        -- ["<c-c>"] = { function() Snacks.picker.command_history() end },
+        -- ["<c-f>"] = { function() Snacks.picker.grep() end },
+        -- ["<c-u>"] = { function() Snacks.picker.files() end },
+        -- ["<leader>u"] = { function() Snacks.picker.buffers() end },
+        -- ["?"] = { function() Snacks.picker.resume() end },
       },
     }
 
