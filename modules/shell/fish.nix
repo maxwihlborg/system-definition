@@ -31,6 +31,11 @@
           description = "sesh connect from zoxide query";
           body = "sesh connect $(zoxide query $argv)";
         };
+        icat = {
+          wraps = "chafa";
+          description = "chafa image preview with passthrough";
+          body = "chafa --passthrough tmux -f kitty $argv";
+        };
 
         fish_user_key_bindings = {
           body = /* fish */''
