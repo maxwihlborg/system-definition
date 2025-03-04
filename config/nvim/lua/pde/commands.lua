@@ -116,6 +116,7 @@ vim.api.nvim_create_user_command("Lint", function()
     args = { "run", "--silent", "lint", "--format=json" },
     on_exit = function(j)
       local items = {}
+
       for _, result in ipairs(vim.json.decode(j:result()[1])) do
         for _, msg in ipairs(result.messages) do
           table.insert(items, {
@@ -138,7 +139,7 @@ vim.api.nvim_create_user_command("Lint", function()
       end)
 
       vim.schedule(function()
-        if #items > 1 then
+        if #items > 0 then
           vim.fn.setqflist(items)
           vim.cmd.copen()
         else
