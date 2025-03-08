@@ -16,6 +16,11 @@ return {
     cmd = "Subvert",
   },
   {
+    "stevearc/quicker.nvim",
+    ft = { "qf" },
+    opts = true,
+  },
+  {
     "ThePrimeagen/harpoon",
     lazy = true,
     opts = {

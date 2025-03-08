@@ -7,9 +7,7 @@ return {
     gitbrowse = { enabled = true },
     image = { enabled = true },
     input = { enabled = true },
-    notifier = {
-      enabled = true,
-    },
+    notifier = { enabled = true },
     quickfile = { enabled = true },
     picker = {
       enabled = true,

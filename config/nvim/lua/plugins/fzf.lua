@@ -41,10 +41,16 @@ return {
     local actions = require("fzf-lua").actions
     require("fzf-lua").setup {
       "skim",
+      keymap = {
+        fzf = {
+          ["ctrl-s"] = "select-all",
+          ["ctrl-d"] = "deselect-all",
+        },
+      },
       actions = {
         files = {
+          false,
           ["enter"] = actions.file_edit_or_qf,
-          ["ctrl-s"] = actions.file_sel_to_qf,
           ["ctrl-v"] = actions.file_vsplit,
           ["ctrl-t"] = actions.file_tabedit,
         },
