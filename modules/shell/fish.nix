@@ -44,11 +44,33 @@
 
             bind \cu '__sk_open'
             bind \cg '__sk_ghq'
+            bind \cg '__sk_ws'
             bind \co 'vicd; commandline -f repaint'
 
             bind -M insert \cu '__sk_open'
             bind -M insert \cg '__sk_ghq'
+            bind -M insert \cw '__sk_ws'
             bind -M insert \co 'vicd; commandline -f repaint'
+          '';
+        };
+
+
+        __sk_ws = {
+          description = "Change directory from ws-list";
+          body = /* fish */''
+            set -l proj (ws-list -l | sk-tmux -d 40% | string escape)
+            set -l open_status 0
+            if not test -z "$proj"
+              set -l select (ws-list -r $proj)
+              set open_status $status
+              if not test -z "$select"
+                cd $select
+                commandline "$EDITOR package.json"; and commandline -f execute
+                set open_status $status
+              end
+            end
+            commandline -f repaint
+            return $open_status
           '';
         };
 
