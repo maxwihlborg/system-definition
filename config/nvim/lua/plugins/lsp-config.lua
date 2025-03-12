@@ -2,9 +2,6 @@ return {
   "neovim/nvim-lspconfig",
   event = "BufReadPre",
   dependencies = {
-    { "folke/neodev.nvim", opts = {
-      library = { plugins = { "nvim-dap-ui" }, types = true },
-    } },
     { "jose-elias-alvarez/nvim-lsp-ts-utils" },
     { "marilari88/twoslash-queries.nvim" },
     { "ray-x/lsp_signature.nvim" },

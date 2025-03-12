@@ -3,6 +3,7 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
+  ---@type snacks.Config
   opts = {
     gitbrowse = { enabled = true },
     image = { enabled = true },
@@ -29,9 +30,11 @@ return {
     styles = {
       notification = {
         border = "single",
+        relative = "editor",
       },
       notification_history = {
         border = "single",
+        relative = "editor",
       },
     },
   },
