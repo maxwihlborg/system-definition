@@ -18,6 +18,9 @@ return {
   {
     "stevearc/quicker.nvim",
     ft = { "qf" },
+    keys = {
+      { "<leader>co", function() require("quicker").toggle { height = 10 } end },
+    },
     opts = true,
   },
   {

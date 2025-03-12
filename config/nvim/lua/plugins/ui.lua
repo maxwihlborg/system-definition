@@ -4,6 +4,8 @@ return {
   { "nvim-lua/popup.nvim" },
   {
     "rebelot/kanagawa.nvim",
+    ---@type KanagawaConfig
+    ---@diagnostic disable-next-line: missing-fields
     opts = {
       compile = true,
       undercurl = true,
@@ -22,6 +24,7 @@ return {
       overrides = function(colors)
         local c = colors.theme
         local p = colors.palette
+
         return {
           DrexRoot = { fg = p.roninYellow, bg = c.ui.bg_dim, bold = true },
           DrexDir = { link = "Directory" },
@@ -32,8 +35,7 @@ return {
 
           NormalSB = { fg = c.ui.fg_dim, bg = c.ui.bg_dim },
 
-          WinSeparator = { fg = c.ui.bg, bg = c.ui.bg_dim },
-          VertSplit = { fg = c.ui.bg, bg = c.ui.bg_dim },
+          WinSeparator = { fg = c.ui.bg_p1 },
           WinBar = { fg = c.ui.fg_dim, bg = c.ui.bg_dim },
           WinBarNC = { fg = c.ui.fg_dim, bg = c.ui.bg_dim },
           TermWinBarActive = { bg = c.diff.change, fg = c.syn.fun },
