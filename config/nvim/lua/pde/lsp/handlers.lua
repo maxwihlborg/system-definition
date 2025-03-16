@@ -3,7 +3,7 @@ local M = {}
 local function get_client_capabilites()
   local blink_ok, blink = pcall(require, "blink.cmp")
   if blink_ok then
-    return blink.get_lsp_capabilities()
+    return blink.get_lsp_capabilities(nil, true)
   end
   return vim.lsp.protocol.make_client_capabilities()
 end
@@ -51,7 +51,7 @@ function M.setup()
 
   local status_ok, inc_rename = pcall(require, "inc_rename")
   if status_ok then
-    inc_rename.setup()
+    inc_rename.setup {}
   end
 end
 
@@ -68,7 +68,7 @@ local function lsp_commands(client, bufnr)
     return
   end
 
-  local group = vim.api.nvim_create_augroup("CoreLSP", {
+  local group = vim.api.nvim_create_augroup("PdeLSP", {
     clear = true,
   })
 

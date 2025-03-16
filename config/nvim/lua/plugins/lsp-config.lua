@@ -4,7 +4,6 @@ return {
   dependencies = {
     { "jose-elias-alvarez/nvim-lsp-ts-utils" },
     { "marilari88/twoslash-queries.nvim" },
-    { "ray-x/lsp_signature.nvim" },
     {
       "j-hui/fidget.nvim",
       opts = {

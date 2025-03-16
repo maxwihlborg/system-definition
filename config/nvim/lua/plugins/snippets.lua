@@ -3,6 +3,15 @@ return {
   event = "InsertEnter",
   init = function()
     local unlinkgrp = vim.api.nvim_create_augroup("UnlinkSnippetOnModeChange", { clear = true })
+    require("pde.utils").load_keymap {
+      ["i"] = {
+        ["<c-t>"] = { function() require("luasnip").expand() end },
+      },
+      [{ "i", "s" }] = {
+        ["<c-h>"] = { function() require("luasnip").jump(-1) end },
+        ["<c-l>"] = { function() require("luasnip").jump(1) end },
+      },
+    }
 
     vim.api.nvim_create_autocmd("ModeChanged", {
       group = unlinkgrp,

@@ -3,7 +3,7 @@ return {
   cmd = { "Telescope" },
   dependencies = {
     { "nvim-telescope/telescope-fzy-native.nvim" },
-    { "stevearc/aerial.nvim", opts = true },
+    "stevearc/aerial.nvim",
     "isak102/telescope-git-file-history.nvim",
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",

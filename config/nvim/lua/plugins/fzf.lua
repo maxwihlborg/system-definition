@@ -1,11 +1,12 @@
 return {
   "ibhagwan/fzf-lua",
+  event = "VeryLazy",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  lazy = true,
   init = function()
     require("pde.utils").load_keymap {
       ["cmd"] = {
         ["Help"] = { function() require("fzf-lua").helptags() end },
+        ["History"] = { function() require("fzf-lua").git_bcommits() end },
       },
       ["n"] = {
         ["?"] = { function() require("fzf-lua").resume() end },
@@ -38,8 +39,9 @@ return {
     }
   end,
   config = function()
-    local actions = require("fzf-lua").actions
-    require("fzf-lua").setup {
+    local fzf = require "fzf-lua"
+    fzf.register_ui_select()
+    fzf.setup {
       "skim",
       keymap = {
         fzf = {
@@ -47,14 +49,42 @@ return {
           ["ctrl-d"] = "deselect-all",
         },
       },
+      winopts = {
+        preview = { border = "single" },
+        border = "single",
+      },
       actions = {
         files = {
           false,
-          ["enter"] = actions.file_edit_or_qf,
-          ["ctrl-v"] = actions.file_vsplit,
-          ["ctrl-t"] = actions.file_tabedit,
+          ["enter"] = fzf.actions.file_edit_or_qf,
+          ["ctrl-v"] = fzf.actions.file_vsplit,
+          ["ctrl-t"] = fzf.actions.file_tabedit,
         },
       },
     }
+
+    local group = vim.api.nvim_create_augroup("PdeFzfLua", {
+      clear = true,
+    })
+
+    vim.api.nvim_create_autocmd("LspAttach", {
+      group = group,
+      callback = function(_opts)
+        local opts = {
+          buffer = _opts.buf,
+          silent = true,
+          noremap = true,
+        }
+        require("pde.utils").load_keymap {
+          ["n"] = {
+            ["gd"] = { function() fzf.lsp_definitions() end, opts },
+            ["gi"] = { function() fzf.lsp_implementations() end, opts },
+            ["gr"] = { function() fzf.lsp_references { includeDeclaration = false } end, opts },
+            ["gs"] = { function() fzf.lsp_document_symbols() end, opts },
+            ["gt"] = { function() fzf.lsp_typedefs() end, opts },
+          },
+        }
+      end,
+    })
   end,
 }

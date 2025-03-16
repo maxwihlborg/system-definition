@@ -29,12 +29,10 @@ vim.api.nvim_create_user_command("Lcc", function(opts)
   Job:new({
     command = "lcc",
     args = cmd_args,
-    on_exit = function(j)
-      vim.schedule(function()
-        vim.notify(table.concat(j:result(), "\n"), nil, { title = "Output" })
-        handle:finish()
-      end)
-    end,
+    on_exit = vim.schedule_wrap(function(j)
+      vim.notify(table.concat(j:result(), "\n"), nil, { title = "Output" })
+      handle:finish()
+    end),
   }):start()
 end, {
   nargs = 1,
@@ -63,7 +61,8 @@ vim.api.nvim_create_user_command("CommitMsg", function()
   Job:new({
     command = "cgip",
     args = {
-      "" -- Source: https://github.com/rtwfroody/gpt-commit-msg/blob/master/gpt_commit_msg.py
+      "-n",
+      ""
         .. "Write a git commit message for the following. The message "
         .. "starts with a one-line summary of 60 characters, followed by a "
         .. "blank line, followed by a longer but concise description of the "
@@ -73,14 +72,12 @@ vim.api.nvim_create_user_command("CommitMsg", function()
       command = "git",
       args = { "diff", "--staged" },
     },
-    on_exit = function(j)
-      vim.schedule(function()
-        handle:finish()
-        local buf = vim.api.nvim_get_current_buf()
-        local line_number = vim.api.nvim_win_get_cursor(0)[1]
-        vim.api.nvim_buf_set_lines(buf, line_number, line_number, false, j:result())
-      end)
-    end,
+    on_exit = vim.schedule_wrap(function(j)
+      handle:finish()
+      local buf = vim.api.nvim_get_current_buf()
+      local line_number = vim.api.nvim_win_get_cursor(0)[1]
+      vim.api.nvim_buf_set_lines(buf, line_number, line_number, false, j:result())
+    end),
   }):start()
 end, {})
 
@@ -88,18 +85,18 @@ vim.api.nvim_create_user_command("Ws", function()
   local Job = require "plenary.job"
   Job:new({
     command = "ws-list",
-    on_exit = function(j)
-      vim.schedule(function()
-        vim.ui.select(vim.json.decode(j:result()[1]), {
-          prompt = "Select package",
-          format_item = function(item) return item.name end,
-        }, function(choice)
-          if choice ~= nil then
-            vim.cmd(string.format("cd %s", vim.fn.escape(choice.dir, " \\")))
-          end
-        end)
+    on_exit = vim.schedule_wrap(function(j)
+      vim.ui.select(vim.json.decode(j:result()[1]), {
+        prompt = "Select package",
+        format_item = function(item) return item.name end,
+      }, function(choice)
+        if choice ~= nil then
+          local dir = vim.fn.escape(choice.dir, " \\")
+          vim.cmd(string.format("cd %s", dir))
+          vim.cmd(string.format("edit %s/package.json", dir))
+        end
       end)
-    end,
+    end),
   }):start()
 end, {})
 

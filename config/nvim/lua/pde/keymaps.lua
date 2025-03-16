@@ -20,6 +20,8 @@ M["terminal"] = function(opts)
   return {
     ["t"] = {
       ["<esc>"] = { "<C-\\><C-n>", opts },
+      ["<C-j>"] = { "<c-\\><c-n>:NavigatorDown<cr>", opts },
+      ["<C-k>"] = { "<c-\\><c-n>:NavigatorUp<cr>", opts },
     },
     ["n"] = {
       ["q"] = { "<cmd>close<cr>", opts },

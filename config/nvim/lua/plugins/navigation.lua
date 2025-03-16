@@ -24,6 +24,16 @@ return {
     opts = true,
   },
   {
+    "niilohlin/neoindent",
+    opts = true,
+  },
+  {
+    "stevearc/aerial.nvim",
+    opts = {
+      nav = { border = "single" },
+    },
+  },
+  {
     "ThePrimeagen/harpoon",
     lazy = true,
     opts = {
@@ -81,12 +91,12 @@ return {
         [{ "n", "i" }] = {
           ["<C-j>"] = { "<cmd>NavigatorDown<cr>" },
           ["<C-k>"] = { "<cmd>NavigatorUp<cr>" },
+        },
+        [{ "n" }] = {
           ["<C-l>"] = { "<cmd>NavigatorRight<cr>" },
           ["<C-h>"] = { "<cmd>NavigatorLeft<cr>" },
         },
         ["t"] = {
-          ["<C-j>"] = { "<c-\\><c-n>:NavigatorDown<cr>" },
-          ["<C-k>"] = { "<c-\\><c-n>:NavigatorUp<cr>" },
           ["<C-l>"] = { "<c-\\><c-n>:NavigatorRight<cr>" },
           ["<C-h>"] = { "<c-\\><c-n>:NavigatorLeft<cr>" },
         },

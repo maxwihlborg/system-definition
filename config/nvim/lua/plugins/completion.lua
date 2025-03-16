@@ -21,6 +21,7 @@ return {
       keymap = {
         preset = "default",
         ["<c-e>"] = {},
+        ["<c-k>"] = {},
         ["<cr>"] = { "select_and_accept", "fallback" },
       },
       snippets = { preset = "luasnip" },
@@ -44,6 +45,7 @@ return {
 
         documentation = {
           auto_show = true,
+          auto_show_delay_ms = 0,
         },
 
         accept = {
@@ -51,13 +53,13 @@ return {
         },
 
         ghost_text = {
-          enabled = true,
+          enabled = false,
           show_without_selection = true,
         },
       },
 
       sources = {
-        default = { "snippets", "lazydev", "lsp", "path", "buffer" },
+        default = { "lazydev", "lsp", "path", "buffer" },
         providers = {
           lazydev = {
             name = "LazyDev",

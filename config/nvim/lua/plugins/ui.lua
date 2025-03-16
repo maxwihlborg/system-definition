@@ -68,22 +68,23 @@ return {
   {
     "akinsho/toggleterm.nvim",
     keys = {
-      { "<C-t>", mode = { "n", "i", "v" } },
+      { "<c-t>" },
     },
     init = function()
-      local group = vim.api.nvim_create_augroup("CoreToggleTerm", { clear = true })
+      local group = vim.api.nvim_create_augroup("PdeToggleTerm", { clear = true })
       vim.api.nvim_create_autocmd("TermOpen", {
         group = group,
         pattern = { "term://*toggleterm#*" },
-        callback = function()
+        callback = function(opt)
           require("pde.utils").load_keymap("terminal", {
-            buffer = 0,
+            buffer = opt.buf,
           })
         end,
       })
     end,
     opts = {
       open_mapping = "<C-t>",
+      insert_mappings = false,
       shade_terminals = false,
       hide_numbers = true,
       highlights = {
@@ -202,9 +203,9 @@ return {
   },
   {
     "nanozuki/tabby.nvim",
+    lazy = false,
     config = function()
       local tabby = require "tabby.tabline"
-
       local theme = {
         fill = "lualine_c_normal",
         head = "lualine_a_normal",

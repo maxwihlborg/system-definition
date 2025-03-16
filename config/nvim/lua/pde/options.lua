@@ -52,7 +52,7 @@ vim.opt.wildmenu = true
 vim.opt.wrap = true
 vim.opt.writebackup = false
 
-local group = vim.api.nvim_create_augroup("CoreEditor", { clear = true })
+local group = vim.api.nvim_create_augroup("PdeEditor", { clear = true })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = group,
