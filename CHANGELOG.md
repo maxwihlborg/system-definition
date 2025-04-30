@@ -2,6 +2,39 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.9.0](https://github.com/maxwihlborg/system-definition/compare/19b50d3668f13e9871f2bcaa3cd6129d776749d0..0.9.0) - 2025-04-30
+#### Bug Fixes
+- **(ghostty,fish)** cursor shape - ([8765e85](https://github.com/maxwihlborg/system-definition/commit/8765e8509ebbd6f6b316a9c93b09b41e88aece54)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** fzf.lua keymaps - ([dd22b79](https://github.com/maxwihlborg/system-definition/commit/dd22b79e0bdbaf7d1268ada648db07b6ba43503f)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** single lint error not shown - ([532a3e9](https://github.com/maxwihlborg/system-definition/commit/532a3e9fb3ca35d3e60d2d5ccb416b1f6cf9877b)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** command errors - ([729c3fe](https://github.com/maxwihlborg/system-definition/commit/729c3fe3c79c5bc3aa36a48196f708a78625f0bf)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** snacks qflist keybind - ([a0eb8d5](https://github.com/maxwihlborg/system-definition/commit/a0eb8d5352eb49df3e390c492048bde479bb889e)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** blink.cmp behaviour - ([a5d20d9](https://github.com/maxwihlborg/system-definition/commit/a5d20d94f8c1e94ba9e4ac0de8b372f1f3c2f6cd)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Features
+- **(fish)** __sq_ws keybinds - ([2b3eac1](https://github.com/maxwihlborg/system-definition/commit/2b3eac1fb14a798f8a9a85c596d2b8b6d4e91189)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(fish)** icat function - ([493e533](https://github.com/maxwihlborg/system-definition/commit/493e533b9f7520f7d9a63bccaadfa978152405c0)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(fish)** __sk_ghq change directory function and mappings - ([38a9234](https://github.com/maxwihlborg/system-definition/commit/38a9234961bbeb00aeb6315743db63f9b42ac469)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** nvim instead of vim logo in tabline - ([f90bf5f](https://github.com/maxwihlborg/system-definition/commit/f90bf5fba1a655f34b6bafd377aa29619c2df29f)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** single toggle qf-list binding - ([aeb6a2f](https://github.com/maxwihlborg/system-definition/commit/aeb6a2fda4227d0bf34fa1968cccd5394ef41fcc)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** omnisharp lsp - ([57464b9](https://github.com/maxwihlborg/system-definition/commit/57464b92f4979cf4bfddfe948ac6092ae8437ad1)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** fzf.lua, luasnippets and blink.cmp bindings - ([59f4519](https://github.com/maxwihlborg/system-definition/commit/59f4519673beed5f33e3614136854b580a8aac44)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** lazydev instead of neodev - ([b35d6b6](https://github.com/maxwihlborg/system-definition/commit/b35d6b6118f0815a6eb1d6a40f9c90470faeb4d0)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** fzf-lua - ([bc4ecf6](https://github.com/maxwihlborg/system-definition/commit/bc4ecf603a738c92f36d0f88f588a687c64e24de)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** quicker.nvim - ([5c946b2](https://github.com/maxwihlborg/system-definition/commit/5c946b22484aa7ea40797eeb957c520f44ae5c53)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** Ws keybinding - ([026fd5b](https://github.com/maxwihlborg/system-definition/commit/026fd5bf7e0836c5a2c1098c34cf513a7d95c4b4)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** more markdown highlights in kanagawa - ([a067274](https://github.com/maxwihlborg/system-definition/commit/a067274c89016f725cf2c4deac36dd50b43ec98e)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** ws-list user command - ([60311bb](https://github.com/maxwihlborg/system-definition/commit/60311bbcbf8c80780694ba44b7afb0fdff4ba223)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** neotest keybinds - ([fe80e85](https://github.com/maxwihlborg/system-definition/commit/fe80e85a5632199ed965d5b9a284cba0747f403e)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** change back to wrap true - ([6693303](https://github.com/maxwihlborg/system-definition/commit/669330308f513035a6aeac93138f5b82f76d2117)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim,fish)** rename tmux pane on workspace change - ([c449f28](https://github.com/maxwihlborg/system-definition/commit/c449f28223bbbd8027cf3935db51a16ac5b0b8ac)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(vifm)** chafa image previews - ([e785db7](https://github.com/maxwihlborg/system-definition/commit/e785db7e73133721ed7c290c72a2dbe13796819b)) - [@maxwihlborg](https://github.com/maxwihlborg)
+#### Miscellaneous Chores
+- **(nix,nvim)** upgrade - ([95d1428](https://github.com/maxwihlborg/system-definition/commit/95d1428d558095ad2f1807ecfcde64fbecb3c4eb)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- **(nvim)** update plugin versions - ([47f5965](https://github.com/maxwihlborg/system-definition/commit/47f5965458d9853ce10218c0a5946d89dcfb2e32)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- new screenshot - ([19b50d3](https://github.com/maxwihlborg/system-definition/commit/19b50d3668f13e9871f2bcaa3cd6129d776749d0)) - [@maxwihlborg](https://github.com/maxwihlborg)
+
+- - -
+
 ## [0.8.0](https://github.com/maxwihlborg/system-definition/compare/06ba617d14c2e2b03507ac0f6d11a4cdaeb6e82c..0.8.0) - 2025-02-23
 #### Features
 - **(fish)** simple __sk_open instead of broken __fzf_open - ([06ba617](https://github.com/maxwihlborg/system-definition/commit/06ba617d14c2e2b03507ac0f6d11a4cdaeb6e82c)) - [@maxwihlborg](https://github.com/maxwihlborg)
