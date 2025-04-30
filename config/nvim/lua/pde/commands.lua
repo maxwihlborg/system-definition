@@ -87,13 +87,14 @@ vim.api.nvim_create_user_command("Ws", function()
     command = "ws-list",
     on_exit = vim.schedule_wrap(function(j)
       vim.ui.select(vim.json.decode(j:result()[1]), {
-        prompt = "Select package",
+        prompt = "~/workspace/",
         format_item = function(item) return item.name end,
       }, function(choice)
         if choice ~= nil then
           local dir = vim.fn.escape(choice.dir, " \\")
           vim.cmd(string.format("cd %s", dir))
           vim.cmd(string.format("edit %s/package.json", dir))
+          Job:new({ command = "tmux", args = { "rename-window", choice.name } }):start()
         end
       end)
     end),

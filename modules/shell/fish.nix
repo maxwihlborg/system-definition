@@ -65,7 +65,7 @@
               set open_status $status
               if not test -z "$select"
                 cd $select
-                commandline "$EDITOR package.json"; and commandline -f execute
+                commandline "tmux rename-window $proj;$EDITOR package.json"; and commandline -f execute
                 set open_status $status
               end
             end
