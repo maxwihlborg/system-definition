@@ -51,7 +51,6 @@ M["main"] = {
     ["<leader><leader>o"] = { "vi{:sort<cr>" },
     ["<leader>a"] = { "<cmd>w<cr>" },
     ["<leader>ca"] = { "<cmd>Lazy<cr>" },
-    ["<leader>cc"] = { "<cmd>cclose<cr>" },
     ["<leader>cm"] = { "<cmd>Mason<cr>" },
     ["<leader>o"] = { "vip:sort<cr>" },
     ["<leader>q"] = { "<cmd>q<cr>" },
