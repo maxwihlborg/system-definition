@@ -218,7 +218,7 @@ return {
       tabby.set(function(line)
         return {
           {
-            { "  ", hl = theme.head },
+            { "  ", hl = theme.head },
           },
           line.tabs().foreach(function(tab)
             local hl = tab.is_current() and theme.current_tab or theme.tab
