@@ -171,6 +171,7 @@
         # overrides
         set fish_color_cwd yellow
         set fish_greeting
+        set fish_cursor_insert block
 
         # fish git prompt
         set __fish_git_prompt_show_informative_status yes

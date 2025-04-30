@@ -17,6 +17,7 @@ in
 
       cursor-style = "block";
       cursor-style-blink = false;
+      shell-integration-features = "no-cursor";
 
       window-padding-balance = true;
       window-decoration = false;
