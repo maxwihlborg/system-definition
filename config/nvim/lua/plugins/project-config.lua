@@ -11,7 +11,7 @@ return {
           local utils = require "pde.utils"
           local lspconfig = require "lspconfig"
 
-          lspconfig.csharp_ls.setup(config.get_options "csharp_ls")
+          lspconfig.omnisharp.setup(config.get_options "omnisharp")
 
           utils.set_compiler("tsc", {
             pattern = { "typescript", "typescriptreact", "json", "jsonc" },

@@ -27,8 +27,8 @@ return {
         },
       },
       csharpier_local = {
-        command = "dotnet csharpier",
-        args = { "--write-stdout" },
+        command = "dotnet",
+        args = { "csharpier", "--write-stdout" },
         stdin = true,
       },
     }
