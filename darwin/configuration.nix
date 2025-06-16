@@ -28,6 +28,7 @@
   };
   system = {
     stateVersion = 6;
+    primaryUser = user;
     keyboard = {
       enableKeyMapping = true;
       remapCapsLockToEscape = true;
