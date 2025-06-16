@@ -90,6 +90,7 @@ return {
     ls.add_snippets("_jscommon", {
       s("cn", { t 'className="', i(0), t '"' }),
       s("cnn", { t "className={", i(0), t "}" }),
+      s("tw", { t 'className={tw("', i(0), t '")}' }),
       s("cx", { t "className={css({", i(0), t "})}" }),
       s("cl", { t "console.log(", i(0), t ");" }),
       s("rcd", { t "export { default as ", f(copy, 1), t ' } from "./', i(1), t '";' }),

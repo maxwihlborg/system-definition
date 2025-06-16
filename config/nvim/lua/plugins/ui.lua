@@ -83,7 +83,7 @@ return {
       })
     end,
     opts = {
-      open_mapping = "<C-t>",
+      open_mapping = "<c-t>",
       insert_mappings = false,
       shade_terminals = false,
       hide_numbers = true,
