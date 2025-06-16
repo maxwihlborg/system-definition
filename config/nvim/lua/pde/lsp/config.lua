@@ -1,5 +1,3 @@
-local handlers = require "pde.lsp.handlers"
-
 local M = {}
 
 function M.setup_autostart(lsp)
@@ -25,22 +23,8 @@ function M.setup_autostart(lsp)
   vim.api.nvim_create_autocmd(event, {
     pattern = pattern,
     group = lsp_group,
-    callback = function(opt)
-      client.manager.try_add(opt.buf)
-    end,
+    callback = function(opt) client.manager.try_add(opt.buf) end,
   })
-end
-
-function M.get_options(lsp)
-  local opts = {
-    on_attach = handlers.on_attach,
-    capabilities = handlers.capabilities,
-  }
-  local opt_ok, extend_opt = pcall(require, "pde.lsp.servers." .. lsp)
-  if opt_ok then
-    opts = vim.tbl_deep_extend("force", extend_opt, opts)
-  end
-  return opts
 end
 
 return M

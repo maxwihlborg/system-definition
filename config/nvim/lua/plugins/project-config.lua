@@ -7,11 +7,11 @@ return {
       {
         path = vim.fn.expand "~/ghq/github.com/walktheroom",
         config = function()
-          local config = require "pde.lsp.config"
           local utils = require "pde.utils"
-          local lspconfig = require "lspconfig"
 
-          lspconfig.omnisharp.setup(config.get_options "omnisharp")
+          vim.lsp.config("omnisharp", {
+            cmd = { "OmniSharp" },
+          })
 
           utils.set_compiler("tsc", {
             pattern = { "typescript", "typescriptreact", "json", "jsonc" },

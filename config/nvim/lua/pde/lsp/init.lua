@@ -1,15 +1,72 @@
 local handlers = require "pde.lsp.handlers"
-local utils = require "pde.lsp.config"
 
-local lspconfig = require "lspconfig"
+local config = {
+  -- disable virtual text
+  virtual_text = false,
+  -- show signs
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.HINT] = "",
+      [vim.diagnostic.severity.INFO] = "",
+    },
+  },
+  update_in_insert = false,
+  underline = true,
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "none",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
+}
 
-handlers.setup()
+vim.diagnostic.config(config)
+vim.lsp.config("*", {
+  capabilities = handlers.get_client_capabilites(),
+  on_attach = handlers.on_attach,
+})
 
-local mason_ok, mason = pcall(require, "mason-lspconfig")
-if mason_ok then
-  mason.setup_handlers {
-    function(lsp)
-      lspconfig[lsp].setup(utils.get_options(lsp))
-    end,
-  }
-end
+vim.lsp.enable {
+  -- "biome",
+  "cssls",
+  -- "eslint",
+  -- "graphql",
+  "jsonls",
+  "lua_ls",
+  "prismals",
+  "rescriptls",
+  "rust_analyzer",
+  -- "tailwindcss",
+  -- "ts_ls",
+  "vale_ls",
+  "yamlls",
+}
+
+require("typescript-tools").setup {
+  capabilities = handlers.get_client_capabilites(),
+  on_attach = handlers.on_attach,
+  settings = {
+    separate_diagnostic_server = true,
+    publish_diagnostic_on = "insert_leave",
+    expose_as_code_action = {},
+    tsserver_path = nil,
+    tsserver_plugins = {},
+    tsserver_max_memory = "auto",
+    tsserver_format_options = {},
+    tsserver_file_preferences = {},
+    tsserver_locale = "en",
+    complete_function_calls = false,
+    include_completions_with_insert_text = true,
+    code_lens = "off",
+    disable_member_code_lens = true,
+    jsx_close_tag = {
+      enable = false,
+      filetypes = { "javascriptreact", "typescriptreact" },
+    },
+  },
+}

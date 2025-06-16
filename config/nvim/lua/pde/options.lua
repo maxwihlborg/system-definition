@@ -84,6 +84,7 @@ vim.filetype.add {
     gltf = "jsonc",
   },
   filename = {
+    ["workspace.config.json"] = "jsonc",
     [".csharpierrc"] = "jsonc",
     ["flake.lock"] = "jsonc",
   },

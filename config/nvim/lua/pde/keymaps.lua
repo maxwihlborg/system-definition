@@ -76,6 +76,9 @@ M["main"] = {
 
 M["lsp.ts"] = function(opts)
   return {
+    ["cmd"] = {
+      ["OrganizeImports"] = { ":TSToolsOrganizeImports" },
+    },
     ["n"] = {
       ["<leader>rf"] = { "<cmd>TSLspRenameFile<cr>", opts },
       ["<leader>i"] = { "<cmd>InspectTwoslashQueries<cr>", opts },
@@ -98,7 +101,7 @@ M["lsp"] = function(opts)
         opts,
       },
       ["<leader>j"] = {
-        function() vim.lsp.buf.hover() end,
+        function() vim.lsp.buf.hover { border = "rounded" } end,
         opts,
       },
     },
