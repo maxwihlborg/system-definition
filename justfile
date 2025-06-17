@@ -4,7 +4,7 @@
 
 # rebuild system
 switch:
-    darwin-rebuild switch --flake .
+    sudo darwin-rebuild switch --flake .
 
 # update flake
 update:
