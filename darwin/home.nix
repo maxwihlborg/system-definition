@@ -45,6 +45,7 @@
       lazydocker
       less
       meshoptimizer
+      moreutils
       ncdu
       neofetch
       nixpkgs-fmt
