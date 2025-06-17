@@ -32,19 +32,19 @@ vim.lsp.config("*", {
 })
 
 vim.lsp.enable {
-  -- "biome",
   "cssls",
-  -- "eslint",
-  -- "graphql",
   "jsonls",
   "lua_ls",
   "prismals",
   "rescriptls",
   "rust_analyzer",
+  "harper_ls",
+  "yamlls",
+  -- "biome",
+  -- "eslint",
+  -- "graphql",
   -- "tailwindcss",
   -- "ts_ls",
-  "vale_ls",
-  "yamlls",
 }
 
 require("typescript-tools").setup {

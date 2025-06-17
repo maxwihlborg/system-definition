@@ -101,31 +101,50 @@ vim.api.nvim_create_user_command("Ws", function()
   }):start()
 end, {})
 
-vim.api.nvim_create_user_command("Lint", function()
+local function lint(cmd)
   local progress = require "fidget.progress"
   local Job = require "plenary.job"
 
   local handle = progress.handle.create {
     title = "Lint",
-    lsp_client = { name = "eslint" },
+    lsp_client = { name = cmd },
   }
+  local output = {}
+
   Job:new({
     command = "pnpm",
-    args = { "run", "--silent", "lint", "--format=json" },
-    on_exit = function(j)
+    args = { "run", "--silent", cmd, "--format=json" },
+    on_stdout = function(_, data) table.insert(output, data) end,
+    on_exit = function()
       local items = {}
 
-      for _, result in ipairs(vim.json.decode(j:result()[1])) do
-        for _, msg in ipairs(result.messages) do
-          table.insert(items, {
-            filename = result.filePath,
-            text = msg.message,
-            type = msg.severity > 1 and "E" or "W",
-            lnum = msg.line,
-            end_lnum = msg.endLine,
-            col = msg.col,
-            end_col = msg.endCol,
-          })
+      local parsed_output = vim.json.decode(table.concat(output))
+      if parsed_output.diagnostics ~= nil then -- oxlint
+        for _, diag in ipairs(parsed_output.diagnostics) do
+          for _, label in ipairs(diag.labels) do
+            table.insert(items, {
+              filename = diag.filename,
+              text = string.format("[%s] %s", diag.code, diag.message),
+              type = diag.severity == "error" and "E" or "W",
+              lnum = label.span.line,
+              col = label.span.column,
+              end_col = label.span.column + label.span.length,
+            })
+          end
+        end
+      else
+        for _, result in ipairs(parsed_output) do -- eslint
+          for _, msg in ipairs(result) do
+            table.insert(items, {
+              filename = result.filePath,
+              text = msg.message,
+              type = msg.severity > 1 and "E" or "W",
+              lnum = msg.line,
+              end_lnum = msg.endLine,
+              col = msg.col,
+              end_col = msg.endCol,
+            })
+          end
         end
       end
 
@@ -148,4 +167,7 @@ vim.api.nvim_create_user_command("Lint", function()
       end)
     end,
   }):start()
-end, {})
+end
+
+vim.api.nvim_create_user_command("Lint", function() lint "lint" end, {})
+vim.api.nvim_create_user_command("OLint", function() lint "olint" end, {})
