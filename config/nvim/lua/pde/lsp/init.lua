@@ -33,12 +33,13 @@ vim.lsp.config("*", {
 
 vim.lsp.enable {
   "cssls",
+  "harper_ls",
   "jsonls",
   "lua_ls",
   "prismals",
   "rescriptls",
   "rust_analyzer",
-  "harper_ls",
+  "taplo",
   "yamlls",
   -- "biome",
   -- "eslint",
