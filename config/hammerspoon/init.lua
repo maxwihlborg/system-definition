@@ -41,17 +41,18 @@ local function launch_by_bundle_id(id)
 end
 
 -- osascript -e 'id of app "App Name"'
-hs.hotkey.bind(mod, "T", launch_by_bundle_id "com.mitchellh.ghostty")
-hs.hotkey.bind(mod, "C", launch_by_bundle_id "company.thebrowser.Browser")
-hs.hotkey.bind(mod, "S", launch_by_bundle_id "com.tinyspeck.slackmacgap")
-hs.hotkey.bind(mod, "N", launch_by_bundle_id "com.spotify.client")
 hs.hotkey.bind(mod, "B", launch_by_bundle_id "com.linear")
+hs.hotkey.bind(mod, "C", launch_by_bundle_id "company.thebrowser.Browser")
 hs.hotkey.bind(mod, "F", launch_by_bundle_id "com.figma.Desktop")
+hs.hotkey.bind(mod, "N", launch_by_bundle_id "com.spotify.client")
+hs.hotkey.bind(mod, "S", launch_by_bundle_id "com.tinyspeck.slackmacgap")
+hs.hotkey.bind(mod, "T", launch_by_bundle_id "com.mitchellh.ghostty")
+hs.hotkey.bind(mod, "W", launch_by_bundle_id "net.whatsapp.WhatsApp")
 
 -- Split Screen Actions
 local send_win_left = send_win(0, 0, 0.5, 1)
-local send_win_right = send_win(0.5, 0, 0.5, 1)
 local send_win_up = send_win(0, 0, 1, 0.5)
+local send_win_right = send_win(0.5, 0, 0.5, 1)
 local send_win_down = send_win(0, 0.5, 1, 0.5)
 local send_win_full = send_win(0, 0, 1, 1)
 
