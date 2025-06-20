@@ -23,7 +23,6 @@
       bat
       btop
       chafa
-      cocogitto
       curl
       darwin.trash
       delta
@@ -36,6 +35,7 @@
       gh
       ghq
       git-agecrypt
+      git-cliff
       git-crypt
       gopass
       httpie

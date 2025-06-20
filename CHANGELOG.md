@@ -1,207 +1,269 @@
 # Changelog
-All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
-- - -
-## [0.9.0](https://github.com/maxwihlborg/system-definition/compare/19b50d3668f13e9871f2bcaa3cd6129d776749d0..0.9.0) - 2025-04-30
-#### Bug Fixes
-- **(ghostty,fish)** cursor shape - ([8765e85](https://github.com/maxwihlborg/system-definition/commit/8765e8509ebbd6f6b316a9c93b09b41e88aece54)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** fzf.lua keymaps - ([dd22b79](https://github.com/maxwihlborg/system-definition/commit/dd22b79e0bdbaf7d1268ada648db07b6ba43503f)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** single lint error not shown - ([532a3e9](https://github.com/maxwihlborg/system-definition/commit/532a3e9fb3ca35d3e60d2d5ccb416b1f6cf9877b)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** command errors - ([729c3fe](https://github.com/maxwihlborg/system-definition/commit/729c3fe3c79c5bc3aa36a48196f708a78625f0bf)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** snacks qflist keybind - ([a0eb8d5](https://github.com/maxwihlborg/system-definition/commit/a0eb8d5352eb49df3e390c492048bde479bb889e)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** blink.cmp behaviour - ([a5d20d9](https://github.com/maxwihlborg/system-definition/commit/a5d20d94f8c1e94ba9e4ac0de8b372f1f3c2f6cd)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Features
-- **(fish)** __sq_ws keybinds - ([2b3eac1](https://github.com/maxwihlborg/system-definition/commit/2b3eac1fb14a798f8a9a85c596d2b8b6d4e91189)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(fish)** icat function - ([493e533](https://github.com/maxwihlborg/system-definition/commit/493e533b9f7520f7d9a63bccaadfa978152405c0)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(fish)** __sk_ghq change directory function and mappings - ([38a9234](https://github.com/maxwihlborg/system-definition/commit/38a9234961bbeb00aeb6315743db63f9b42ac469)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** nvim instead of vim logo in tabline - ([f90bf5f](https://github.com/maxwihlborg/system-definition/commit/f90bf5fba1a655f34b6bafd377aa29619c2df29f)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** single toggle qf-list binding - ([aeb6a2f](https://github.com/maxwihlborg/system-definition/commit/aeb6a2fda4227d0bf34fa1968cccd5394ef41fcc)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** omnisharp lsp - ([57464b9](https://github.com/maxwihlborg/system-definition/commit/57464b92f4979cf4bfddfe948ac6092ae8437ad1)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** fzf.lua, luasnippets and blink.cmp bindings - ([59f4519](https://github.com/maxwihlborg/system-definition/commit/59f4519673beed5f33e3614136854b580a8aac44)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** lazydev instead of neodev - ([b35d6b6](https://github.com/maxwihlborg/system-definition/commit/b35d6b6118f0815a6eb1d6a40f9c90470faeb4d0)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** fzf-lua - ([bc4ecf6](https://github.com/maxwihlborg/system-definition/commit/bc4ecf603a738c92f36d0f88f588a687c64e24de)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** quicker.nvim - ([5c946b2](https://github.com/maxwihlborg/system-definition/commit/5c946b22484aa7ea40797eeb957c520f44ae5c53)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** Ws keybinding - ([026fd5b](https://github.com/maxwihlborg/system-definition/commit/026fd5bf7e0836c5a2c1098c34cf513a7d95c4b4)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** more markdown highlights in kanagawa - ([a067274](https://github.com/maxwihlborg/system-definition/commit/a067274c89016f725cf2c4deac36dd50b43ec98e)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** ws-list user command - ([60311bb](https://github.com/maxwihlborg/system-definition/commit/60311bbcbf8c80780694ba44b7afb0fdff4ba223)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** neotest keybinds - ([fe80e85](https://github.com/maxwihlborg/system-definition/commit/fe80e85a5632199ed965d5b9a284cba0747f403e)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** change back to wrap true - ([6693303](https://github.com/maxwihlborg/system-definition/commit/669330308f513035a6aeac93138f5b82f76d2117)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim,fish)** rename tmux pane on workspace change - ([c449f28](https://github.com/maxwihlborg/system-definition/commit/c449f28223bbbd8027cf3935db51a16ac5b0b8ac)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(vifm)** chafa image previews - ([e785db7](https://github.com/maxwihlborg/system-definition/commit/e785db7e73133721ed7c290c72a2dbe13796819b)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Miscellaneous Chores
-- **(nix,nvim)** upgrade - ([95d1428](https://github.com/maxwihlborg/system-definition/commit/95d1428d558095ad2f1807ecfcde64fbecb3c4eb)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** update plugin versions - ([47f5965](https://github.com/maxwihlborg/system-definition/commit/47f5965458d9853ce10218c0a5946d89dcfb2e32)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- new screenshot - ([19b50d3](https://github.com/maxwihlborg/system-definition/commit/19b50d3668f13e9871f2bcaa3cd6129d776749d0)) - [@maxwihlborg](https://github.com/maxwihlborg)
+All notable changes to this project will be documented in this file.
 
-- - -
+## [0.10.0] - 2025-06-20
 
-## [0.8.0](https://github.com/maxwihlborg/system-definition/compare/06ba617d14c2e2b03507ac0f6d11a4cdaeb6e82c..0.8.0) - 2025-02-23
-#### Features
-- **(fish)** simple __sk_open instead of broken __fzf_open - ([06ba617](https://github.com/maxwihlborg/system-definition/commit/06ba617d14c2e2b03507ac0f6d11a4cdaeb6e82c)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** new config - ([b6a0951](https://github.com/maxwihlborg/system-definition/commit/b6a09511df398e2daa94614ff207d83236668427)) - [@maxwihlborg](https://github.com/maxwihlborg)
+### 🚀 Features
 
-- - -
+- *(nvim)* Config update
+- *(nix)* Add moreutils
+- *(nvim)* Add harper-ls
+- *(nvim)* Make Lint user command handle oxlint output
+- *(hammerspoon)* Add whatsapp binding
+- *(lazygit)* Gpg support
+- *(nvim)* Add hunks.nvim
+- Add jujutsu vcs
+- *(fish)* Jjui fish alias
+- *(nvim)* Enable taplo lsp
+- *(skim)* Add SKIM_DEFAULT_OPTIONS, FZF_DEFAULT_OPTS
+- *(fzf)* Set FZF_DEFAULT_COMMAND
+- Change to git-cliff
 
-## [0.7.0](https://github.com/maxwihlborg/system-definition/compare/9dc2a455f2079ac885470ab83d2c73b0edf65f16..0.7.0) - 2025-02-17
-#### Bug Fixes
-- **(lazygit)** branchLog command - ([8a855d5](https://github.com/maxwihlborg/system-definition/commit/8a855d53fcbd91f0ef17470b78defe78076bf6eb)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** try fix drex highlights - ([fbb3e01](https://github.com/maxwihlborg/system-definition/commit/fbb3e01eb77156176f62f897d4e4617b84ad1ec3)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** fix tabline - ([fd26964](https://github.com/maxwihlborg/system-definition/commit/fd26964655d801c71f72e28b9c2e264304c7c14d)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Features
-- **(ghostty)** ghostty config - ([28777bf](https://github.com/maxwihlborg/system-definition/commit/28777bf43e943fa9b6c45e4467d9e8cc2450cc46)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(neomutt)** configure email - ([9dc2a45](https://github.com/maxwihlborg/system-definition/commit/9dc2a455f2079ac885470ab83d2c73b0edf65f16)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** export declare namespace luasnip - ([4669649](https://github.com/maxwihlborg/system-definition/commit/46696491dffd925c3d45fe481532a5ba770e53de)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** move csharp_ls to project-config - ([37a2514](https://github.com/maxwihlborg/system-definition/commit/37a2514f197f3b7736006facd1912cb544d1f507)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add vim-abolish - ([2ec53ad](https://github.com/maxwihlborg/system-definition/commit/2ec53adb4de796dc1e3ae37a1a928d86e4f62b82)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(vifm)** image previews - ([4b2dfde](https://github.com/maxwihlborg/system-definition/commit/4b2dfde7a0548cbeaa575177ea2eea365baeb798)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- atac and serie packages - ([1b2f7f8](https://github.com/maxwihlborg/system-definition/commit/1b2f7f8f5a3d2948d99581e8e315834fe5f85743)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- more tokyonight theming - ([1da53ac](https://github.com/maxwihlborg/system-definition/commit/1da53ac4586e696062ea2a3c24b3b3f50019d8a9)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Miscellaneous Chores
-- **(ghostty)** close on last window - ([5ce90f6](https://github.com/maxwihlborg/system-definition/commit/5ce90f6011d19a6ee1d6e59c49f66f222ccf76b2)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** update plugins - ([168b5d5](https://github.com/maxwihlborg/system-definition/commit/168b5d5004ddbb05c61cabb102fc7accc93b299e)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update nix - ([f4d9592](https://github.com/maxwihlborg/system-definition/commit/f4d95920aea5fbc86b9fdf9d4727bd238169a788)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([bf222cb](https://github.com/maxwihlborg/system-definition/commit/bf222cb6591d77cd4675b6b21dfa64365a9676ec)) - [@maxwihlborg](https://github.com/maxwihlborg)
+### 🐛 Bug Fixes
 
-- - -
+- *(nix)* Switch require sudio
 
-## [0.6.0](https://github.com/maxwihlborg/system-definition/compare/1e114d6167cec73a8593aab6c59c7717f65db95a..0.6.0) - 2024-11-14
-#### Bug Fixes
-- **(just)** update recipie - ([f17ae24](https://github.com/maxwihlborg/system-definition/commit/f17ae2431b405ab9d1042bbc4ce2bf6369d3febb)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** rename tid snippet to tt - ([123ec7d](https://github.com/maxwihlborg/system-definition/commit/123ec7ded0103fba5864e4e3f46258213514e16b)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Features
-- **(darwin)** sops and git-crypt + notmuch/mail config - ([3676bd2](https://github.com/maxwihlborg/system-definition/commit/3676bd20fdb75ae28cb0faeb274d51e342fbbb80)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(fish)** vim bindings! - ([a52efd9](https://github.com/maxwihlborg/system-definition/commit/a52efd98b90d932525548cb16b9dc4f826c665b5)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(git)** add sig key - ([4d2cc56](https://github.com/maxwihlborg/system-definition/commit/4d2cc561b7b48eef318618c9a0070140c8392c70)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(lazygit)** enable emoji parsing - ([97b87b3](https://github.com/maxwihlborg/system-definition/commit/97b87b3fd0db0aac0d5d00de2ff0ac0cbe7fba91)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** svg formatting using prettier - ([6211a73](https://github.com/maxwihlborg/system-definition/commit/6211a73895af9b0bae30c1f58c727fe49b08aaa4)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** Effect.gen snippet - ([1e114d6](https://github.com/maxwihlborg/system-definition/commit/1e114d6167cec73a8593aab6c59c7717f65db95a)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(tmux)** make out of store symlink - ([ddaaee2](https://github.com/maxwihlborg/system-definition/commit/ddaaee22ef1520a6bf03a0be6e3caa5cda3e2db0)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(vifm)** packer plugin - ([17867bb](https://github.com/maxwihlborg/system-definition/commit/17867bb20032f3f5fbda6e140abd8154cbf0ffb6)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(vifm)** change from lf to vifm - ([dc2e67b](https://github.com/maxwihlborg/system-definition/commit/dc2e67b8d23c5239d48994286877b733180fb546)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Miscellaneous Chores
-- **(home)** remove unused programs - ([2dbc96e](https://github.com/maxwihlborg/system-definition/commit/2dbc96e20d745759363e0ac93acf0d53f4f5cace)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(tmux)** cleanup config file - ([040ade8](https://github.com/maxwihlborg/system-definition/commit/040ade8fffc3a920f1eb3a61be386c7f41505b1c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+### ⚙️ Miscellaneous Tasks
 
-- - -
+- *(nix)* Update flake
+- *(nvim)* Upgrade to latest mason and vim.lsp.config
 
-## [0.5.0](https://github.com/maxwihlborg/system-definition/compare/5eb43df285e9416031e5771bbbb145a92a102d41..0.5.0) - 2024-10-31
-#### Features
-- **(fish)** add syntax highlighting - ([444f565](https://github.com/maxwihlborg/system-definition/commit/444f56588125fc41280feee94fe53c541ae10a51)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(fish)** remove secrets file - ([5eb43df](https://github.com/maxwihlborg/system-definition/commit/5eb43df285e9416031e5771bbbb145a92a102d41)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(home)** manage lazygit with home-manager, enable xdg - ([0226b9f](https://github.com/maxwihlborg/system-definition/commit/0226b9f323788a73e66fee2cb170dee117d8d150)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** move user commands into own file - ([b27dcb9](https://github.com/maxwihlborg/system-definition/commit/b27dcb99aabbb2f8e1ac0b7f9ab6e64086ee4bb8)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** q close binding in aerial-nav - ([df4dae4](https://github.com/maxwihlborg/system-definition/commit/df4dae4d6d29816ea6459f4e70391bd35c4d6b2f)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** c-j/c-k keymaps for telescope - ([af5024e](https://github.com/maxwihlborg/system-definition/commit/af5024e265e6bb17b9a1696d614ba660e05df2b1)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add git_file_history keymap command - ([7eb598d](https://github.com/maxwihlborg/system-definition/commit/7eb598d2c1685a5846c13b6a10895dce22c93732)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(vifm)** enable vifm - ([4621014](https://github.com/maxwihlborg/system-definition/commit/4621014822d8a3183b30bd0990d26fe3a702cb90)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Miscellaneous Chores
-- **(nvim)** ui package wtr monorepo makeprg - ([ca0f2c8](https://github.com/maxwihlborg/system-definition/commit/ca0f2c898d58b5880a1be92cc1a10d2a60ec98be)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([9e32dbb](https://github.com/maxwihlborg/system-definition/commit/9e32dbb56c09fc38f415f306f36530f8bb48e9cd)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([4a82e7e](https://github.com/maxwihlborg/system-definition/commit/4a82e7edf29e431449ebbda8916cae5c936e2f78)) - [@maxwihlborg](https://github.com/maxwihlborg)
+## [0.9.0] - 2025-04-30
 
-- - -
+### 🚀 Features
 
-## [0.4.0](https://github.com/maxwihlborg/system-definition/compare/ca8ca53b0aba95213ccc70e4987c3c2260e75d1e..0.4.0) - 2024-10-12
-#### Bug Fixes
-- **(nvim)** fix haxe tree-sitter - ([8c2a472](https://github.com/maxwihlborg/system-definition/commit/8c2a4721781e5dbbea5f167d30eb2fa2708b6975)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Features
-- **(home)** add postgres, unar and meshoptimizer apps - ([2af8674](https://github.com/maxwihlborg/system-definition/commit/2af86742cdad3346990ff6d7dc5d8ab0971d8271)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** move project-config into own module - ([5076d08](https://github.com/maxwihlborg/system-definition/commit/5076d08eb713b73d148bdee9250f06103d83762f)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** `cnn` snippet -> className={$1} - ([d5dbc41](https://github.com/maxwihlborg/system-definition/commit/d5dbc41ae5d68233e9e269bdb3616de56a65addf)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** run closest build command in wtr repo - ([7f2001c](https://github.com/maxwihlborg/system-definition/commit/7f2001c958d976f2b1098ef24c5aa21db211051e)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** nvim-dap symbols, dotnet dap adapter - ([6d7d4bc](https://github.com/maxwihlborg/system-definition/commit/6d7d4bc2067a80ad8a1e0f7de9e90dad6c3003a8)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add dim to light-control-cli user command - ([5de0072](https://github.com/maxwihlborg/system-definition/commit/5de007220350f3a9ef60a842c5c16c8490c9a901)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add `CommitMsg` command - ([f3de4f1](https://github.com/maxwihlborg/system-definition/commit/f3de4f19f5742eacd1867fd74915c570c25730c1)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** Update nvim configurations and packages versions - ([d4eb4c9](https://github.com/maxwihlborg/system-definition/commit/d4eb4c9196265a7448ad88556c9b0b2d607ff651)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** light-control-cli user command - ([39e9309](https://github.com/maxwihlborg/system-definition/commit/39e9309d334b8699c6e408324abb1d9c62730d8f)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add Lint user_command - ([1276bc8](https://github.com/maxwihlborg/system-definition/commit/1276bc89d50dbd6bc27b495885f6313cf4854046)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add `cexpr system(...) | copen` keybind - ([fba3400](https://github.com/maxwihlborg/system-definition/commit/fba3400d9045a0b498c829502b31b3fa457b9fc4)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add `tid` (type id) snippet - ([ca8ca53](https://github.com/maxwihlborg/system-definition/commit/ca8ca53b0aba95213ccc70e4987c3c2260e75d1e)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Miscellaneous Chores
-- **(nvim)** rename tsserver -> ts_ls - ([b65cdb0](https://github.com/maxwihlborg/system-definition/commit/b65cdb0f908f215c87253a12fff1e694b15c16e0)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([ff8e75d](https://github.com/maxwihlborg/system-definition/commit/ff8e75d99313b1863e0f024ab5c511d967e573de)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- *(nvim)* Change back to wrap true
+- *(nvim)* Neotest keybinds
+- *(nvim)* Ws-list user command
+- *(fish)* __sk_ghq change directory function and mappings
+- *(vifm)* Chafa image previews
+- *(nvim)* More markdown highlights in kanagawa
+- *(nvim)* Ws keybinding
+- *(fish)* Icat function
+- *(nvim)* Quicker.nvim
+- *(nvim)* Fzf-lua
+- *(fish)* __sq_ws keybinds
+- *(nvim)* Lazydev instead of neodev
+- *(nvim)* Fzf.lua, luasnippets and blink.cmp bindings
+- *(nvim)* Omnisharp lsp
+- *(nvim,fish)* Rename tmux pane on workspace change
+- *(nvim)* Single toggle qf-list binding
+- *(nvim)* Nvim instead of vim logo in tabline
 
-- - -
+### 🐛 Bug Fixes
 
-## [0.3.0](https://github.com/maxwihlborg/system-definition/compare/b43fd80046c93627e81696ac19fafb70450bb579..0.3.0) - 2024-08-01
-#### Bug Fixes
-- **(nvim)** remove prettierd after conform update - ([54a8772](https://github.com/maxwihlborg/system-definition/commit/54a877217d2ed408a8d618b38e4daad48d8dda5a)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** diagnostic symbols - ([b02973a](https://github.com/maxwihlborg/system-definition/commit/b02973a3562f330d8490b191c733938e00b6c748)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Features
-- **(nvim)** go back to fzy_native instead of zf-native (build issues) - ([8d1a4d9](https://github.com/maxwihlborg/system-definition/commit/8d1a4d9298b7178fbdde3ac6aeb6216100afb724)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** css formatting with prettier - ([f54a8de](https://github.com/maxwihlborg/system-definition/commit/f54a8de6dd2a391b8303c9255283e6fae597fda4)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** upgrade fidget nvim! - ([2c979cc](https://github.com/maxwihlborg/system-definition/commit/2c979cc63c399dfec86d8287aee10817f2d48019)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(nvim)** add .csharpierrc filetype - ([42b2f7b](https://github.com/maxwihlborg/system-definition/commit/42b2f7b1f0800180d62fc32feb2a960372a5f286)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- nvim add csharpier_local conform command - ([ef907c7](https://github.com/maxwihlborg/system-definition/commit/ef907c74c7912d67243106842bcaff38dd54c746)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- nvim add gltf file type - ([c6ca46e](https://github.com/maxwihlborg/system-definition/commit/c6ca46eafbdb0e8591a2a82efa0cba7bb5528fb4)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- remove neogit - ([001b1ee](https://github.com/maxwihlborg/system-definition/commit/001b1eed127d811c980885b805e3d2eb560ccf7c)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- add flake.lock filetype definition - ([d77c8f0](https://github.com/maxwihlborg/system-definition/commit/d77c8f0a5963489f864f6604044bc0cd91a2e14d)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- remove sys-switch sys-update in favour of justfile - ([1d5c1a1](https://github.com/maxwihlborg/system-definition/commit/1d5c1a19dd173dbfbdb984151cd8ed9bd47ac14a)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- add lazydocker.nvim - ([d88889f](https://github.com/maxwihlborg/system-definition/commit/d88889fefd025ab5da335cddc4754bf76aa7d601)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- remove gitui and nnn - ([c4e7900](https://github.com/maxwihlborg/system-definition/commit/c4e7900f2447d489559ce798c1e5cc22820de853)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- add justfile - ([b43fd80](https://github.com/maxwihlborg/system-definition/commit/b43fd80046c93627e81696ac19fafb70450bb579)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Miscellaneous Chores
-- **(nvim)** remove yanil highlights - ([ad4e429](https://github.com/maxwihlborg/system-definition/commit/ad4e429e758dd0bcd10b8dad435c445ea8fb993c)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- **(version)** 0.2.0 - ([2ffcedd](https://github.com/maxwihlborg/system-definition/commit/2ffcedddd0bf64d8c412d41b75f2478015735b44)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([b4768eb](https://github.com/maxwihlborg/system-definition/commit/b4768ebbc2052d85ac2f456006174dc130c673bf)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([f5314e3](https://github.com/maxwihlborg/system-definition/commit/f5314e3e89c69e8c5c1045c9ca7c002c228318f8)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([e0d36d3](https://github.com/maxwihlborg/system-definition/commit/e0d36d3b2c70a27c77c8762dbcf15d066a7c099c)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update system - ([6c3f7f4](https://github.com/maxwihlborg/system-definition/commit/6c3f7f4d69f360e99e867cd7a106198c6004d7c4)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update nix-pkgs - ([6b5355a](https://github.com/maxwihlborg/system-definition/commit/6b5355a043513df1dc066f2132b1253498154f48)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update lock files - ([8a53836](https://github.com/maxwihlborg/system-definition/commit/8a5383638e864d9b714257484d9a7ce5f8429453)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- pin Neogit version - ([ecf082f](https://github.com/maxwihlborg/system-definition/commit/ecf082fb85ba9853775ba304a0e8245c9472006f)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- update cocogitto configuration - ([144b3a2](https://github.com/maxwihlborg/system-definition/commit/144b3a2f1b91bfa4483dd59550e7fc233445a03c)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- *(nvim)* Blink.cmp behaviour
+- *(nvim)* Snacks qflist keybind
+- *(nvim)* Command errors
+- *(nvim)* Single lint error not shown
+- *(nvim)* Fzf.lua keymaps
+- *(ghostty,fish)* Cursor shape
 
-- - -
+### ⚙️ Miscellaneous Tasks
 
-## [0.2.0](https://github.com/maxwihlborg/system-definition/compare/05f4d54347f4c962a99a1bfe72f6a336b98f3b9b..0.2.0) - 2024-05-23
-#### Features
-- add justfile - ([c6cca04](https://github.com/maxwihlborg/system-definition/commit/c6cca044189ab760aeacf2776a05ed9ebd57795b)) - [@maxwihlborg](https://github.com/maxwihlborg)
-- git followTags option - ([ca15096](https://github.com/maxwihlborg/system-definition/commit/ca1509686d45d37bdf367ad1509c30743f7888bc)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Miscellaneous Chores
-- update cocogitto configuration - ([30925f4](https://github.com/maxwihlborg/system-definition/commit/30925f4a49d62398341412ab1ae036eb9ea452e1)) - [@maxwihlborg](https://github.com/maxwihlborg)
-#### Refactoring
-- rename readme -> README - ([05f4d54](https://github.com/maxwihlborg/system-definition/commit/05f4d54347f4c962a99a1bfe72f6a336b98f3b9b)) - [@maxwihlborg](https://github.com/maxwihlborg)
+- New screenshot
+- *(nvim)* Update plugin versions
+- *(nix,nvim)* Upgrade
+- *(version)* 0.9.0
 
-- - -
+## [0.8.0] - 2025-02-23
 
-## 0.1.0 - 2024-05-23
-#### Bug Fixes
-- fish remove ghq-fish - (1c08e14) - Max Wihlborg
-- enable netrw for GBrowse commands - (8acc894) - Max Wihlborg
-#### Features
-- **(TS)** syntax queries - (16d5f30) - Max Wihlborg
-- **(nvim)** remove aw-watcher-vim - (e09cf87) - Max Wihlborg
-- **(nvim)** gpt close and more snippets - (b747600) - Max Wihlborg
-- **(nvim)** enable dap again - (0bbcb9e) - Max Wihlborg
-- **(nvim)** more _jscommon snippets - (e1f810e) - Max Wihlborg
-- **(nvim)** update - (ff5c082) - Max Wihlborg
-- **(nvim)** go config - (ccee3d3) - Max Wihlborg
-- **(nvim)** neoswap - (97536af) - Max Wihlborg
-- **(nvim)** add `Fd` command - (030292e) - Max Wihlborg
-- **(nvim)** ,,o to sort in curly blocks - (55615d0) - Max Wihlborg
-- **(nvim)** export function snippet - (a9c0313) - Max Wihlborg
-- **(nvim)** add just - (72ac633) - Max Wihlborg
-- **(xnomad)** check command - (c216b1d) - Max Wihlborg
-- add cocogitto configuration - (ac93711) - Max Wihlborg
-- add ffmpeg - (e1c3b6c) - Max Wihlborg
-- add telescope git_file_history command - (d033989) - Max Wihlborg
-- add cocogitto - (2afc9db) - Max Wihlborg
-- nvim add zf - (c1272fb) - Max Wihlborg
-- fish new alias - (c4a370d) - Max Wihlborg
-- nvim csharp settings - (2d13aff) - Max Wihlborg
-- add vimv (bulk rename tool) - (a14161c) - Max Wihlborg
-- gopass alias - (400d9ea) - Max Wihlborg
-- implement sesh - (4ae6fd6) - Max Wihlborg
-- nvim change telescope sorter (zf) - (4e2a73a) - Max Wihlborg
-- add sesh - (3115d06) - Max Wihlborg
-- add nvim pipeable alias - (7d1cfa2) - Max Wihlborg
-- nvim hide DS_Store - (7561f57) - Max Wihlborg
-#### Miscellaneous Chores
-- **(nvim)** fidget.nvim -> legacy - (1fb44dd) - Max Wihlborg
-- **(nvim)** update packages - (426a4eb) - Max Wihlborg
-- update packages - (3422c34) - Max Wihlborg
+### 🚀 Features
 
-- - -
+- *(fish)* Simple __sk_open instead of broken __fzf_open
+- *(nvim)* [**breaking**] New config
 
-Changelog generated by [cocogitto](https://github.com/cocogitto/cocogitto).
+### ⚙️ Miscellaneous Tasks
+
+- *(version)* 0.8.0
+
+## [0.7.0] - 2025-02-17
+
+### 🚀 Features
+
+- *(neomutt)* Configure email
+- *(vifm)* Image previews
+- *(nvim)* Add vim-abolish
+- *(nvim)* Move csharp_ls to project-config
+- More tokyonight theming
+- *(ghostty)* Ghostty config
+- *(nvim)* Export declare namespace luasnip
+- Atac and serie packages
+
+### 🐛 Bug Fixes
+
+- *(nvim)* Fix tabline
+- *(nvim)* Try fix drex highlights
+- *(lazygit)* BranchLog command
+
+### ⚙️ Miscellaneous Tasks
+
+- Update system
+- Update nix
+- *(ghostty)* Close on last window
+- *(nvim)* Update plugins
+- *(version)* 0.7.0
+
+## [0.6.0] - 2024-11-14
+
+### 🚀 Features
+
+- *(nvim)* Effect.gen snippet
+- *(tmux)* Make out of store symlink
+- *(fish)* Vim bindings!
+- *(vifm)* Change from lf to vifm
+- *(vifm)* Packer plugin
+- *(lazygit)* Enable emoji parsing
+- *(nvim)* Svg formatting using prettier
+- *(git)* Add sig key
+- *(darwin)* Sops and git-crypt + notmuch/mail config
+
+### 🐛 Bug Fixes
+
+- *(just)* Update recipie
+- *(nvim)* Rename tid snippet to tt
+
+### ⚙️ Miscellaneous Tasks
+
+- *(home)* Remove unused programs
+- *(tmux)* Cleanup config file
+- *(version)* 0.6.0
+
+## [0.5.0] - 2024-10-31
+
+### 🚀 Features
+
+- *(fish)* Remove secrets file
+- *(fish)* Add syntax highlighting
+- *(nvim)* Add git_file_history keymap command
+- *(nvim)* C-j/c-k keymaps for telescope
+- *(nvim)* Q close binding in aerial-nav
+- *(nvim)* Move user commands into own file
+- *(home)* Manage lazygit with home-manager, enable xdg
+- *(vifm)* Enable vifm
+
+### ⚙️ Miscellaneous Tasks
+
+- *(nvim)* Ui package wtr monorepo makeprg
+- Update system
+- Update system
+- *(version)* 0.5.0
+
+## [0.4.0] - 2024-10-12
+
+### 🚀 Features
+
+- *(nvim)* Add `tid` (type id) snippet
+- *(nvim)* Add `cexpr system(...) | copen` keybind
+- *(nvim)* Add Lint user_command
+- *(nvim)* Light-control-cli user command
+- *(nvim)* Update nvim configurations and packages versions
+- *(nvim)* Add `CommitMsg` command
+- *(nvim)* Add dim to light-control-cli user command
+- *(nvim)* Nvim-dap symbols, dotnet dap adapter
+- *(nvim)* Run closest build command in wtr repo
+- *(home)* Add postgres, unar and meshoptimizer apps
+- *(nvim)* `cnn` snippet -> className={$1}
+- *(nvim)* Move project-config into own module
+
+### 🐛 Bug Fixes
+
+- *(nvim)* Fix haxe tree-sitter
+
+### ⚙️ Miscellaneous Tasks
+
+- Update system
+- *(nvim)* Rename tsserver -> ts_ls
+- *(version)* 0.4.0
+
+## [0.3.0] - 2024-08-01
+
+### 🚀 Features
+
+- Git followTags option
+- Add justfile
+- Remove gitui and nnn
+- Add lazydocker.nvim
+- Remove sys-switch sys-update in favour of justfile
+- Add flake.lock filetype definition
+- Remove neogit
+- Nvim add gltf file type
+- Nvim add csharpier_local conform command
+- *(nvim)* Add .csharpierrc filetype
+- *(nvim)* Upgrade fidget nvim!
+- *(nvim)* Css formatting with prettier
+- *(nvim)* Go back to fzy_native instead of zf-native (build issues)
+
+### 🐛 Bug Fixes
+
+- *(nvim)* Diagnostic symbols
+- *(nvim)* Remove prettierd after conform update
+
+### 🚜 Refactor
+
+- Rename readme -> README
+
+### ⚙️ Miscellaneous Tasks
+
+- Update cocogitto configuration
+- *(version)* 0.2.0
+- Pin Neogit version
+- Update lock files
+- Update nix-pkgs
+- Update system
+- *(nvim)* Remove yanil highlights
+- Update system
+- Update system
+- Update system
+- *(version)* 0.3.0
+
+## [0.1.0] - 2024-05-23
+
+### 🚀 Features
+
+- *(nvim)* Add just
+- *(TS)* Syntax queries
+- *(nvim)* Export function snippet
+- *(nvim)* ,,o to sort in curly blocks
+- *(xnomad)* Check command
+- *(nvim)* Add `Fd` command
+- *(nvim)* Neoswap
+- *(nvim)* Go config
+- *(nvim)* Update
+- *(nvim)* More _jscommon snippets
+- *(nvim)* Enable dap again
+- *(nvim)* Gpt close and more snippets
+- *(nvim)* Remove aw-watcher-vim
+- Nvim hide DS_Store
+- Add nvim pipeable alias
+- Add sesh
+- Nvim change telescope sorter (zf)
+- Implement sesh
+- Gopass alias
+- Add vimv (bulk rename tool)
+- Nvim csharp settings
+- Fish new alias
+- Nvim add zf
+- Add cocogitto
+- Add telescope git_file_history command
+- Add ffmpeg
+- Add cocogitto configuration
+
+### 🐛 Bug Fixes
+
+- Enable netrw for GBrowse commands
+- Fish remove ghq-fish
+
+### 💼 Other
+
+- *(nvim)* Mv core -> pde
+
+### ⚙️ Miscellaneous Tasks
+
+- *(nvim)* Update packages
+- *(nvim)* Fidget.nvim -> legacy
+- Update packages
+- *(version)* 0.1.0
+
+<!-- generated by git-cliff -->

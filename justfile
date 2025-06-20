@@ -15,4 +15,4 @@ upgrade: update switch
 
 # release new version
 bump:
-    cog bump --auto
+    git-cliff --bump -o CHANGELOG.md
