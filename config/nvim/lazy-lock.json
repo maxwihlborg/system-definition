@@ -10,7 +10,7 @@
   "blink.cmp": { "branch": "main", "commit": "2ce8b3e821b2e0b263410929322adeb7dc8684aa" },
   "close-buffers.nvim": { "branch": "master", "commit": "3acbcad1211572342632a6c0151f839e7dead27f" },
   "conform.nvim": { "branch": "master", "commit": "8132ec733eed3bf415b97b76797ca41b59f51d7d" },
-  "drex.nvim": { "branch": "main", "commit": "acccc1225e61a3977d86a590420b868e708cc64a" },
+  "drex.nvim": { "branch": "main", "commit": "62140090e13552d0f960afb5647e943872f88309" },
   "emmet-vim": { "branch": "master", "commit": "6c511a8d7d2863066f32e25543e2bb99d505172c" },
   "fidget.nvim": { "branch": "main", "commit": "d9ba6b7bfe29b3119a610892af67602641da778e" },
   "fzf-lua": { "branch": "main", "commit": "f21fecf43eeae285583042fb8cf462cf7cb8d05e" },

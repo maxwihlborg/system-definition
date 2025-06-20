@@ -26,4 +26,15 @@ return {
     cmd = { "DiffEditor" },
     opts = true,
   },
+  {
+    dir = "~/ghq/github.com/maxwihlborg/jjui.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    cmd = { "JJUi" },
+    keys = {
+      { "<leader>cj", "<cmd>JJUi<cr>" },
+    },
+    opts = true,
+  },
 }
