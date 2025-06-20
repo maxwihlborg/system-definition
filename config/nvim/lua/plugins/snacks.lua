@@ -7,7 +7,7 @@ return {
   opts = {
     gitbrowse = { enabled = true },
     image = { enabled = true, doc = { enabled = false } },
-    input = { enabled = true },
+    input = { enabled = false },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     styles = {

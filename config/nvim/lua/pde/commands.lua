@@ -134,7 +134,7 @@ local function lint(cmd)
         end
       else
         for _, result in ipairs(parsed_output) do -- eslint
-          for _, msg in ipairs(result) do
+          for _, msg in ipairs(result.messages) do
             table.insert(items, {
               filename = result.filePath,
               text = msg.message,

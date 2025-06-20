@@ -21,4 +21,9 @@ return {
       { "<leader>cd", "<cmd>LazyDocker<cr>" },
     },
   },
+  {
+    "julienvincent/hunk.nvim",
+    cmd = { "DiffEditor" },
+    opts = true,
+  },
 }
