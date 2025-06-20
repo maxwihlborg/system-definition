@@ -81,6 +81,7 @@
       # fzf
       FZF_FIND_FILE_COMMAND = "fd --type f";
       FZF_OPEN_COMMAND = "fd --type f";
+      FZF_DEFAULT_COMMAND = "fd --type f";
       FZF_DEFAULT_OPTS = "--cycle";
       # skim
       SKIM_DEFAULT_COMMAND = "fd --type f";
