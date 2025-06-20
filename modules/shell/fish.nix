@@ -99,7 +99,16 @@
             return $open_status
           '';
         };
-
+        fish_vcs_prompt = {
+          description = "Print all vcs prompts";
+          body = /* fish */''
+            fish_jj_prompt $argv
+            or fish_git_prompt $argv
+            # or fish_hg_prompt $argv
+            # or fish_fossil_prompt $argv
+            # or fish_svn_prompt
+          '';
+        };
         fish_mode_prompt = {
           body = /* fish */''
             set -l normal (set_color normal)
@@ -117,7 +126,49 @@
             end
           '';
         };
+        fish_jj_prompt = {
+          description = "Write out the jj prompt";
+          body = /* fish */''
+            # Is jj installed?
+            if not command -sq jj
+                return 1
+            end
+            # Are we in a jj repo?
+            if not jj root --quiet &>/dev/null
+                return 1
+            end
 
+            # Generate prompt
+            jj log --ignore-working-copy --no-graph --color always -r @ -T '
+                surround(
+                    " (",
+                    ")",
+                    separate(
+                        " ",
+                        bookmarks.join(", "),
+                        coalesce(
+                            surround(
+                                "\"",
+                                "\"",
+                                if(
+                                    description.first_line().substr(0, 24).starts_with(description.first_line()),
+                                    description.first_line().substr(0, 24),
+                                    description.first_line().substr(0, 23) ++ "…"
+                                )
+                            ),
+                            label(if(empty, "empty"), description_placeholder)
+                        ),
+                        change_id.shortest(),
+                        commit_id.shortest(),
+                        if(conflict, label("conflict", "(conflict)")),
+                        if(empty, label("empty", "(empty)")),
+                        if(divergent, "(divergent)"),
+                        if(hidden, "(hidden)"),
+                    )
+                )
+            '
+          '';
+        };
         fish_prompt = {
           body = /* fish */''
             set -l last_status $status
