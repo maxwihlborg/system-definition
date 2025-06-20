@@ -197,6 +197,7 @@
         # lazy
         gg = "lazygit";
         gd = "lazydocker";
+        jg = "jjui";
 
         md = "mkdir -p";
 
