@@ -103,7 +103,7 @@ return {
     "jackMort/ChatGPT.nvim",
     cmd = { "ChatGPT", "ChatGPTRun" },
     keys = {
-      { "<leader>cg", "<cmd>ChatGPT<cr>" },
+      { "<leader>ct", "<cmd>ChatGPT<cr>" },
     },
     opts = {
       api_key_cmd = "cat ~/.config/sops-nix/secrets/open_api_token",

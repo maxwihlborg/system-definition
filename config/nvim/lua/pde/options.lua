@@ -82,10 +82,12 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.filetype.add {
   extension = {
     gltf = "jsonc",
+    http = "http",
   },
   filename = {
-    ["workspace.config.json"] = "jsonc",
     [".csharpierrc"] = "jsonc",
     ["flake.lock"] = "jsonc",
+    ["turbo.json"] = "jsonc",
+    ["workspace.config.json"] = "jsonc",
   },
 }

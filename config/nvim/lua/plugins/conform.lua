@@ -38,6 +38,7 @@ return {
       fish = { "fish_indent" },
       glsl = { "clang_format" },
       go = { "gofmt" },
+      http = { "kulala-fmt" },
       just = { "just" },
       lua = { "stylua" },
       nix = { "nixpkgs_fmt" },

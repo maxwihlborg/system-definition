@@ -8,17 +8,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>g", "<cmd>LazyGit<cr>" },
-    },
-  },
-  {
-    "crnvl96/lazydocker.nvim",
-    cmd = "LazyDocker",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-    keys = {
-      { "<leader>cd", "<cmd>LazyDocker<cr>" },
+      { "<leader>cg", "<cmd>LazyGit<cr>" },
     },
   },
   {
@@ -27,13 +17,17 @@ return {
     opts = true,
   },
   {
+    "rafikdraoui/jj-diffconflicts",
+    cmd = { "JJDiffConflicts" },
+  },
+  {
     dir = "~/ghq/github.com/maxwihlborg/jjui.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
     cmd = { "JJUi" },
     keys = {
-      { "<leader>cj", "<cmd>JJUi<cr>" },
+      { "<leader>g", "<cmd>JJUi<cr>" },
     },
     opts = true,
   },
