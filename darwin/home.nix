@@ -40,7 +40,9 @@
       gopass
       httpie
       imagemagick
+      jjui
       jq
+      jujutsu
       just
       lazydocker
       less
