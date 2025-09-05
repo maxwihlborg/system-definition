@@ -5,6 +5,22 @@ return {
   opts = {
     project_config = {
       {
+        path = vim.fn.expand "~/ghq/github.com/maxwihlborg",
+        config = function()
+          local utils = require "pde.utils"
+
+          utils.set_compiler("tsc", {
+            pattern = { "typescript", "typescriptreact", "json", "jsonc" },
+            cmd = function()
+              local dir = utils.find_package_json_dir()
+              assert(dir ~= nil, "Could not find root dir")
+
+              return string.format("pnpm --dir %s run build", dir)
+            end,
+          })
+        end,
+      },
+      {
         path = vim.fn.expand "~/ghq/github.com/walktheroom",
         config = function()
           local utils = require "pde.utils"

@@ -76,7 +76,7 @@ return {
       s("en", { t "export declare namespace ", i(1), t { " {", "\t" }, i(0), t { "", "}" } }),
       s("gg", { t { "Effect.gen(function* () {", "\t" }, i(0), t { "", "})" } }),
       s("tt", {
-        t { "const " },
+        t { "export const " },
         i(1),
         t { ': unique symbol = Symbol.for("' },
         i(2),

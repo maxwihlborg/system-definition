@@ -59,8 +59,12 @@ return {
       },
 
       sources = {
-        default = { "lazydev", "lsp", "path", "buffer" },
+        default = { "lazydev", "lsp", "path", "buffer", "gh_emoji" },
         providers = {
+          gh_emoji = {
+            name = "GH Emojis",
+            module = "pde.blink.gh-emoji",
+          },
           lazydev = {
             name = "LazyDev",
             module = "lazydev.integrations.blink",
