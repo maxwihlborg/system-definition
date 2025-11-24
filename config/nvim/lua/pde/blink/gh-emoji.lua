@@ -2,13 +2,13 @@
 --- @class blink.cmp.Source
 local source = {}
 
-local function keyword_pattern(line, trigger_characters)
-  -- Pattern is taken from `cmp-emoji` for similar trigger behavior.
-  for _, c in ipairs(trigger_characters) do
-    local pattern = [=[\%([[:space:]"'`]\|^\)\zs]=] .. c .. [=[[[:alnum:]_\-\+]*]=] .. c .. [=[\?]=] .. "$"
-    if vim.regex(pattern):match_str(line) then
-      return true
-    end
+-- Pattern is taken from `cmp-emoji` for similar trigger behavior.
+local pattern = [=[\%([[:space:]"'`]\|^\)\zs]=] .. ":" .. [=[[[:alnum:]_\-\+]*]=] .. ":" .. [=[\?]=] .. "$"
+local keyword_re = vim.regex(pattern)
+
+local function keyword_pattern(line)
+  if keyword_re:match_str(line) then
+    return true
   end
   return false
 end
@@ -65,7 +65,7 @@ end
 
 function source:get_completions(ctx, cb)
   local cursor_before_line = ctx.line:sub(1, ctx.cursor[2])
-  if not keyword_pattern(cursor_before_line, self:get_trigger_characters()) then
+  if not keyword_pattern(cursor_before_line) then
     cb()
     return function() end
   else
@@ -74,9 +74,9 @@ function source:get_completions(ctx, cb)
       local items = vim.tbl_map(
         function(emoji)
           return {
-            _data = vim.deepcopy(emoji),
             label = string.format("%s :%s:", emoji.emoji, emoji.name),
             kind = kind,
+            insertText = string.format(":%s:", emoji.name),
             textEdit = {
               newText = string.format(":%s:", emoji.name),
               range = {
@@ -105,7 +105,7 @@ end
 
 function source:resolve(item, callback)
   item = vim.deepcopy(item)
-  return get_emoji_info(item._data.name, function(info)
+  return get_emoji_info(item.insertText, function(info)
     item.documentation = {
       kind = "markdown",
       value = info,

@@ -34,11 +34,11 @@ return {
             cmd = function()
               local dir = utils.find_package_json_dir()
               assert(dir ~= nil, "Could not find root dir")
-              if utils.ends_with(dir, "wtr-admin") or utils.ends_with(dir, "apps/clients") then
-                return string.format("pnpm --dir %s exec tsc", dir)
-              end
-              if utils.ends_with(dir, "apps/studio") then
+              if utils.ends_with(dir, "apps/platform") or utils.ends_with(dir, "apps/studio") or utils.ends_with(dir, "apps/auth") then
                 return string.format("pnpm --dir %s exec tsc -b", dir)
+              end
+              if utils.ends_with(dir, "apps/clients") then
+                return string.format("pnpm --dir %s exec tsc", dir)
               end
               if utils.ends_with(dir, "packages/ui") or utils.ends_with(dir, "packages/gis") then
                 return string.format("pnpm --dir %s run build:ts", dir)

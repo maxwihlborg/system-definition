@@ -83,6 +83,7 @@ vim.filetype.add {
   extension = {
     gltf = "jsonc",
     http = "http",
+    mdx = "markdown",
   },
   filename = {
     [".csharpierrc"] = "jsonc",
