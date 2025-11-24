@@ -21,6 +21,16 @@
     '';
   };
 
+  networking = {
+    knownNetworkServices = [
+      "Wi-Fi"
+    ];
+    dns = [
+      "1.1.1.1"
+      "8.8.8.8"
+    ];
+  };
+
   ids = {
     gids = {
       nixbld = 30000;
