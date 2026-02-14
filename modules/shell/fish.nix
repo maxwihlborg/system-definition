@@ -44,7 +44,7 @@
 
             bind \cu '__sk_open'
             bind \cg '__sk_ghq'
-            bind \cg '__sk_ws'
+            bind \cw '__sk_ws'
             bind \co 'vicd; commandline -f repaint'
 
             bind -M insert \cu '__sk_open'
@@ -58,7 +58,7 @@
         __sk_ws = {
           description = "Change directory from ws-list";
           body = /* fish */''
-            set -l proj (ws-list -l | sk-tmux -d 40% | string escape)
+            set -l proj (ws-list -l | sk --tmux -d 40% | string escape)
             set -l open_status 0
             if not test -z "$proj"
               set -l select (ws-list -r $proj)
@@ -77,7 +77,7 @@
         __sk_ghq = {
           description = "Change directory from ghq";
           body = /* fish */''
-            set -l select (ghq list | sk-tmux -d 40% | string escape)
+            set -l select (ghq list | sk --tmux -d 40% | string escape)
             set -l open_status 0
             if not test -z "$select"
               cd "$(ghq root)/$select";
@@ -89,7 +89,7 @@
         __sk_open = {
           description = "Open files and directories with editor";
           body = /* fish */''
-            set -l select (sk-tmux -d 40% | string escape)
+            set -l select (sk --tmux -d 40% | string escape)
             set -l open_status 0
             if not test -z "$select"
               commandline "$EDITOR $select"; and commandline -f execute
@@ -216,9 +216,6 @@
         # zoxide
         ${pkgs.zoxide}/bin/zoxide init fish | source
 
-        # transient secrets
-        set -gx OPENAI_API_KEY $(cat ~/.config/sops-nix/secrets/open_api_token)
-
         # overrides
         set fish_color_cwd yellow
         set fish_greeting
@@ -264,6 +261,9 @@
 
         # GoPass
         pass = "gopass";
+
+        # Temp
+        wo = "__sk_ws"; # ctrl+w binding broken for some reason
 
         # neovim
         nn = "nvim";

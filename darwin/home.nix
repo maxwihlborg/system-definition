@@ -9,15 +9,9 @@
     enable = true;
   };
 
-
-  sops = {
-    age.keyFile = "${config.xdg.dataHome}/system-definition/key.txt";
-    defaultSopsFile = ./secrets.yaml;
-    secrets.open_api_token = { };
-  };
-
   home = {
     packages = with pkgs; [
+      # skim
       age
       atac
       bat
@@ -41,6 +35,7 @@
       httpie
       imagemagick
       jjui
+      jless
       jq
       jujutsu
       just
@@ -61,8 +56,8 @@
       serie
       sesh
       silver-searcher
-      skim
       sops
+      ssh-to-age
       tokei
       unar
       watchman

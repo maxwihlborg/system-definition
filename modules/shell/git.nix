@@ -3,22 +3,24 @@
   programs = {
     git = {
       enable = true;
-      userEmail = "6181962+maxwihlborg@users.noreply.github.com";
-      userName = "Max Wihlborg";
       signing = {
         key = "CFEADCD30132EB29";
         format = "openpgp";
         signByDefault = true;
       };
-      aliases = {
-        rename = "!moveit() { git push origin --delete `git branch --show-current` || true; git branch -m $1; git push --set-upstream origin $1; }; moveit";
-        co = "checkout";
-        ci = "commit";
-        st = "status";
-        br = "branch";
-        rb = "rebase";
-      };
-      extraConfig = {
+      settings = {
+        user = {
+          email = "6181962+maxwihlborg@users.noreply.github.com";
+          name = "Max Wihlborg";
+        };
+        alias = {
+          rename = "!moveit() { git push origin --delete `git branch --show-current` || true; git branch -m $1; git push --set-upstream origin $1; }; moveit";
+          co = "checkout";
+          ci = "commit";
+          st = "status";
+          br = "branch";
+          rb = "rebase";
+        };
         include = {
           path = "${pkgs.vimPlugins.tokyonight-nvim}/extras/delta/tokyonight_night.gitconfig";
         };
@@ -58,6 +60,7 @@
 
         # Vim
         ".swp"
+        ".exrc"
         ".netrwhist"
       ];
     };

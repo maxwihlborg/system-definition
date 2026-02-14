@@ -54,7 +54,6 @@ M["main"] = {
     ["<leader>cm"] = { "<cmd>Mason<cr>" },
     ["<leader>o"] = { "vip:sort<cr>" },
     ["<leader>q"] = { "<cmd>q<cr>" },
-    ["<leader>tt"] = { "<cmd>tabe<cr>" },
     ["<leader>w"] = { "<cmd>Ws<cr>" },
     ["<leader>x"] = { "<cmd>w|luafile %<cr>" },
 

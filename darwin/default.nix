@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, darwin, sops-nix, user, ... }:
+{ lib, inputs, nixpkgs, home-manager, darwin, user, ... }:
 {
   xbook-pro = darwin.lib.darwinSystem {
     system = "aarch64-darwin";
@@ -11,9 +11,6 @@
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit user; };
         home-manager.users.${user} = import ./home.nix;
-        home-manager.sharedModules = [
-          sops-nix.homeManagerModules.sops
-        ];
       }
     ];
   };

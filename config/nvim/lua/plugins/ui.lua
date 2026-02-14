@@ -68,7 +68,7 @@ return {
   {
     "akinsho/toggleterm.nvim",
     keys = {
-      { "<c-t>" },
+      { "<leader>to" },
     },
     init = function()
       local group = vim.api.nvim_create_augroup("PdeToggleTerm", { clear = true })
@@ -83,7 +83,7 @@ return {
       })
     end,
     opts = {
-      open_mapping = "<c-t>",
+      open_mapping = "<leader>to",
       insert_mappings = false,
       shade_terminals = false,
       hide_numbers = true,
@@ -97,25 +97,6 @@ return {
         enabled = true,
         name_formatter = function(term) return " " .. term.name .. " " end,
       },
-    },
-  },
-  {
-    "jackMort/ChatGPT.nvim",
-    cmd = { "ChatGPT", "ChatGPTRun" },
-    keys = {
-      { "<leader>ct", "<cmd>ChatGPT<cr>" },
-    },
-    opts = {
-      api_key_cmd = "cat ~/.config/sops-nix/secrets/open_api_token",
-      openai_params = {
-        max_tokens = 2000,
-      },
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "folke/trouble.nvim",
-      "nvim-telescope/telescope.nvim",
     },
   },
   {

@@ -9,12 +9,9 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    sops-nix.url = "github:Mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, sops-nix, darwin, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, darwin, ... }:
     let
       user = "max";
     in
@@ -22,7 +19,7 @@
       darwinConfigurations = (
         import ./darwin {
           inherit (nixpkgs) lib;
-          inherit user inputs nixpkgs darwin home-manager sops-nix;
+          inherit user inputs nixpkgs darwin home-manager;
         }
       );
     };

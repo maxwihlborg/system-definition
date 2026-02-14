@@ -36,6 +36,7 @@ vim.lsp.enable {
   "harper_ls",
   "jsonls",
   "lua_ls",
+  "oxlint",
   "prismals",
   "rescriptls",
   "rust_analyzer",
