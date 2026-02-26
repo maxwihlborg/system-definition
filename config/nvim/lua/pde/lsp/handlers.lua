@@ -1,5 +1,6 @@
 local M = {}
 
+---@param bufnr integer
 local function lsp_mappings(bufnr)
   require("pde.utils").load_keymap("lsp", {
     buffer = bufnr,
@@ -8,6 +9,8 @@ local function lsp_mappings(bufnr)
   })
 end
 
+---@param client vim.lsp.Client
+---@param bufnr integer
 local function lsp_commands(client, bufnr)
   if not client.server_capabilities.documentHighlightProvider then
     return
@@ -30,6 +33,7 @@ local function lsp_commands(client, bufnr)
   })
 end
 
+---@param bufnr integer
 local function ts_mappings(bufnr)
   require("pde.utils").load_keymap("lsp.ts", {
     buffer = bufnr,
@@ -38,6 +42,8 @@ local function ts_mappings(bufnr)
   })
 end
 
+---@param client vim.lsp.Client
+---@param bufnr integer
 local function lsp_winbar(client, bufnr)
   local status_ok, navic = pcall(require, "nvim-navic")
   if not status_ok then
@@ -49,6 +55,8 @@ local function lsp_winbar(client, bufnr)
   end
 end
 
+---@param client vim.lsp.Client
+---@param bufnr integer
 local function ts_attach_twoslash(client, bufnr)
   local status_ok, twoslash = pcall(require, "twoslash-queries")
   if not status_ok then
@@ -58,18 +66,35 @@ local function ts_attach_twoslash(client, bufnr)
   twoslash.attach(client, bufnr)
 end
 
+---@param client vim.lsp.Client
+---@param bufnr integer
 local function ts_on_attach(client, bufnr)
   ts_attach_twoslash(client, bufnr)
   ts_mappings(bufnr)
 end
 
+---@param client vim.lsp.Client
+---@param bufnr integer
 function M.on_attach(client, bufnr)
+  -- print(client.name)
   if client.name == "typescript-tools" then
     ts_on_attach(client, bufnr)
   end
   lsp_mappings(bufnr)
   lsp_winbar(client, bufnr)
   lsp_commands(client, bufnr)
+end
+
+local enable_formatting = {
+  ["oxfmt"] = true,
+}
+
+---@param client vim.lsp.Client
+function M.on_init(client)
+  if not enable_formatting[client.name] then
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end
 end
 
 function M.get_client_capabilites()

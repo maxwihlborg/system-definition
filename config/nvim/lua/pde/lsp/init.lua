@@ -29,6 +29,7 @@ vim.diagnostic.config(config)
 vim.lsp.config("*", {
   capabilities = handlers.get_client_capabilites(),
   on_attach = handlers.on_attach,
+  on_init = handlers.on_init,
 })
 
 vim.lsp.enable {
@@ -37,6 +38,7 @@ vim.lsp.enable {
   "jsonls",
   "lua_ls",
   "oxlint",
+  "oxfmt",
   "prismals",
   "rescriptls",
   "rust_analyzer",
@@ -52,6 +54,7 @@ vim.lsp.enable {
 require("typescript-tools").setup {
   capabilities = handlers.get_client_capabilites(),
   on_attach = handlers.on_attach,
+  on_init = handlers.on_init,
   settings = {
     separate_diagnostic_server = true,
     publish_diagnostic_on = "insert_leave",
