@@ -87,6 +87,8 @@ vim.filetype.add {
   },
   filename = {
     [".csharpierrc"] = "jsonc",
+    [".oxfmtrc.json"] = "jsonc",
+    [".oxlintrc.json"] = "jsonc",
     ["flake.lock"] = "jsonc",
     ["turbo.json"] = "jsonc",
     ["workspace.config.json"] = "jsonc",

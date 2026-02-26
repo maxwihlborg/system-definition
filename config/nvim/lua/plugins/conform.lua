@@ -48,7 +48,7 @@ return {
       sql = { "pg_format" },
     }
 
-    local prettier_fts = {
+    local oxfmt_fts = {
       "css",
       "graphql",
       "html",
@@ -60,8 +60,10 @@ return {
       "markdown.mdx",
       "scss",
       "typescript",
-      "svg",
       "typescriptreact",
+    }
+    local prettier_fts = {
+      "svg",
       "xml",
       "yaml",
     }
@@ -69,6 +71,10 @@ return {
     prettier.options.ft_parsers = {
       svg = "html",
     }
+
+    for _, ft in ipairs(oxfmt_fts) do
+      formatters_by_ft[ft] = { "oxfmt" }
+    end
 
     for _, ft in ipairs(prettier_fts) do
       formatters_by_ft[ft] = { "prettier" }
