@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Returns the current playing song via nowplaying-cli
+
+playback_rate=$(nowplaying-cli get playbackRate 2>/dev/null)
+
+if [[ "$playback_rate" == "1" ]]; then
+  artist=$(nowplaying-cli get artist 2>/dev/null)
+  title=$(nowplaying-cli get title 2>/dev/null)
+
+  if [[ -n "$artist" && "$artist" != "null" ]]; then
+    echo "♫ $artist - $title"
+  elif [[ -n "$title" && "$title" != "null" ]]; then
+    echo "~ $title"
+  fi
+fi

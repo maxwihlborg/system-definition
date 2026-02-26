@@ -46,6 +46,7 @@
       ncdu
       neofetch
       nixpkgs-fmt
+      nowplaying-cli
       nurl
       p7zip
       pgformatter
