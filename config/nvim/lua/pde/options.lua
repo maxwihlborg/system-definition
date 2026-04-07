@@ -52,6 +52,11 @@ vim.opt.wildmenu = true
 vim.opt.wrap = true
 vim.opt.writebackup = false
 
+local status_ok, coreui = pcall(require, "vim._core.ui2")
+if status_ok then
+  coreui.enable {}
+end
+
 local group = vim.api.nvim_create_augroup("PdeEditor", { clear = true })
 
 vim.api.nvim_create_autocmd("TextYankPost", {

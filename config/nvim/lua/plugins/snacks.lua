@@ -6,7 +6,7 @@ return {
   ---@type snacks.Config
   opts = {
     gitbrowse = { enabled = true },
-    image = { enabled = true, doc = { enabled = false } },
+    image = { enabled = false },
     input = { enabled = false },
     notifier = { enabled = true },
     quickfile = { enabled = true },

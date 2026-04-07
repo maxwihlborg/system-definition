@@ -1,126 +1,129 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
+  branch = "main",
+  build = ":TSUpdate",
   dependencies = {
-    { "nvim-treesitter/nvim-treesitter-textobjects" },
+    {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      branch = "main",
+      opts = {
+        select = { lookahead = true },
+      },
+      init = function()
+        local select_sym = function(qs)
+          local m = require "nvim-treesitter-textobjects.select"
+          return function() m.select_textobject(qs, "textobjects") end
+        end
+        local swap_prev = function(qs)
+          local m = require "nvim-treesitter-textobjects.swap"
+          return function() m.swap_previous(qs) end
+        end
+        local swap_next = function(qs)
+          local m = require "nvim-treesitter-textobjects.swap"
+          return function() m.swap_next(qs) end
+        end
+        require("pde.utils").load_keymap {
+          [{ "x", "o" }] = {
+            ["af"] = { select_sym "@function.outer" },
+            ["if"] = { select_sym "@function.inner" },
+
+            ["ac"] = { select_sym "@conditional.outer" },
+            ["ic"] = { select_sym "@conditional.inner" },
+
+            ["aa"] = { select_sym "@parameter.outer" },
+            ["ia"] = { select_sym "@parameter.inner" },
+
+            ["av"] = { select_sym "@variable.outer" },
+            ["iv"] = { select_sym "@variable.inner" },
+          },
+          [{ "n" }] = {
+            ["<leader>tah"] = { swap_prev "@parameter.inner" },
+            ["<leader>tal"] = { swap_next "@parameter.inner" },
+          },
+        }
+      end,
+    },
   },
-  config = function()
-    local config = require "nvim-treesitter.configs"
-    local parsers = require "nvim-treesitter.parsers"
-
-    local parser_config = parsers.get_parser_configs()
-
-    parser_config.haxe = {
-      install_info = {
-        url = "https://github.com/vantreeseba/tree-sitter-haxe",
-        files = { "src/parser.c", "src/scanner.c" },
-        branch = "main",
-      },
-      filetype = "haxe",
+  init = function()
+    local parsers = {
+      "bash",
+      "c",
+      "c_sharp",
+      "cmake",
+      "css",
+      "dockerfile",
+      "elm",
+      "fish",
+      "glsl",
+      "go",
+      "graphql",
+      "html",
+      "http",
+      "javascript",
+      "jsdoc",
+      "json",
+      "just",
+      "kdl",
+      "lua",
+      "make",
+      "markdown",
+      "markdown_inline",
+      "nix",
+      "php",
+      "prisma",
+      "python",
+      "rust",
+      "scss",
+      "sql",
+      "toml",
+      "tsx",
+      "typescript",
+      "vim",
+      "vimdoc",
+      "wgsl",
+      "yaml",
+      "clojure",
+      "comment",
+      "cpp",
+      "elixir",
+      "gdscript",
+      "godot_resource",
+      "gomod",
+      "gowork",
+      "kotlin",
+      "ninja",
+      "pug",
+      "query",
+      "regex",
+      "ruby",
+      "svelte",
+      "vue",
+      "zig",
     }
 
-    config.setup {
-      ensure_installed = {
-        "bash",
-        "c",
-        "c_sharp",
-        "clojure",
-        "cmake",
-        "comment",
-        "cpp",
-        "css",
-        "dockerfile",
-        "elixir",
-        "elm",
-        "fish",
-        "gdscript",
-        "glsl",
-        "go",
-        "godot_resource",
-        "gomod",
-        "gowork",
-        "graphql",
-        "haxe",
-        "html",
-        "http",
-        "javascript",
-        "jsdoc",
-        "json",
-        "jsonc",
-        "just",
-        "kdl",
-        "kotlin",
-        "lua",
-        "make",
-        "markdown",
-        "ninja",
-        "nix",
-        "php",
-        "prisma",
-        "pug",
-        "python",
-        "query",
-        "regex",
-        "ruby",
-        "rust",
-        "scss",
-        "sql",
-        "svelte",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vimdoc",
-        "vue",
-        "wgsl",
-        "yaml",
-        "zig",
-      },
-      indent = {
-        enable = true,
-      },
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-      },
-      incremental_selection = {
-        enable = false,
-        keymaps = {
-          init_selection = "<cr>",
-          node_decremental = "<s-tab>",
-          node_incremental = "<tab>",
-          scope_incremental = "<cr>",
-        },
-      },
-      textobjects = {
-        swap = {
-          enable = true,
-          swap_previous = {
-            ["<leader>tah"] = "@parameter.inner",
-          },
-          swap_next = {
-            ["<leader>tal"] = "@parameter.inner",
-          },
-        },
-        select = {
-          enable = true,
-          lookahead = true,
+    require("nvim-treesitter").install(parsers)
 
-          keymaps = {
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function(args)
+        local buf, filetype = args.buf, args.match
 
-            ["ac"] = "@conditional.outer",
-            ["ic"] = "@conditional.inner",
+        local language = vim.treesitter.language.get_lang(filetype)
+        if not language then
+          return
+        end
 
-            ["aa"] = "@parameter.outer",
-            ["ia"] = "@parameter.inner",
+        -- check if parser exists and load it
+        if not vim.treesitter.language.add(language) then
+          return
+        end
 
-            ["av"] = "@variable.outer",
-            ["iv"] = "@variable.inner",
-          },
-        },
-      },
-    }
+        -- enables syntax highlighting and other treesitter features
+        vim.treesitter.start(buf, language)
+
+        -- enables treesitter based indentation
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end,
+    })
   end,
 }
