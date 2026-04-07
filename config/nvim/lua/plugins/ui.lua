@@ -136,6 +136,7 @@ return {
     cmd = "DBUI",
     dependencies = {
       { "tpope/vim-dadbod", cmd = "DB" },
+      { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
     },
     keys = {
       { "<leader>cb", "<cmd>DBUI<cr>" },

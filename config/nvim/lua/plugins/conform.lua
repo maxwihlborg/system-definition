@@ -18,14 +18,6 @@ return {
           "package.json",
         },
       },
-      rescript = {
-        command = util.from_node_modules "rescript",
-        args = { "format", "-stdin", "$FILENAME" },
-        cwd = util.root_file {
-          "bsconfig.json",
-          "package.json",
-        },
-      },
       csharpier_local = {
         command = "dotnet",
         args = { "csharpier", "--write-stdout" },

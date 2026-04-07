@@ -60,6 +60,9 @@ return {
 
       sources = {
         default = { "lazydev", "lsp", "path", "buffer", "gh_emoji" },
+        per_filetype = {
+          sql = { "snippets", "dadbod", "buffer" },
+        },
         providers = {
           gh_emoji = {
             name = "GH Emojis",
@@ -69,6 +72,10 @@ return {
             name = "LazyDev",
             module = "lazydev.integrations.blink",
             score_offset = 100,
+          },
+          dadbod = {
+            name = "Dadbod",
+            module = "vim_dadbod_completion.blink",
           },
         },
       },

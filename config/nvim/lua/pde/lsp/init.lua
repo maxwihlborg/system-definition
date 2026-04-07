@@ -37,9 +37,7 @@ vim.lsp.enable {
   "harper_ls",
   "jsonls",
   "lua_ls",
-  "oxlint",
   "oxfmt",
-  "prismals",
   "rescriptls",
   "rust_analyzer",
   "taplo",
@@ -47,6 +45,8 @@ vim.lsp.enable {
   -- "biome",
   -- "eslint",
   -- "graphql",
+  -- "oxlint",
+  -- "prismals",
   -- "tailwindcss",
   -- "ts_ls",
 }

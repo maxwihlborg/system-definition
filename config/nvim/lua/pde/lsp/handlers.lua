@@ -87,6 +87,7 @@ end
 
 local enable_formatting = {
   ["oxfmt"] = true,
+  ["rescriptls"] = true,
 }
 
 ---@param client vim.lsp.Client

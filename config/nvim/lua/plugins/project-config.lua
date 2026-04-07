@@ -40,7 +40,7 @@ return {
               then
                 return string.format("pnpm --dir %s exec tsc -b", dir)
               end
-              if utils.ends_with(dir, "apps/clients") then
+              if utils.ends_with(dir, "apps/clients") or utils.ends_with(dir, "tools/cli") then
                 return string.format("pnpm --dir %s exec tsc", dir)
               end
               if utils.ends_with(dir, "packages/ui") or utils.ends_with(dir, "packages/gis") then

@@ -3,8 +3,6 @@ return {
   lazy = false,
   dependencies = {
     { "nvim-treesitter/nvim-treesitter-textobjects" },
-    { "nkrkv/nvim-treesitter-rescript" },
-    { "IndianBoy42/tree-sitter-just", opts = true },
   },
   config = function()
     local config = require "nvim-treesitter.configs"
