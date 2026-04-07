@@ -22,6 +22,7 @@
       delta
       deno
       eza
+      fastfetch
       fd
       ffmpeg
       fzf
@@ -44,7 +45,6 @@
       meshoptimizer
       moreutils
       ncdu
-      neofetch
       nixpkgs-fmt
       nowplaying-cli
       nurl

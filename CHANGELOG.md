@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.11.0] - 2026-04-07
+
+### 🚀 Features
+
+- Scuffed jjui.nvim plugin
+- *(fish)* Fish_jj_prompt
+- *(nvim)* Add kulala jj default git-ui
+- *(nvim)* Add emoji blink source
+- *(darwin)* Add dns settings
+- *(nvim)* Gh-emoji completion source
+- *(nvim)* Enable skim again, remove unused env vars
+- *(tmux)* Change to nowplaying-cli
+- *(nvim)* Change to oxfmt
+- *(nvim)* Use oxfmt lsp
+- *(nvim)* Sql completions
+
+### ⚙️ Miscellaneous Tasks
+
+- System update
+
 ## [0.10.0] - 2025-06-20
 
 ### 🚀 Features
